@@ -1,0 +1,339 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% load cache %}
+{% block additional_css %}
+  {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.1.2/css/searchPanes.dataTables.min.css"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css"> {% endcomment %}
+
+  <link rel="stylesheet" href="{% static "css/jQuerydatatables.css" %}" />
+  <link rel="stylesheet" href="{% static "css/searchPanes.css" %}" />
+  <link rel="stylesheet" href="{% static "css/selectDataTable.css" %}" />
+  <link rel="stylesheet" href="{% static "css/example_master.css" %}" /> 
+
+  <link href="{% sass_src 'scss/true_test.scss' %}" rel="stylesheet" type="text/css" />
+  {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> {% endcomment %}
+  {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"> {% endcomment %}
+{% endblock additional_css %}
+{% block additional_js %}
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+  <script src="{% static 'js/datatables.js' %}"></script>
+  <script src="{% static 'js/searchpanes.min.js' %}"></script>
+  <script src="{% static 'js/datatables.select.min.js' %}"></script>
+  {% comment %} <script src="{% static 'js/example_master.js' %}"></script> {% endcomment %}
+  {% comment %} <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js" type="text/javascript"></script> {% endcomment %}
+  {% comment %} <script src="https://cdn.datatables.net/searchpanes/2.1.2/js/dataTables.searchPanes.min.js" type="text/javascript"></script> {% endcomment %}
+  {% comment %} <script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js" type="text/javascript"></script> {% endcomment %}
+  <!-- Custom JS -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#netflix_data').DataTable({
+          scrollX: true,
+          responsive: true,
+          searchPanes: {
+              columns: [2,4,5,6],
+              dtOpts: {
+                  select: {
+                      style: 'multi'
+                  }
+              }
+          },
+          dom: 'Plfrtip'
+      });
+  });
+  </script>
+  {% comment %} <script src="{% static "js/example_master.js" %}" type="text/javascript></script> {% endcomment %}
+{% endblock additional_js %}
+{% block title %}
+    Netflix Dataset
+{% endblock %}
+{% block content %}
+  <div class="text_info">
+    <h1 id="banner">
+      This page is for the Netflix Dataset.
+    </h1>
+    <p id="para1"> 
+      You can click around and play with the data to explore and learn more :) 
+    </p>
+    <p id="para1">
+      Below is a simple way created through data tables to display the data 
+      for every title located within my database. Please note that this data 
+      is updated only up to <b><em>September 2021</em></b>, and not beyond.
+    </p>
+    <p id="para1">
+      Here we can click through the rows and open the hyperlinks in another page 
+      to get more information of the titles. 
+      ( Work in progress! )
+    </p>
+  </div>
+  <div class="container position-static">
+    <div class="data_table_div">
+      {% cache 432000 data_table %}
+      <table id="netflix_data" class="hover" style="overflow-x: auto; max-width: 100%;">
+        <thead>
+            <tr>
+              <th>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+                  <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+                </svg>
+              </th>
+              <th> Title </th>
+              <th> Type </th>
+              <th> Country </th>
+              <th> Month Added </th>
+              <th> Release Year </th>
+              <th> Rating </th>
+              <th> Duration </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for key,value in meow.items %}
+          <tr>
+            <td>
+              <div class="border mx-auto">
+                <div class="text-center">
+                    <button type="button" id="{{key|safe}}" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-type="{{value.1|safe}}" data-releaseyear="{{value.4|safe}}">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16" style="pointer-events: none;">
+                        <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+                      </svg>
+                    </button>
+                </div>  
+              </div>  
+            </td>
+            <td id="{{key}}">{{key}}</td>
+            {% for values in value|slice:"1:" %}
+              <td id="{{values}}">{{values}}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      
+      </table>
+    </div>
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <div class="team-boxed ">
+                  <div class="container">
+                      <div class="row bg-light text-dark">
+                          <div class="mx-auto card mb-3 item bg-light text-dark">
+                              <div class="box bg-light text-dark">
+                                  <img class="rounded-circle" id="poster" src=''>
+                                  <h3 class="name" id="ModalTitle"></h3>
+                                  <p class="title" id="genres"></p>
+                                  <p class="description" id="overview"></p>
+                              </div> <!--box-->
+                          </div> <!-- card -->
+                      </div> <!-- row -->
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endcache %}  
+  </div>
+
+
+{% endblock %}
+{% block extended_js %}
+<script type="text/javascript">
+  const fetchButtons = document.querySelectorAll('.btn.btn-primary');
+  const options = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiOWRhYzUxMWNlYTdiZjMwMWRkNTU0MjBkNmYzY2M5OCIsInN1YiI6IjY0NDAyYWNlMzdiM2E5MDQ2ZjQzMzViNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UJ4hhk0zcYhuaangCRGYz7uae1LGrReoOMCzj4pqC5Y'
+    }
+  };
+  let modalPoster = document.getElementById('modalPoster');
+  let modalTitle = document.querySelectorAll('#ModalTitle');
+  let modalOverview = document.getElementById('overview');
+  let modalGenres = document.getElementById('genres');
+  let logo = document.getElementById('poster');
+
+  function fetchData(url, params, button) {
+    fetch(url, options)
+      .then(response => response.json())
+      .then(response => {
+        if (response.total_results === 0 || response === null) {
+          console.log('No response');
+          return;
+        }
+        
+        const result = processResponseData(response, button); // Call a separate function to handle the response
+        if (result === null){
+          modalTitle.innerHTML = 'No Data Found';
+          logo.src = '{% static "images/BMO.png" %}'
+          modalGenres.innerHTML = "No Genre Data";
+          modalOverview.innerHTML = 'No information here, but we will...';
+          return;
+        }
+        else if (result !== null && result !== "") {          
+          try {
+            logo.src = `https://image.tmdb.org/t/p/w185${result.poster_path}`;
+          } catch(err) {
+            console.log(err.message);
+            logo.src = '{% static "images/BMO.png" %}'
+          }  
+          try {
+            modalGenres.innerHTML = result.genre_ids.map(elem => genres(elem)).join(', ');
+          } catch(err) {
+            console.log(err.message);
+            modalGenres.innerHTML = "No Genre Data";
+          }
+    
+          modalTitle.forEach(element => {
+            element.innerHTML = button.id;
+          });
+          modalOverview.innerHTML = result.overview;
+    
+          return;
+        }
+
+        if (params.pages > response.total_pages) {
+          console.log('No data');
+          return;
+        } else{
+          params.page++;
+          const queryString = `?query=${params.query}&include_adult=${params.include_adult}&page=${params.page}`;
+          const nextUrl = url + queryString;
+          fetchData(nextUrl, params, button); // Fetch the next page recursively            
+        }
+
+      })
+      .catch(error => {
+        console.error(error.message);
+      });
+  }
+  function quick_update_if_empty() {
+    modalTitle.forEach(element => {
+            element.innerHTML = 'No Data Found';
+          });
+    logo.src = '{% static "images/BMO.png" %}'
+    modalGenres.innerHTML = "No Genre Data";
+    modalOverview.innerHTML = 'No information here, but we will...';
+    return;
+  }
+  fetchButtons.forEach(fetchButton => {
+    fetchButton.addEventListener('click', function(event) {
+      let button = event.target;
+      let buttonId = encodeURIComponent(button.id); // Get the ID of the clicked button
+      let dataClassValue = button.getAttribute('data-type');
+      let TV_TF = false;
+      try {
+        if (dataClassValue.includes("TV")) {
+          TV_TF = true;
+        } else if (!dataClassValue.includes("Movie")) {
+          quick_update_if_empty()
+          throw new Error('not much data here, partner.');
+          return;
+        }
+      }
+      catch (err) {
+        console.log(err.message);
+        quick_update_if_empty();
+        return;
+      }
+      let params = {
+        "query": buttonId,
+        "page": 1,
+        "include_adult": true
+      };
+  
+      let url = "https://api.themoviedb.org/3/search/";
+      if (TV_TF === true) {
+        url += "tv";
+      } else {
+        url += "movie";
+      }
+  
+      const queryString = `?query=${params.query}&include_adult=${params.include_adult}&page=${params.page}`;
+      url += queryString;
+  
+      fetchData(url, params, button); // Initial fetch
+    });
+  });
+  
+  function processResponseData(response, button) {
+    try {
+    const release_year = button.getAttribute('data-releaseyear');
+    const buttonId = button.id;
+    for (let result of response.results) {
+      if ("release_date" in result) {
+        if (
+          result.release_date.slice(0, 4) === release_year ||
+          result.overview.includes(buttonId) || result.title === buttonId
+        ) {
+          return result;
+        }
+      } else if ("first_air_date" in result) {
+        if (
+          result.first_air_date.slice(0, 4) === release_year ||
+          result.overview.includes(buttonId) || result.title === buttonId
+        ) {
+          return result;
+        }
+      }
+    }
+    quick_update_if_empty()
+    return null; // Return null if no desired response is found
+  }
+  catch(err) {
+    console.log(err.message);
+    return;
+  }
+}
+  function genres(x) {
+    const y = {
+        "28": "Action",
+        "12": "Adventure",
+        "16": "Animation",
+        "35": "Comedy",
+        "80": "Crime",
+        "99": "Documentary",
+        "18": "Drama",
+        "10751": "Family",
+        "14": "Fantasy",
+        "36": "History",
+        "27": "Horror",
+        "10402": "Music",
+        "9648": "Mystery",
+        "10749": "Romance",
+        "878": "Science Fiction",
+        "10770": "TV Movie",
+        "53": "Thriller",
+        "10752": "War",
+        "37": "Western",
+        "10759": "Action & Adventure",
+        "10762": "Kids",
+        "10763": "News",
+        "10764": "Reality",
+        "10765": "Sci-Fi & Fantasy",
+        "10766": "Soap",
+        "10767": "Talk",
+        "10768": "War & Politics"
+    };
+    if (x in y) {
+        return y[x];
+    }
+    else {
+        return x;
+    }
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

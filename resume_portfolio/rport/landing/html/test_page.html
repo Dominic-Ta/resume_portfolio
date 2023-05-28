@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html>
+    <head>
+      {% load staticfiles %}
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+      <title>Datas Advocate</title>
+      <link rel="stylesheet" href="{% static "css/landing.css" %}">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src=js/jquery-1.10.2.min.js"><\/script>')</script>
+      <script type="text/javascript" src="{% static "js/jquery-migrate-1.2.1.min.js" %}"></script>
+   
+      <script src="{% static "js/play_pause.js" %}"></script>
+      <audio id="fish_noises" src={% static "sound/hydrophone_river.mp3" %}></audio>
+
+      
+      <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" >
+    </head>
+    <body>
+      <header>
+        <div class="row banner">
+          <div class="banner-text">
+            <h3> Welcome! </h3>
+            <button class="sound_button" id="play-btn" value="paused" onclick="playPause()">
+              Click here for ambiance.
+            </button>
+            <button class="sound_button" id="pause-btn" value="paused" onclick="playPause()" hidden>
+              Click here if you're a square and hate ambiance.
+            </button>
+            <hr>
+          </div>
+       </div>
+      </header>
+        <div class="row">
+          <div class="column">
+            <div class="card" style="background-color:#172642">
+              <h3> <a href="{% url 'resume' %}" style="color:white;">Resume</a> </h3>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="background-color:#172642">
+              <h3> 
+                <a href="https://meetings.aps.org/Meeting/FWS18/Event/338683"
+                  target="_blank" 
+                  rel="noopener noreferrer nofollow"
+                  style="color:white;">
+                  Master's Thesis
+                </a>
+              </h3>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="background-color:#172642">
+              <h3>    
+                <a href="https://www.linkedin.com/in/dominicmt/"
+                target="_blank" 
+                rel="noopener noreferrer nofollow" style="color:white;">
+                LinkedIn
+              </a>
+            </h3>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card" style="background-color:#172642">
+              <h3>    
+                <a href="https://aip.scitation.org/doi/abs/10.1063/1.4954278"
+                target="_blank" 
+                rel="noopener noreferrer nofollow" style="color:white;">
+                Undergrad Thesis
+              </a>
+            </h3>
+            </div>
+          </div>           
+        </div>
+
+    <footer>
+      <a target="_blank" rel="noopener noreferrer nofollow" 
+        href="https://icons8.com/icon/5RSNkT2QWYy3/bmo">
+          Bmo
+      </a> 
+      icon by 
+      <a target="_blank" 
+        rel="noopener noreferrer nofollow" 
+        href="https://icons8.com">
+          Icons8
+      </a>
+    </footer>
+    </body>
+
+</html>

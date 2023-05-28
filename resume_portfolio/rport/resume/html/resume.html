@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+   {% load static %}
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+   <!-- The above solves the js being blocked issue -->
+   <!-- Java Script
+   ================================================== -->
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src=js/jquery-1.10.2.min.js"><\/script>')</script>
+   <script type="text/javascript" src="{% static "js/jquery-migrate-1.2.1.min.js" %}"></script>
+
+   <script src="{% static "js/jquery.flexslider.js" %}"></script>
+   <script src="{% static "js/waypoints.js" %}"></script>
+   <script src="{% static "js/jquery.fittext.js" %}"></script>
+   <script src="{% static "js/magnific-popup.js" %}"></script>
+   <script src="{% static "js/init.js" %}"></script>
+
+   <!-- Script
+   ================================================== -->
+	<script src="{% static "js/modernizr.js" %}"></script>
+
+   <!--- Basic Page Needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Dominic Martinez-Ta Resume</title>
+	<meta name="description" content="">
+	<meta name="author" content="Dominic Martinez-Ta">
+
+   <!-- Mobile Specific Metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+    ================================================== -->
+   <link rel="stylesheet" href="{% static "css/default.css" %}">
+	<link rel="stylesheet" href="{% static "css/layout.css" %}">
+   <link rel="stylesheet" href="{% static "css/media-queries.css" %}">
+   <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+
+   
+   <!-- BMOs
+	================================================== -->
+	<link rel="shortcut icon" href="{% static 'images/BMO.png' %}" >
+
+</head>
+
+<body>
+
+   <!-- Header
+   ================================================== -->
+   <header id="home">
+
+      <nav id="nav-wrap">
+
+         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+
+         <ul id="nav" class="nav">
+            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+            <li><a class="smoothscroll" href="#about">About</a></li>
+	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio">Works</a></li>
+            <li><a class="smoothscroll" href="#testimonials">Philosophy</a></li>
+            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+         </ul> <!-- end #nav -->
+
+      </nav> <!-- end #nav-wrap -->
+
+      <div class="row banner">
+         <div class="banner-text">
+            <h1 class="responsive-headline">I'm Dominic Martinez-Ta.</h1>
+            <h3>I'm a <span>program developer</span>, <span>fullstack engineer</span> and <span> data analyst</span> with a background in
+               Semiconductor Physics and Electrical Engineering. I'm here to create some pretty radical and 
+               effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">take a tour</a>
+            and learn more <a class="smoothscroll" href="#about">about me </a>.</h3>
+            <hr />
+            <ul class="social">
+               <li>
+                  <a href="https://www.linkedin.com/in/dominicmt/" target="_blank" rel="noopener noreferrer nofollow">
+                     <i class="fa fa-linkedin"></i>
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <p class="scrolldown">
+         <a class="smoothscroll" href="#about">
+            <i class="icon-down-circle"></i>
+         </a>
+      </p>
+
+   </header> <!-- Header End -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
+
+      <div class="row">
+
+         <div class="three columns">
+
+            <img class="profile-pic"  src="{% static "images/Alisa_and_I.jpeg" %}" alt="" />
+
+         </div>
+
+         <div class="nine columns main-col">
+
+            <h2>About Me</h2>
+
+            <p>
+               <p>
+               Hi, I'm Dom! I'm a current program developer at Amazon currently maintaining an internal 
+               network wide website dedicated to providing resources to equipment tracking and the storage 
+               of excel tools for operations, safety and etcetera (Don't be afraid to ask me about watchtower!). 
+               </p>
+               <p>
+               I began my career as a data analyst sometime after my graduation from UC Riverside (B.S Physics), 
+               where I concentrated in the study of Semi-Conductors and of their applications in modern day electronics. 
+               After working closely with large amounts of data and trying to find insiteful meanings from them, I found 
+               that I was more inclined towards data analytics and full stack development with emphasis on data science. 
+               (I have a broad skillset with strong skills geared towards my passion,) I am a self taught python guru with 
+               experience and knowledge in Ruby on Rails, python Django, Java, and JS. Give me a goal and I'll diligently 
+               work to achieve it!
+               </p>
+               <p>
+               I'm currently working as a program developer at Amazon (also known as a full stack developer), working my 
+               way towards machine learning and artificial intelligence. I feel to effectively be a strong candidate, I 
+               must understand and master the basics to programming and displaying data. To showcase my experience, I first 
+               have to create a means to show it. That's where my full stack development experience comes in. Can you 
+               imagine the difficulty of displaying data without knowing how insertions work in HTML? Or pipelines for 
+               data analytics? By understanding and being able to work on all of this independently, my skills would 
+               reduce my need to rely on other individuals who could take hours to days finding a solution to. That's 
+               why I am working towards Data Science from a full stack developer's perspective. If you have any questions, 
+               feel free to always reach out via <a class="smoothscroll" href="#contact">email</a>. 
+               </p>
+            </p>
+
+            <div class="row">
+
+               <div class="columns contact-details">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Dominic Martinez-Ta</span><br>
+						   <span>Garden Grove, CA 92840 US
+                     </span><br>
+                     <span>martineztadominic@gmail.com</span>
+					   </p>
+
+               </div>
+
+               <div class="columns download">
+                  <p>
+                     <a href="{% url 'resume_url' %}" 
+                        class="button" 
+                        target="_blank" 
+                        rel="noopener noreferrer nofollow">
+                        <i class="fa fa-download">
+                        </i>
+                        Link to Resume
+                     </a>
+                  </p>
+               </div>
+
+            </div> <!-- end row -->
+
+         </div> <!-- end .main-col -->
+
+      </div>
+
+   </section> <!-- About Section End-->
+
+
+   <!-- Resume Section
+   ================================================== -->
+   <section id="resume">
+
+      <!-- Education
+      ----------------------------------------------- -->
+      <div class="row education">
+
+         <div class="three columns header-col">
+            <h1><span>Education</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>California State University, Fullerton</h3>
+                  <p class="info">Masters of Science, Physics <span>&bull;</span> <em class="date">March 2019</em></p>
+
+                  <p>
+                  My masters thesis was on the properties of dopped and non-dopped graphene. 
+                  As this was presented, if you would like to find out more you can always shoot a 
+                  pm or check it out on
+                  <a href ="https://meetings.aps.org/Meeting/FWS18/Event/338683" target="_blank" rel="noopener noreferrer nofollow">google scholar</a>.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>University of California, Riverside</h3>
+                  <p class="info">Bachelors of Science, Physics<span>&bull;</span> <em class="date">June 2016</em></p>
+
+                  <p>
+                  Here at UCR, I spent the majority of my time studying the synthesis of MoS2 and TeS2 via chemical vapour 
+                  deposition. You can find many of the co-authored publications I had worked on, on my 
+                  <a href="https://www.linkedin.com/in/dominicmt/" target="_blank" rel="noopener noreferrer nofollow">linkedin</a> account.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+         </div> <!-- main-col end -->
+
+      </div> <!-- End Education -->
+
+
+      <!-- Work
+      ----------------------------------------------- -->
+      <div class="row work">
+
+         <div class="three columns header-col">
+            <h1><span>Work</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Amazon</h3>
+                  <p class="info">Program Developer<span>&bull;</span> <em class="date">August 2022 - Present</em></p>
+                  <p>
+                     Built, supervised, and maintained network wide website (watchtower) used in the tracking of 
+                     features such as equipment trackers and toolbox storage. 
+                     Experienced with internal NAWS and NAWS <a href="{% static "images/linked_in.jpg" %}" target="_blank" rel="noopener noreferrer nofollow">accessories</a>. 
+                  </p>
+               </div>
+
+            </div> <!-- item end -->
+
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Amazon</h3>
+                  <p class="info">Data Analyst<span>&bull;</span> <em class="date">July 2020- August 2022</em></p>
+                  
+                  <p>
+                  <p>
+                  Let me summarize this in short. I have made changes to the LAX9s safety standards using aggregated data and decisions that indirectly led to the reductions of workers compensation cases by reducing injuries by 25% per week! That's 33k per week resulting in a total of 3 million USD every 10 months. My effort and knowledge has been adopted by 4 warehouses across the network totalling over 18 million USD in the same time frame. 
+                  </p>
+                  <p>
+                  I know what I'm doing, and I will find the root cause to any issue.
+                  </p>
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+         </div> <!-- main-col end -->
+         <div class="nine columns main-col">
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>TJLoans</h3>
+                  <p class="info">Data Analyst<span>&bull;</span> <em class="date">Sept 2018-Jun 2020</em></p>
+                  
+                  <p>
+                     My main focus here was on optimizing customer satisfaction and purchase/loan histories to fully optimize item placements to increase revenue. I increased revenue by up to 40% per month.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+         </div> <!-- main-col end-->
+      </div> <!-- End Work -->
+
+
+      <!-- Skills
+      ----------------------------------------------- -->
+      <div class="row skill">
+
+         <div class="three columns header-col">
+            <h1><span>Skills</span></h1>
+         </div>
+
+         <div class="nine columns main-col">
+
+            <p>
+               Below are some of my core skills and how I would rate myself on them based on experience and strengths.
+            </p>
+
+				<div class="bars">
+
+				   <ul class="skills">
+					   <li><span class="bar-expand sql"></span><em>sql</em></li>
+                  <li><span class="bar-expand ML"></span><em>Machine Learning</em></li>
+                  <li><span class="bar-expand vba"></span><em>VBA</em></li>
+                  <li><span class="bar-expand python"></span><em>Python</em></li>
+						<li><span class="bar-expand RoR"></span><em>Ruby On Rails/ Python Django</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML</em></li>
+                  <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
+					</ul>
+
+				</div><!-- end skill-bars -->
+
+			</div> <!-- main-col end -->
+
+      </div> <!-- End skills -->
+
+   </section> <!-- Resume Section End-->
+
+
+   <!-- Portfolio Section
+   ================================================== -->
+   <section id="portfolio">
+
+      <div class="row">
+
+         <div class="twelve columns collapsed">
+
+            <h1>Check Out Some of My Works.</h1>
+
+            <!-- portfolio-wrapper -->
+            <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
+
+          	   <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-01" title="">
+                        <img alt="" src="{% static "images/github_logo.jpeg" %}">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Python Django</h5>
+                              <p>Web Development</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-02" title="">
+                        <img alt="" src="{% static "images/APS.jpeg" %}">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Undergraduate Thesis</h5>
+                              <p>Scientific research</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-03" title="">
+                        <img alt="" src="{% static "images/nature_logo.jpg" %}">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Undergraduate Research</h5>
+                              <p>Scientific research</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+               <div class="columns portfolio-item">
+                  <div class="item-wrap">
+
+                     <a href="#modal-04" title="">
+                        <img alt="" src="{% static "images/github_logo.jpeg" %}">
+                        <div class="overlay">
+                           <div class="portfolio-item-meta">
+          					      <h5>Machine Learning</h5>
+                              <p>Machine Learning with Python</p>
+          					   </div>
+                        </div>
+                        <div class="link-icon"><i class="icon-plus"></i></div>
+                     </a>
+
+                  </div>
+          		</div> <!-- item end -->
+
+            </div> <!-- portfolio-wrapper end -->
+
+         </div> <!-- twelve columns end -->
+
+
+         <!-- Modal Popup
+	      --------------------------------------------------------------- -->
+
+         <div id="modal-01" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="{% static "images/portfolio/modals/m-github_logo.jpg" %}" alt="" />
+
+		      <div class="description-box">
+			      <h4>Django website</h4>
+			      <p>Here is the source code to which this website is running off of.</p>
+               <span class="categories"><i class="fa fa-sitemap "></i>fullstack, Webdesign</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="https://github.com/Dominic-Ta/django_api" 
+                  target="_blank" 
+                  rel="noopener noreferrer">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-01 End -->
+
+         <div id="modal-02" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="{% static "images/portfolio/modals/m-APS.jpg" %}" alt="" />
+
+		      <div class="description-box">
+			      <h4>APS Publication</h4>
+			      <p>My College Thesis. This is what I worked towards publishing and researching during my undergraduate education.</p>
+               <span class="categories"><i class="fa fa-search-plus"></i>Research, Publications</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="https://aip.scitation.org/doi/abs/10.1063/1.4954278" 
+                  target="_blank"
+                  rel="noopener noreferrer">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-02 End -->
+
+         <div id="modal-03" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="{% static "images/portfolio/modals/m-nature_logo.jpg" %}" alt="" />
+
+		      <div class="description-box">
+			      <h4>Nature Publication</h4>
+			      <p> Some of the research I completed as an undergraduate at UCR.</p>
+               <span class="categories"><i class="fa fa-search-plus"></i>Research, Publications</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="https://www.nature.com/articles/s41598-017-07379-2" 
+                  target="_blank"
+                  rel="noopener noreferrer">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-03 End -->
+
+         <div id="modal-04" class="popup-modal mfp-hide">
+
+		      <img class="scale-with-grid" src="{% static "images/portfolio/modals/m-github_logo.jpg" %}" alt="" />
+
+		      <div class="description-box">
+			      <h4>Machine learning projects/practice</h4>
+			      <p>Here, I practice some machine learning projects at home as well as provide some trainings for others to use.</p>
+               <span class="categories"><i class="fa fa-sitemap"></i>Machine Learning, Python</span>
+		      </div>
+
+            <div class="link-box">
+               <a href="https://github.com/Dominic-Ta/ML_projects" 
+                  target="_blank"
+                  rel="noopener noreferrer">Details</a>
+		         <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+	      </div><!-- modal-04 End -->
+
+      </div> <!-- row End -->
+
+   </section> <!-- Portfolio Section End-->
+
+
+   <!-- Call-To-Action Section
+   ================================================== -->
+   <section id="call-to-action">
+
+      <div class="row">
+
+         <div class="two columns header-col">
+
+            <h1><span>Get Hosting.</span></h1>
+
+         </div>
+
+         <div class="seven columns">
+
+            <h2><span class="lead">I'm a Lord of the Rings Historian</span></h2>
+            <p><span class="lead">You can ask me anything you want about Lord of the Rings! I live and breathe in middle Earth on my free time after all. 
+                </span></p>
+
+         </div>
+
+         <div class="three columns action">
+
+
+
+         </div>
+
+      </div>
+
+   </section> <!-- Call-To-Action Section End-->
+
+
+   <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+      <div class="text-container">
+
+         <div class="row">
+
+            <div class="two columns header-col">
+
+               <h1><span>Inspirational Quotes</span></h1>
+
+            </div>
+
+            <div class="ten columns flex-container">
+
+               <div class="flexslider">
+
+                  <ul class="slides">
+
+                     <li>
+                        <blockquote>
+                           <p>
+                              Not only is the Universe stranger than we think, it is stranger than we can think.
+                           </p>
+                           <cite>Werner Heisenberg</cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                     <li>
+                        <blockquote>
+                           <p>
+                              Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, 
+                              and the Universe trying to produce bigger and better idiots. So far, the Universe is winning.
+                           </p>
+                           <cite> Rick Cook, The Wizardry Compiled </cite>
+                        </blockquote>
+                     </li> <!-- slide ends -->
+
+                  </ul>
+
+               </div> <!-- div.flexslider ends -->
+
+            </div> <!-- div.flex-container ends -->
+
+         </div> <!-- row ends -->
+
+       </div>  <!-- text-container ends -->
+
+   </section> <!-- Testimonials Section End-->
+
+
+   <!-- Contact Section
+   ================================================== -->
+   <section id="contact">
+
+         <div class="row section-head">
+
+            <div class="two columns header-col">
+
+               <h1><span>Get In Touch.</span></h1>
+
+            </div>
+
+            <div class="ten columns">
+
+                  <p class="lead">Let's get keep in touch! If you're interested in what my resume shows, 
+                     shoot an email. If you're interested in the layout of this resume, you can click the link at the bottom!
+                  </p>
+
+            </div>
+
+         </div>
+
+         <div class="row">
+
+            <div class="eight columns">
+
+               <!-- form -->
+               {% block content %}
+
+               {% endblock %}
+               <!-- contact-warning -->
+               <div id="message-warning"> Error, your message was not sent. </div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+				   </div>
+
+            </div>
+
+
+            <aside class="four columns footer-widgets">
+
+               <div class="widget widget_contact">
+
+                  <h2>Contact Details</h2>
+                  <p class="address">
+						   <span>Dominic Martinez-Ta</span><br>
+						   <span>Garden Grove, CA 92840 US
+                     </span><br>
+                     <span>martineztadominic@gmail.com</span>
+					   </p>
+				   </div>
+
+               <div class="widget widget_tweets">
+
+                  <h4 class="widget-title">Latest Updates</h4>
+
+                  <ul id="Upates">
+                     <li>
+                        <span>
+                        None at this moment!
+                        </span>
+                        <b><a href="#">2 Days Ago</a></b>
+                     </li>
+                  </ul>
+
+		         </div>
+
+            </aside>
+
+      </div>
+
+   </section> <!-- Contact Section End-->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+      <div class="row">
+
+         <div class="twelve columns">
+
+            <ul class="social-links">
+               <li>
+                  <a href="https://www.linkedin.com/in/dominicmt/" target="_blank" rel="noopener noreferrer nofollow">
+                     <i class="fa fa-linkedin"></i>
+                  </a>
+               </li>
+            </ul>
+
+            <ul class="copyright">
+               <li>&copy; Copyright 2014 CeeVee</li>
+               <li>Design by <a href="http://www.styleshout.com/" title="Styleshout" target="_blank">Styleshout</a></li>   
+            </ul>
+
+         </div>
+
+         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a></div>
+
+      </div>
+
+   </footer> <!-- Footer End-->
+
+   
+</body>
+
+</html>

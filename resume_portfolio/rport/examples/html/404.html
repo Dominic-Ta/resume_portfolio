@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+
+{% block additional_css %}
+<link href="{% sass_src 'scss/error_404.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
+    <div id='error'>
+        <h1> Oh No! Looks like we have a problem. </h1>
+        <img src="{% static "images/i-have-failed-you.png" %}" alt="404 png goes here...IF THERE WAS ONE." class="404" />
+        <p> Don't you worry, let's close this door behind us and go back home.</p>
+        <form action="{% url 'example' %}">
+            <input type="submit" value="Click Me" id="form_button"/>
+        </form>
+    </div>
+{% endblock %}

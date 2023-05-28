@@ -1,0 +1,112 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block additional_css %}
+<style>
+    :root {
+    --bg1-url: url("https://image.tmdb.org/t/p/w780{{response.backdrop_path}}");
+    --link-png: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png")
+    }
+</style>
+<link href="{% sass_src 'scss/test.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% comment %} {% block additional_js %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        let dat = JSON.parse('{{map_json|safe}}');    
+        const arr_of_countries = dat.countries_available.map(element => [element, 1]);
+
+        let result = [['Country', 'available']];
+
+        arr_of_countries.forEach(element => result.push(element));
+
+        google.charts.load('current', {
+        'packages':['geochart'],
+        'mapsApiKey': {{maps_API_key|safe}},
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+        let data = google.visualization.arrayToDataTable(
+            result
+        );
+
+        let options = {
+            legend: 'none',
+            backgroundColor: '#81d4fa'
+        };
+
+        let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+        }
+    </script>
+  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffezHi4Wl8NIS1eSqqsmjmwy7BH0wYZw&callback=Function.prototype"></script> {% endcomment %}
+{% comment %} {% endblock additional_js %} {% endcomment %}
+{% block title %}
+    {{response.original_name}} information
+{% endblock %}
+
+{% block content %}
+   <div class="movie-card">
+
+        <div class="container">
+
+            <a href="#"><img src="https://image.tmdb.org/t/p/w185{{response.poster_path}}" alt="cover" class="cover" /></a>
+            
+            <div class="hero">
+                    
+                <div class="details">
+                
+                    <div class="title1">{{response.original_name}} <span>{{response.rating}}</span></div>
+
+                    <div class="title2">{{response.original_title}} </div>    
+                    
+                    <fieldset class="rating">
+                        <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                        <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" checked /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                        <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                        <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                        <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                    </fieldset>
+                        
+                        <span class="likes">{{response.vote_count}}</span>
+                        
+                </div> <!-- end details -->
+                
+            </div> <!-- end hero -->
+
+            <div class="description">
+            
+                <div class="column1">
+                    {% for i in response.genre_ids %}
+                        <span class="tag">{{i}}</span>
+                    {% endfor %}
+                </div> <!-- end column1 -->
+                
+                <div class="column2">
+                    
+                    <p> {{response.overview}}</p>
+                        
+                </div> <!-- end column2 -->
+            </div> <!-- end description -->
+        </div> <!-- end container -->
+    </div> <!-- end movie-card -->
+
+{% comment %} <div class="container">
+    <div class="map">
+        <h2><b>Countries available</b></h2>
+        <p>{{info.country}}</p>
+    </div>
+    <div class="map">
+        <div id="regions_div"></div>
+    </div>
+
+</div> {% endcomment %}
+
+{% endblock %}

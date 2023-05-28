@@ -1,0 +1,54 @@
+{% extends "master.html" %}
+
+{% load static %}
+{% block title %}
+    Examples
+{% endblock %}
+{% block additional_css %}
+<link rel="stylesheet" href="{% static "css/green_table.css" %}">
+
+{% endblock additional_css %}
+{% block content %}
+  <h1 class="text-center">
+    Hello! This page is in development, 
+    please come back at a later time for updates.
+  </h1>
+  <div class="container">
+    <table class="table table-striped"> {% comment %} class="topics_of_interest"> {% endcomment %}
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Analysis</th>
+          <th>Supporting links</th>
+          <th> API </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>Python</td>
+          <td><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://www.python.org/</a></td>
+          <td><a href="https://docs.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://docs.python.org/</a></td>
+          <td><a href="https://pypi.org/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/</a></td>
+        </tr>
+        <tr>
+          <td>Django</td>
+          <td><a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://www.djangoproject.com/</a></td>
+          <td><a href="https://docs.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://docs.djangoproject.com/</a></td>
+          <td><a href="https://pypi.org/project/Django/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/project/Django/</a></td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer nofollow">https://developer.mozilla.org/en-US/docs/Web/HTML</a></td>
+          <td><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer nofollow">https://www.w3schools.com/html/</a></td>
+          <td><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer nofollow">https://html.spec.whatwg.org/multipage/</a></td>
+        </tr> -->
+        <tr>
+          <td> Netflix Data </td>
+          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'about_netflix' %}>Overview of data</a></td>
+          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'netflix' %}>Data Table of titles</a></td>
+          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href='//www.datasadvocate.dev/api/Netflix_Titles/'>API</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

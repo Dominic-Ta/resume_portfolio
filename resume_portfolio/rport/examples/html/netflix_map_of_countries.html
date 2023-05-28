@@ -1,0 +1,48 @@
+{% extends "master.html" %}
+{% load static %}
+{% block additional_js %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      let dat = JSON.parse('{{titles_per_country|safe}}');    
+
+      let result = [['Country', 'Available Titles']];
+
+      for(let i in dat){
+          result.push([i, dat[i]]);
+      }
+      google.charts.load('current', {
+      'packages':['geochart'],
+      'mapsApiKey': '{{maps_API_key|safe}}',
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+      let
+      
+      data = google.visualization.arrayToDataTable(
+          result
+      );
+
+      let options = {
+        backgroundColor: '#81d4fa'
+      };
+
+      let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+      chart.draw(data, options);
+      }
+    </script>
+  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffezHi4Wl8NIS1eSqqsmjmwy7BH0wYZw&callback=Function.prototype"></script>
+{% endblock additional_js %}
+{% block title %}
+    Netflix Titles Map
+{% endblock %}
+{% block content %}
+  <body>
+    <h1> Hello World!!! </h1>
+    <div class="region_map">
+      <div id="regions_div" style="width: auto; height: auto;"></div>
+    </div>
+    {{ titles_per_country }}
+  </body>
+{% endblock %}

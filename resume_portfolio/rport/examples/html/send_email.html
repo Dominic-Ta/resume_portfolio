@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block email %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input 
+        type="submit" 
+        value="Submit" 
+        onclick="alert('Your inquiry has been sent, I will respond to you ASAP. Thank you!'); return True;" />
+</form>
+{% endblock %}

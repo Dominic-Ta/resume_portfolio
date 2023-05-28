@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title> {% block title %}{% endblock %}</title>
+
+      <meta charset="utf-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {% comment %} <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> {% endcomment %}
+
+      {% load bootstrap5 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+      {% load static %}
+      <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+      <link rel="shortcut icon" href="{% static "images/BMO.png" %}" >
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{% static "css/index.css" %}">
+      <!-- Other CSS -->
+      {% block additional_css %}{% endblock additional_css %}
+      <!-- Other JS -->
+      {% block additional_js %}{% endblock additional_js %}       
+
+    </head>
+    <body style="display: flex; flex-direction: column; min-height: 100vh;">
+      <script>0</script>
+      <nav class="navbar bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Top</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header bg-dark">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body bg-dark">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item text-white">
+                  <a class="text-white link-dark" href="{% url 'example' %}">
+                    Home <i class="bi bi-house-door"></i> 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="text-white link-dark" href="{% url 'home' %}">
+                    Landing 
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white link-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Resume
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume_url' %}">PDF</a></li>
+                    <li><a class="dropdown-item" target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume'%}">URL</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                  </ul>
+                </li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!--Use this block to define content for each page-->
+      <div class="container-fluid mx-auto mt-5">
+        {% block content %}
+        {% endblock %}
+      </div >
+      <div class="navbar fixed-bottom" id="footer">
+        <footer class="bg-grey container-fluid py-5">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-6 ">
+                          <div class="logo-part">
+                            <img src="{% static "images/BMO.png" %}" class="w-50 logo-footer" >
+                            <p>Queens, New York</p>
+                          </div>
+                      </div>
+                      <div class="col-md-6 px-4">
+                          <h6> About Me</h6>
+                          <p> Check out my resume, or download it.</p>
+                          <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume' %}" class="btn-footer"> Resume </a><br>
+                          <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume_url' %}" class="btn-footer"> Download Resume </a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-6 px-4">
+                          <h6> Quick Links</h6>
+                          <div class="row ">
+                            <div class="col-md-6">
+                                <ul>
+                                  <li> <a href="{% url 'home' %}"> Landing Page</a> </li>
+                                  <li> <a href="{% url 'example' %}"> Home</a> </li>
+                                  <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api"> API Overview </a> </li>
+                                  <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api/Netflix_Titles"> Netflix API </a> </li>
+                                </ul>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <h6 >Contact Me</h6>
+                        <hr>
+                        <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.datasadvocate.dev/resume#contact" class="btn-footer"> Email </a><br>
+                        <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/in/dominicmt/" class="btn-footer"> LinkedIn </a><br>
+                        {% comment %} <form>
+                          <fieldset class="form-group">
+                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                          </fieldset>
+                          <fieldset class="form-group">
+                              <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                          </fieldset>
+                          <fieldset class="form-group text-xs-right">
+                              <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
+                          </fieldset>
+                        </form> {% endcomment %}
+                      </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </footer>
+      </div>
+      {% block extended_js %} {% endblock %}
+   </body>
+</html>

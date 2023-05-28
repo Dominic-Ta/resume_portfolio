@@ -1,0 +1,248 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block additional_css %}
+<style>
+    :root {
+    --bg1-url: url("https://image.tmdb.org/t/p/w780{{response.backdrop_path}}");
+    --link-png: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png")
+    }
+</style>
+
+<link href="{% sass_src 'scss/true_test.scss' %}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% comment %} <link rel="stylesheet" href="assets/css/style.css"> {% endcomment %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+{% endblock %}
+{% block additional_js %}
+
+    
+    {% comment %} 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        let dat = JSON.parse('{{countries_available|safe}}');    
+        const arr_of_countries = Object.keys(dat.countries_available).map(element => [element, dat.countries_available[element]]);
+
+        let result = [['Country', 'available']];
+
+        arr_of_countries.forEach(element => result.push(element));
+
+        google.charts.load('current', {
+        'packages':['geochart'],
+        'mapsApiKey': '{{maps_API_key|safe}}'',
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+        let data = google.visualization.arrayToDataTable(
+            result
+        );
+
+        let options = {
+            legend: 'none',
+            backgroundColor: '#81d4fa'
+        };
+
+        let chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+        }
+    </script>
+  <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffezHi4Wl8NIS1eSqqsmjmwy7BH0wYZw&callback=Function.prototype"></script> {% endcomment %}
+{% endblock additional_js %}
+{% block title %}
+    {{response.name}} information
+{% endblock %}
+
+{% block content %}
+<!-- Button trigger modal -->
+<div class="border mx-auto">
+    <div class="text-center">
+        <button type="button" id="{{indi_info.title|safe}}" class="btn btn-primary" data-toggle="modal" data-target="#Modal" data-type="{{indi_info.type|safe}}" data-releaseyear="{{indi_info.release_year|safe}}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tv" viewBox="0 0 16 16">
+            <path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/>
+          </svg>
+        </button>
+    </div>  
+</div>
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="team-boxed ">
+                <div class="container">
+                    <div class="row bg-light text-dark">
+                        <div class="mx-auto card mb-3 item bg-light text-dark">
+                            <div class="box bg-light text-dark">
+                                <img class="rounded-circle" id="poster" src=''>
+                                <h3 class="name" id="ModalTitle"></h3>
+                                <p class="title" id="genres"></p>
+                                <p class="description" id="overview"></p>
+                            </div> <!--box-->
+                        </div> <!-- card -->
+                    </div> <!-- row -->
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  const fetchButtons = document.querySelectorAll('.btn.btn-primary');
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiOWRhYzUxMWNlYTdiZjMwMWRkNTU0MjBkNmYzY2M5OCIsInN1YiI6IjY0NDAyYWNlMzdiM2E5MDQ2ZjQzMzViNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UJ4hhk0zcYhuaangCRGYz7uae1LGrReoOMCzj4pqC5Y'
+    }
+  };
+  
+  fetchButtons.forEach(fetchButton => {
+    fetchButton.addEventListener('click', function(event) {
+      const button = event.target;
+      const buttonId = encodeURIComponent(fetchButton.id); // Get the ID of the clicked button
+      const dataClassValue = button.getAttribute('data-type');
+      let TV_TF = false
+      console.log(dataClassValue)
+      if (dataClassValue === null) {
+        return;
+      } else if (dataClassValue.includes("TV")) {
+        TV_TF = true;
+      } else if(!dataClassValue.includes("Movie")) {
+        throw new Error('not much data here, partner.')
+      }
+
+      let params = {
+        "query": buttonId,
+        "page": 1,
+        "include_adult": true
+      };
+  
+      let url = "https://api.themoviedb.org/3/search/";
+      if (TV_TF === true) {
+        url += "tv";
+      } else {
+        url += "movie";
+      }
+  
+      const queryString = `?query=${params.query}&include_adult=${params.include_adult}&page=${params.page}`;
+      url += queryString;
+
+      fetch(url, options)
+        .then(response => response.json())
+        .then(response => {
+          if (response.total_results === 0) {
+            console.log('No response');
+            return;
+          }
+          console.log(response)
+          const result = processResponseData(response, button); // Call a separate function to handle the response response
+
+          if (result !== null && result !== "") {            
+            const modalContent = document.getElementById('Modal');
+            const modalPoster = document.getElementById('modalPoster');
+            const modalTitle = document.querySelectorAll('#ModalTitle');
+            const modalOverview = document.getElementById('overview');
+            const modalGenres = document.getElementById('genres');
+            const logo = document.getElementById('poster');
+  
+            logo.src = `https://image.tmdb.org/t/p/w185${result.poster_path}`;
+            modalGenres.innerHTML = result.genre_ids.map(elem => genres(elem)).join(', ');
+  
+            modalTitle.forEach(element => {
+              element.innerHTML = fetchButton.id;
+            });
+            modalOverview.innerHTML = result.overview;
+  
+            return;
+          }
+  
+          params.page++;
+          fetchData(); // Fetch the next page
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+  });
+    
+    function processResponseData(response, button) {
+      const release_year = button.getAttribute('data-releaseyear');
+      const buttonId = encodeURIComponent(button.id);
+      for (let result of response.results) {
+        if ("release_date" in result) {
+          if (
+            result.release_date.slice(0, 4) === release_year ||
+            result.overview.includes(buttonId)
+          ) {
+            return result;
+          }
+        } else if ("first_air_date" in result) {
+          if (
+            result.first_air_date.slice(0, 4) ===release_year ||
+            result.overview.includes(buttonId)
+          ) {
+            return result;
+          }
+        }
+      }
+    
+      return null; // Return null if no desired response is found
+    }
+    
+    function genres(x) {
+      const y = {
+          "28": "Action",
+          "12": "Adventure",
+          "16": "Animation",
+          "35": "Comedy",
+          "80": "Crime",
+          "99": "Documentary",
+          "18": "Drama",
+          "10751": "Family",
+          "14": "Fantasy",
+          "36": "History",
+          "27": "Horror",
+          "10402": "Music",
+          "9648": "Mystery",
+          "10749": "Romance",
+          "878": "Science Fiction",
+          "10770": "TV Movie",
+          "53": "Thriller",
+          "10752": "War",
+          "37": "Western",
+          "10759": "Action & Adventure",
+          "10762": "Kids",
+          "10763": "News",
+          "10764": "Reality",
+          "10765": "Sci-Fi & Fantasy",
+          "10766": "Soap",
+          "10767": "Talk",
+          "10768": "War & Politics"
+      };
+      if (x in y) {
+          return y[x];
+      }
+      else {
+          return x;
+      }
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
