@@ -3,7 +3,11 @@
 {% load sass_tags %}
 {% load cache %}
 {% block additional_css %}
-
+<style>
+.highlight {
+  background: red;
+}
+</style>
 {% endblock additional_css %}
 {% block additional_js %}
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -47,7 +51,7 @@
   }
   
 </script>
-<script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffezHi4Wl8NIS1eSqqsmjmwy7BH0wYZw&callback=Function.prototype"></script>
+<script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key={{maps_API_key|safe}}&callback=Function.prototype"></script>
 
 
 {% endblock additional_js %}
@@ -167,19 +171,22 @@
 <div class="row mb-8">
   <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
-      <strong class="d-inline-block mb-2 text-primary">Test</strong>
-      <h3 class="mb-0">Test</h3>
+      <strong class="d-inline-block mb-2 text-primary">Genres</strong>
+      <h3 class="mb-0">Initial findings by Genre</h3>
       <div class="mb-1 text-body-secondary">May 23</div>
-      <p class="card-text mb-auto">This is a test.
+      <p class="card-text mb-auto">We see that Netflix ramping up it's database by around 2016. Before that we had &lt; 20 titles added per year. 
+        A close analysis shows that as the years progress, the classification of the genres from TV dramas and movies to both added altogether. 
+        This occurs for several titles. Most notable after 2016 relatively fewer genres are added to the database that aren't outside the norm. 
+        This implies that as the viewerbase grows, there's a higher demand for international movies. 
       </p>
     </div>
     <div class="embed-responsive">
       <div class="col-auto container-fluid d-lg-block" style='overflow: auto;'>
-          <h1>Top 5 genres by year.</h1>
+          <h3>Top 5 genres by year.</h1>
             {% for key in years_in_order  %}
-              <button type="button" class="btn btn-dark m-1" value="{{key}}" id='year_chart_button_{{ key }}'>{{key}}</button>
+              <button type="button" class="btn btn-dark m-1 map_btn" value="{{key}}" id='year_chart_button_{{ key }}'>{{key}}</button>
             {% endfor%}
-          <div class="container mx-auto">
+          <div class="container w-75 p-3">
             <canvas id="chartContainer"></canvas>
           </div>
       </div>
@@ -311,7 +318,7 @@
 
   <div class="col-md-4">
     <div class="position-sticky" style="top: 2rem;">
-      <div class="p-4 mb-3 bg-body-tertiary rounded">
+      <div class="p-4 mb-3 bg-body-tertiary rounded bg-info text-white">
         <h4 class="fst-italic">About Me</h4>
         <p class="mb-0">I'm entirely self taught in data analytics and coding (both front and backend). I've been a data analyst for 5-6 years now, and a software developer for 2.
           In fact, this entire website is ran off of Python Django! This allows me to be more flexible in the type of data that I display and how I can fully review it.
@@ -406,14 +413,22 @@
       }
     }
   });
-
+  document.getElementById("year_chart_button_2007").classList.add("highlight");
 {% for key in years_in_order %}
   document.getElementById("year_chart_button_{{ key }}").addEventListener("click", update_year.bind(null, '{{ key }}'));
 {% endfor %}
+
 function update_year(year) {
   let genres = [];
   let genre_count = [];
-  
+  let yourbuttons = document.getElementsByClassName('map_btn');
+  for (let i = 0; i < yourbuttons.length; i++){
+    if (yourbuttons[i].classList.contains('highlight')) {
+      yourbuttons[i].classList.remove("highlight");
+    }
+  }
+  document.getElementById("year_chart_button_"+year).classList.add("highlight");
+
   Object.entries(top_5_genres[year][0]).forEach(([key, value]) => {
     genres.push(key);
     genre_count.push(value);
@@ -423,6 +438,7 @@ function update_year(year) {
   addData(chartInstances, genres, genre_count);
 }
 function addData(chart, labels, data) {
+  
   chart.data.labels = labels;
   chart.data.datasets.forEach((dataset) => {
     dataset.data = data;
@@ -438,4 +454,5 @@ function removeData(chart) {
   chart.update();
 }
 </script>
+
 {% endblock %}
