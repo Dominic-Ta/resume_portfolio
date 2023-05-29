@@ -139,7 +139,9 @@ def about_view(request):
         "top_5_genres_by_year": dict(total_items["top_5_genres_by_year"]),
         "genre_count_all_years": dict(total_items["genre_count_all_years"]),
         "maps_API_key": maps_API,
+        "years_in_order":  sorted(dict(total_items["top_5_genres_by_year"]).keys(), key=int),
     }
+   
     return render(request, "about_netflix_dataset.html", netflix_data)
 
 

@@ -51,6 +51,7 @@
     Netflix Dataset
 {% endblock %}
 {% block content %}
+<div class="container">
   <div class="text_info">
     <h1 id="banner">
       This page is for the Netflix Dataset.
@@ -69,10 +70,10 @@
       ( Work in progress! )
     </p>
   </div>
-  <div class="container position-static">
+  <div class="container">
     <div class="data_table_div">
       {% cache 432000 data_table %}
-      <table id="netflix_data" class="hover" style="overflow-x: auto; max-width: 100%;">
+      <table id="netflix_data" class="hover table-responsive" style="overflow-x: auto; max-width: 100%;">
         <thead>
             <tr>
               <th>
@@ -146,8 +147,7 @@
     </div>
     {% endcache %}  
   </div>
-
-
+</div>
 {% endblock %}
 {% block extended_js %}
 <script type="text/javascript">

@@ -175,27 +175,14 @@
     </div>
     <div class="embed-responsive">
       <div class="col-auto container-fluid d-lg-block" style='overflow: auto;'>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <h1>Top 5 genres by year.</h1>
+            {% for key in years_in_order  %}
+              <button type="button" class="btn btn-dark m-1" value="{{key}}" id='year_chart_button_{{ key }}'>{{key}}</button>
+            {% endfor%}
+          <div id="chart_container_div">
+            <canvas id="chartContainer"></canvas>
           </div>
-        </div>
-
-        <div class="btn-group dropright">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropright
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
+          
       </div>
     </div>
   </div>
@@ -365,7 +352,7 @@
 </main>
 
 <script>
-    const ctx = document.getElementById('myChart');
+    let ctx = document.getElementById('myChart');
     const top_ten_directors = {{ top_10_directors | safe}};
     const directors = []
     const number_of_titles = []
@@ -373,8 +360,7 @@
         directors.push(value[0]);
         number_of_titles.push(value[1]);
     });
-
-    new Chart(ctx, {
+    let director_chart = new Chart(ctx, {
       type: 'bar',
       data: {
         labels: directors,
@@ -393,5 +379,64 @@
       }
     });
 </script>
+<script>
+  const top_5_genres = {{top_5_genres_by_year | safe}};
+  let genres = []
+  let genre_count = []
+  Object.entries(top_5_genres['2007'][0]).forEach(([key, value]) => {
+    genres.push(key);
+    genre_count.push(value);
+});
+  console.log(genres, genre_count)
+  let chart_top_5 = document.getElementById('chartContainer');
+  let chartInstances = new Chart(chart_top_5, {
+    type: 'bar',
+    data: {
+      labels: genres,
+      datasets: [{
+        label: 'Top 5 Genres',
+        data: genre_count,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
 
+{% for key in years_in_order %}
+  document.getElementById("year_chart_button_{{ key }}").addEventListener("click", update_year.bind(null, '{{ key }}'));
+{% endfor %}
+function update_year(year) {
+  let genres = [];
+  let genre_count = [];
+  
+  Object.entries(top_5_genres[year][0]).forEach(([key, value]) => {
+    genres.push(key);
+    genre_count.push(value);
+  });
+  
+  removeData(chartInstances);
+  addData(chartInstances, genres, genre_count);
+}
+function addData(chart, labels, data) {
+  chart.data.labels = labels;
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data = data;
+  });
+  chart.update();
+}
+
+function removeData(chart) {
+  chart.data.labels = [];
+  chart.data.datasets.forEach((dataset) => {
+    dataset.data = [];
+  });
+  chart.update();
+}
+</script>
 {% endblock %}
