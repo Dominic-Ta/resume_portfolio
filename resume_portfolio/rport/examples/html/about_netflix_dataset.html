@@ -48,7 +48,7 @@
   
 </script>
 <script defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAffezHi4Wl8NIS1eSqqsmjmwy7BH0wYZw&callback=Function.prototype"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 {% endblock additional_js %}
 {% block title %}
@@ -179,10 +179,9 @@
             {% for key in years_in_order  %}
               <button type="button" class="btn btn-dark m-1" value="{{key}}" id='year_chart_button_{{ key }}'>{{key}}</button>
             {% endfor%}
-          <div id="chart_container_div">
+          <div class="container mx-auto">
             <canvas id="chartContainer"></canvas>
           </div>
-          
       </div>
     </div>
   </div>
@@ -350,6 +349,7 @@
 </div>
 
 </main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 
 <script>
     let ctx = document.getElementById('myChart');
@@ -387,7 +387,6 @@
     genres.push(key);
     genre_count.push(value);
 });
-  console.log(genres, genre_count)
   let chart_top_5 = document.getElementById('chartContainer');
   let chartInstances = new Chart(chart_top_5, {
     type: 'bar',
