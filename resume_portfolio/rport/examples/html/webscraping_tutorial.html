@@ -1,0 +1,421 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block additional_css %}
+{% endblock %}
+{% block title %}
+    Webscraping tutorial and examples
+{% endblock %}
+{% block content %}
+
+<main class="container">
+<div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+  <div class="col-md-6 px-0">
+    <h1 class="display-4 fst-italic">Webscraping, what to do and how to do it.</h1>
+    <p class="lead my-3">
+        Here I discuss some of the tools I've used in my career to gather data through the web either via javascript, Python or Java. In this 
+        particular page, I'll go with what I know best; Python. Specifically the Python Requests module.
+    </p>
+  </div>
+</div>
+
+<div class="row mb-2">
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">Libraries</strong>
+        <h3 class="mb-0">Python libraries to install</h3>
+        <div class="mb-1 text-body-secondary">May 30</div>
+        <p class="card-text mb-auto">
+          <div class="table-responsive">
+          <table class="table table-responsive table-body">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">package</th>
+                <th scope="col">url</th>
+                <th scope="col">documentation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>requests</td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://pypi.org/project/requests/">https://pypi.org/project/requests/</a></td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://requests.readthedocs.io/en/latest/">https://requests.readthedocs.io/en/latest/</a></td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>urllib3</td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://pypi.org/project/urllib3/">https://pypi.org/project/urllib3/</a></td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://urllib3.readthedocs.io/en/stable/">https://urllib3.readthedocs.io/en/stable/</a></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>BeautifulSoup4</td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://pypi.org/project/beautifulsoup4/>">https://pypi.org/project/beautifulsoup4/</a></td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">https://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Selenium</td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://pypi.org/project/selenium/">https://pypi.org/project/selenium/</a></td>
+                <td><a target="_blank" rel="nofollow noopener noreferrer" href="https://www.selenium.dev/">https://www.selenium.dev/</a></td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Requests Kerberos</td>
+                <td><a target="_blank" rel="nofollow noopener noreferr" href="https://pypi.org/project/requests-kerberos/">https://pypi.org/project/requests-kerberos/</a></td>
+                <td><a targer="_blank" rel="nofollow noopener noreferr" href="https://github.com/requests/requests-kerberos">https://github.com/requests/requests-kerberos</a></td>
+            </tbody>
+          </table>
+        </div>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-success">Comments</strong>
+        <h3 class="mb-0">Why these?</h3>
+        <div class="mb-1 text-body-secondary">May 30</div>
+        <p class="mb-auto">
+          <div class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <div class="fw-bold">Requests &amp; urllib3</div>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
+                    <div class="accordion-body">
+                      <ul>
+                        <li> Are widely used HTTP libraries for data collection. </li>
+                        <li> They retrieve data from URLs and APIs, returning either JSON or HTML responses.</li>
+                      </ul> 
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                      <div class="fw-bold">BeautifulSoup</div>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Is useful for parsing HTML and extracting relevant information.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      <div class="fw-bold">Selenium</div>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Is beneficial when scraping JavaScript-generated HTML, like ReactJS pages.</li>
+                        <li>Is particularly helpful in cases where a simple HTTP request is insufficient.</li>
+                        <li>Can handle complex scenarios by rendering JavaScript and providing access to the generated HTML.<l/i>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                      <div class="fw-bold">Requests-Kerberos</div>
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Easy Kerberos Integration: Requests Kerberos makes it simple to add Kerberos authentication to your Python applications. It helps you connect securely 
+                          to servers that require Kerberos authentication without getting into complicated technical details.
+                        </li>
+                        <li>Convenient Single Sign-On (SSO): Requests Kerberos enables single sign-on, meaning you can log in once and access multiple services 
+                          without needing to log in again and again. It saves you 
+                          time and effort by eliminating the need for repeated logins.
+                        </li>
+                        <li>
+                          Works Everywhere: Requests Kerberos is designed to work on different operating systems, so you can use it regardless of 
+                          whether you're on Windows, macOS, or Linux. It provides a reliable way to include Kerberos authentication in your applications, 
+                          no matter which platform you're using.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+<div class="row g-5">
+  <div class="col-md-8">
+    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+      From the Shire.
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mortarboard-fill" viewBox="0 0 16 16">
+        <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5Z"/>
+        <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Z"/>
+      </svg>
+    </h3>
+
+    <article class="blog-post">
+      <h2 class="blog-post-title mb-1">Summary</h2>
+      <p class="blog-post-meta">May 30, 2023 by <a href="{% url 'resume' %}">Dominic Martinez-Ta</a></p>
+
+      <p>
+        I'll try to make this as short as possible without much confusion. 
+        <ul>
+          <li>What's the goal of using these HTTP libraries?  To collect data via webscraping.</li>
+          <li>How? Through processing the response ( either as HTML or JSON).</li>
+          <li>What happens when we can't get a valid response? We debug it. </li>
+          <li>Will this always work? For the most part, yes.</li>
+        </ul>
+      </p>
+      <hr>
+      <p>Below you'll find several examples of how to use it. </p>
+      <h2>Using Requests</h2>
+      <p> Let's first start with <strong>requests</strong> as that is the most simplistic. Note that requests uses the urllib3 library so it'd be helpful to know both.
+        Though you'll most likely every have to use the former throughout your entire career. 
+      </p>
+      <p>
+        <em>
+          <figure>
+            <blockquote cite="https://requests.readthedocs.io/en/latest/" class="blockquote">
+              Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, 
+              or to form-encode your POST data. Keep-alive and HTTP connection pooling are 100% automatic, thanks to urllib3.
+            </blockquote>
+          </figure>
+        </em>
+      </p>
+      <p> For the most part, Requests has some of the basic features you'd come to expect from any HTTP library. You can take a look at what each one does 
+        in our dropdown menu way after this little bit.
+      </p>
+      <p>
+        Just note that I have ommited an essential method that you'll most likely have to do depending on your company policy. Using requests-kerberos. 
+        In short, if you use kerberos authentication, (you can check in the stream data when you load a webpage), you can see whether or not you'll be sending
+        your login information to the requesting website. This is a security feature that most individuals have to navigate. I'll make it easy for you, as
+        it even took me awhile to figure out. 
+      </p>
+      <pre>
+        <code>
+          from requests_kerberos import HTTPKerberosAuth
+          import requests
+
+          from requests_kerberos import HTTPKerberosAuth, OPTIONAL
+          kerberos_auth = HTTPKerberosAuth(mutual_authentication=OPTIONAL)
+          r = requests.get("http://example.org", auth=kerberos_auth)
+        </code>
+      </pre>
+      <p> <em> <strong> This is important! </strong> </em>. You can either use the REQUIRED, OPTIONAL or DISABLED functions from requests_kerberos. However, it 
+        is recommended that you not use the latter. 
+      </p>
+      <p> 
+        Sometimes you'll even need the cookies! In Amazon, we used a MFA USB called a YubiKey. What this did was generate a cookie to be used within a 
+        certain timeframe
+        else it would expire and we would have to log in once more. It's pretty easy finding it but you can also search for the parameters by running 
+        in the terminal commands
+        such as <code> mwinit -h </code> and figuring out where it is from there. Since this is some pretty important stuff for the security of your company,
+        I'll leave the rest for you to find. Just note that you must not share the contents of that cookie! 
+      </p>
+      <p>
+        Say you do find that cookie, then what? Easy just use this 
+        <a rel="noopener noreferr nofollow" target="_blank" href="https://curl.se/docs/http-cookies.html">link</a> as a reference to find what you need. 
+        For brevity, I'm making a few assumptions here but this is generally the norm.
+        The key you would need for the cookie would be generated in one of these strings. Normally it'd be #6 but it'd be up to you on how to decipher it.
+      </p>
+      <p>
+        When all is said and done you're going to want to do a get request with your parameters. Sometimes a kerberos only request isn't sufficient, so you'll 
+        need that cookies.
+        Once you parse it through your magical means of data manipulation, you can then store that string as a value such as <code> x = 'Your_cookie_string_here' </code>
+        then input it into our get requests.get
+      </p>
+      <pre><code>
+        r = requests.get("http://example.org", auth=kerberos_auth, cookies=x)
+      </pre></code>
+      <p> 
+        <a targer="_blank" rel="noopener nofollow noreferr" href="https://www.youtube.com/watch?v=I9IvNh4Iba8">Bing Bang Bong</a>, we just got our cookies and 
+        authorization. Now I'll go through the rest of the request parameters.</p>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+              delete
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne" >
+            <div class="accordion-body">
+              <p>
+                This bad boy sends a DELETE request to the specified url. What this does is deletes the values that you are referencing in our parameters. 
+                Below is an example and a slight explanation of what happened. 
+              </p>
+              <p><code> requests.get(url, params, args) </code></p>
+              <p>
+                Parameters are the the values that the server is expecting. For example:
+              <code>
+              params = {
+                  'user_id': 12345,
+                  'delete_comments': True
+              }
+              </code>
+              where the value we're deleting are the values of 'delete_comments'. Based on our parameters, we can choose to either delete this entire row from our 
+              database or the corresponding value. It depends on what parameters we are setting.  
+              </p>
+              <p> So what about the arguments? There's a lot I can say about them, but it depends on your needs once more. 
+                For the most part the only things you'll be using are auth, cert and cookies. But you can find out more about them 
+                <a rel="noopener noreferr nofollow" target="_blank" href="https://www.w3schools.com/python/ref_requests_delete.asp">here</a>.
+              </p>         
+            </div>
+          </div>
+        </div>       
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+              get
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo" >
+            <div class="accordion-body">
+              <p>I'll keep this short, I used a get request in our explanation for more authorization above. You can use that as an example.</p>
+              <p><code> requests.get(url, params, args) </code></p>
+              <p> Though it would be helpful to note that the accepted parameters are similar to that of the delete request, except that the get request literally 
+                has a parameter called params. This is expected to be a dictionary and of values the server expects so it can process the data. Sometimes this is complicated,
+                othertimes it's not. You have to be able to see what's downloaded from the network when you send data manually or download it. 
+                This is a skill I can show later if there's need. Just let me know!
+              </p>
+              <p>
+                What happens after you send the request? It depends I'll show that in the examples later.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+              patch
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree" >
+            <div class="accordion-body">
+              <p>
+                A patch is sort of like a put, but it's "patching" an existing source of data instead of replacing it with the data from put. It makes sense for streams that are kept alive. This is
+                some mumbo jumbo most people won't have to know about because it's rarely used. For the most part, you'll likely never
+                have to use it so we can safely ignore this. If you want you can learn more about it 
+                <a targer="_blank" rel="noreferr noopener nofollow" href='https://www.geeksforgeeks.org/patch-method-python-requests/'>here</a>. 
+              </p>
+              <p> These can only be used for updating data. Not replacing it. </p>
+              <code>patch(url, data, args)</code>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+              post
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour" >
+            <div class="accordion-body">
+              <p>The post() method is used when you want to send some data to the server.</p>
+              <code>
+                requests.post(url, data={key: value}, json={key: value}, args)
+              </code>                
+              <p>
+                To summarize, data is for sending data in key-value pairs, while json is for sending data in JSON format. 
+                The choice between them depends on the expected format of the data by the server you are sending the request to.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+              put
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive" >
+            <div class="accordion-body">
+              <p>
+                PUT is used to send data to a server to create/update a resource.
+              </p>
+              <p>
+                <quote>
+                Although similar to a POST request, PUT requests are idempotent, meaning that multiple requests have the same result. 
+                Multiple PUT requests will overwrite the same resource, and multiple POST requests will create a new resource each time. 
+                Therefore, PUT is generally used for update operations, and POST for create operations.
+                </blockquote> - <a target="_blank" ref="nofollow noopener noreferr" href="https://www.codecademy.com/resources/docs/python/requests-module/put">https://www.codecademy.com/resources/docs/python/requests-module/put</a>
+            </p>
+            <p><code> put(url, data, args)</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p> If you would like to learn more, I highly recommend taking a gander at the documentation for requests. </p>
+      <h2> Examples for request</h2>
+      <p>
+      </p>
+   </article>
+
+
+    {% comment %} <nav class="blog-pagination" aria-label="Pagination">
+      <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+      <a class="btn btn-outline-secondary rounded-pill disabled">Newer</a>
+    </nav> {% endcomment %}
+
+  </div>
+
+  <div class="col-md-4">
+    <div class="position-sticky" style="top: 2rem;">
+      <div class="p-4 mb-3 bg-body-tertiary rounded bg-info text-white">
+        <h4 class="fst-italic">About Me</h4>
+        <p class="mb-0">I'm entirely self taught in data analytics and coding (both front and backend). I've been a data analyst for 6 years now, and a software developer for 2.
+          In fact, this entire website is ran off of Python Django! This allows me to be more flexible in the type of data that I display and how I can fully review it.
+        </p>
+      </div>
+
+      {% comment %} <div class="p-4">
+        <h4 class="fst-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">March 2021</a></li>
+          <li><a href="#">February 2021</a></li>
+          <li><a href="#">January 2021</a></li>
+          <li><a href="#">December 2020</a></li>
+          <li><a href="#">November 2020</a></li>
+          <li><a href="#">October 2020</a></li>
+          <li><a href="#">September 2020</a></li>
+          <li><a href="#">August 2020</a></li>
+          <li><a href="#">July 2020</a></li>
+          <li><a href="#">June 2020</a></li>
+          <li><a href="#">May 2020</a></li>
+          <li><a href="#">April 2020</a></li>
+        </ol>
+      </div>
+
+      <div class="p-4">
+        <h4 class="fst-italic">Elsewhere</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+
+</main>
+
+{% endblock %}
