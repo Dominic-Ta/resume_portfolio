@@ -366,7 +366,87 @@
       <p> If you would like to learn more, I highly recommend taking a gander at the documentation for requests. </p>
       <h2> Examples for request</h2>
       <p>
+        Alright, I will walk you through things that simply work. Should you do it? It depends. Yahoo used to have an available API for their stock but they
+        discontinued it. Just know that without the developer's permission you may be IP banned from a website that you're scraping. That is if you start
+        multithreading and have requests on an infinite loop. 
       </p>
+      <p> 
+        As an aside, multithreading is amazing when you want to start doing multiple webscrapes at once. If you're trying to webscrape in VBA, you won't be
+        able to do asyncronous requests so you'll be stuck doing one at a time. In Python however, you'll be happy to know the amount of requests you can do
+        depends on your threads. 
+      </p>
+      <p> 
+        Anyways back to the examples on hand. 
+      </p>
+      <code>
+        Python 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] on linux <br> 
+        Type "help", "copyright", "credits" or "license" for more information. <br> 
+        &gt;&gt;&gt; from requests import get <br> 
+        &gt;&gt;&gt; from bs4 import BeautifulSoup as Soup <br> 
+        &gt;&gt;&gt; url = 'http://books.toscrape.com/' <br> 
+        &gt;&gt;&gt; response = get(url) <br> 
+        &gt;&gt;&gt; print(response.headers, response.url, response.status_code) <br> 
+        {'Date': 'Wed, 31 May 2023 12:36:20 GMT', 'Content-Type': 'text/html', 'Content-Length': '51294', 
+        'Connection': 'keep-alive', 'Last-Modified': 'Wed, 08 Feb 2023 21:02:32 GMT', 'ETag': '"63e40de8-c85e"', 
+        'Accept-Ranges': 'bytes'} http://books.toscrape.com/ 200<br> 
+        
+        &gt;&gt;&gt; soup_text = Soup(response.text, 'html.parser')<br> 
+        
+        &gt;&gt;&gt; soup_text.find_all('a')[0:10]
+        
+        <xmp>
+        [<a href="index.html">Books to Scrape</a>, <a href="index.html">Home</a>, 
+        <a href="catalogue/category/books_1/index.html">Books</a>, 
+        <a href="catalogue/category/books/travel_2/index.html">Travel</a>,
+        <a href="catalogue/category/books/mystery_3/index.html">Mystery</a>,
+        <a href="catalogue/category/books/historical-fiction_4/index.html">Historical Fiction</a>,
+        <a href="catalogue/category/books/sequential-art_5/index.html">Sequential Art</a>,
+        <a href="catalogue/category/books/classics_6/index.html">Classics</a>,
+        <a href="catalogue/category/books/philosophy_7/index.html">Philosophy</a>,
+        <a href="catalogue/category/books/romance_8/index.html">Romance</a>]
+          </xmp>
+      </code>
+      <h2> So what did we do? What happened? </h2>
+      <p> What we did here was pretty easy, we found a static site, and made a request on it. 
+        Fortunately we didn't have to  do much in terms of the request, so the response was something we expected. 
+        Then we simply converted our text into a BeautifulSoup object and parsed through it. I did a splice of [0:10] or in math terms
+        a closed range of [0,10] inclusive. We did this so we wouldn't be overwhelmed with the sheer amount of results. 
+        In real world scenarios, you're going to want to do a loop through these objects to find the elements you want. 
+      <p>
+      <p> There are different approaches to what you need such as <code>soup.find(id="link3")</code> or <code>soup.p</code>, <code>soup.a</code>  and ecetera. 
+        You'll have to look at the documentation to BeautifulSoup to figure out how you want to parse the html.
+      </p>
+      <h2> What if our Data is a JSON or not loaded into the HTML? </h2>
+      <p>
+        If it's a JSON, even better. The response would be a JSON string in python. Just <code> import json </code> and use the function <code>json.loads(response_text)</code>.
+      </p>
+      <p> You'll have a dictionary as a response which would be perfect with processing as it'll be in a constant memory. </p>
+      </p>
+        However, if it's not in a JSON format, this is where you'll have to learn how to debug. It's a crucial skill, something most up and coming developers lack when they're learning.
+      </p>
+      <o>
+        You can start by checking the status of the response. is it a 404? 500? 401? Each status code has it's own meaning that you'll have to 
+        <a targer="_blank" rel="noreferr noopener nofollow" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">lookup</a>.
+        Afterwards you'll have to follow your own debugging methods. For me, I try to find different sources of data, either through an API or a direct
+        query to a databse. Whatever works for you and what you have permissions for.
+      </p> 
+      <p> <h3> But what if I don't have database access and want to scrape the data in the HTML, but it's not loaded in the response? </h3> </p>
+      <p> An all too common issue, you can go to the inspection tab for the html, and look at the network downloads. From there, you can often find links to the
+        url where you can gather the data from. Most of the time, especially if it's simply a DOM element being loaded in through a query, you can find the url to the
+        api,s3 bucket or storage source and make direct queries to that. 
+      </p>
+      <p>
+        If that's not the case you'll have to load the page through selenium. 
+      </p>
+      <p>
+        Here's a hint that may actually cause security issues if everyone was aware of. Any security keys loaded through javascript are available to be seen. 
+        You just have to be able to parse through it. In summary, if it's loaded clientside, it can be found. So if you want your API keys protected such as Google Maps API, you'll
+        have to lock it into your own program or load it server side where the user can't access it. 
+      </p>
+      <h2> This is all helpful information but where is the urllib3 and Selenium instructions? </h2>
+      <p>  <img alt="" class="centered_photo" fetchpriority="high" src="https://i.kym-cdn.com/photos/images/newsfeed/001/384/531/8ed.jpg" width="604" height="453">
+      </p>
+      <p> It's coming... </p>
    </article>
 
 
