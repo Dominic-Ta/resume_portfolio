@@ -31,6 +31,9 @@ def main_view(request):
 def web_scrape_request(request):
     template = loader.get_template("webscraping_tutorial.html")
     return HttpResponse(template.render())
+def lin_reg_view(request):
+    template = loader.get_template("Linear_regression.html")
+    return HttpResponse(template.render())
 
 def about_view(request):
     total_items = cache.get("total_items")

@@ -1,0 +1,571 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% load cache %}
+{% block additional_css %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.104.2">
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <style>
+      /* stylelint-disable selector-list-comma-newline-after */
+
+      .blog-header {
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      .blog-header-logo {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+        font-size: 2.25rem;
+      }
+
+      .blog-header-logo:hover {
+        text-decoration: none;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+      }
+
+      .display-4 {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 768px) {
+        .display-4 {
+          font-size: 3rem;
+        }
+      }
+
+      .flex-auto {
+        flex: 0 0 auto;
+      }
+
+      .h-250 { height: 250px; }
+      @media (min-width: 768px) {
+        .h-md-250 { height: 250px; }
+      }
+
+      /* Pagination */
+      .blog-pagination {
+        margin-bottom: 4rem;
+      }
+
+      /*
+      * Blog posts
+      */
+      .blog-post {
+        margin-bottom: 4rem;
+      }
+      .blog-post-title {
+        font-size: 2.5rem;
+      }
+      .blog-post-meta {
+        margin-bottom: 1.25rem;
+        color: #727272;
+      }
+
+      /*
+      * Footer
+      */
+      .blog-footer {
+        padding: 2.5rem 0;
+        color: #727272;
+        text-align: center;
+        background-color: #f9f9f9;
+        border-top: .05rem solid #e5e5e5;
+      }
+      .blog-footer p:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+{% endblock additional_css %}
+{% block additional_js %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+{% endblock %}
+{% block title %}
+    Notes on Linear Regression
+{% endblock %}
+{% block content %}
+
+  
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">My Notes on Linear Regression (In Progress)</h1>
+      <p class="lead my-3">I didn't want to lose my notes as they're written, so I figured typing them would be best.</p>
+    </div>
+  </div>
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        Live from New York!
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="blog-post-title mb-1">An Introduction to Statistical Learning</h2>
+        <p class="blog-post-meta">Jun 5, 2023 by <a href="{% url 'resume' %}">Dominic Martinez-Ta</a></p>
+
+        <p>I had some notes that I've been meaning to type up anyways regardling Machine Learning algos, in this page we'll go over Linear Regression.</p>
+        <hr>
+        <p>
+          The goal of this was just to combine my notes so that I can reference later without having to make a mess. Hopefully this helps you in your journey.
+          Some of this would be a mix of my own personal notes/quips and some stuff from the <a href='https://www.statlearning.com/'>Machine Learning Bible</a> itself.
+          At the time of these notes, the book is published in only R, but last I checked python was on the way. Regardless, for now I'll continue with the python approach.
+        </p>
+        <h2>What is Linear Regression?</h2>
+        <p>It's an approximation using data and straight lines. Pretty spooky, I know. It's a useful tool for predicting quantitative responses. 
+          Want to predict the housing market? Linear Regression. What about stocks? Nah, dude. Use Logistic regression. It's the same but different. 
+          Very different. I'll go over that in another page, in the future. 
+        </p>
+        <p>
+          What is it really though? In short, Linear regression is simply a supervised learning algorithm that is used to predict a value. It doesn't tell you
+          much except for that it may be in the future. There's a lot of data you can use to practice, most notably datasets from kaggle. Anyways, we'll
+          get straight to the topic of linear regression.
+        </p>
+        <h2> Simple Linear Regression </h2>
+        <p>
+          By definition our simple linear regression formula takes a simply <code> Y = mx + b </code> approach. We'll just call it as the textbook calls it.
+          \[Y \approx \beta_{0} + \beta_{1} X.\]
+        </p>
+        <p>
+          Which can also be expanded to \[\hat{y}^{(i)} = f_{w,b}(x^{(i)}) = \omega x + b \]
+        <p> 
+          Notation isn't important, so long as you understand the general structure. It's jus a line that is dependent on two things: <code>β0</code> and <code>β1</code>.
+          <br>
+          These are known as the weights/coefficients.
+        </p>
+        <p>
+          Below is a table of each balue in our equation and what they mean. I'll be explaining this in a little more details.
+        </p>
+        <table class="table table-dark table-striped-columns table-hove">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">variable</th>
+              <th scope="col">meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>\(x\)</td>
+              <td>"input" variable function</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>\(y\)</td>
+              <td>"output" variable a.k.a "target" variable</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>\( m \)</td>
+              <td># of training samples (rows in our dataset) [The maximum number i can be]</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>\((x,y)\)</td>
+              <td>single training example</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>\((x^{(i)}, y^{(i)})\)</td>
+              <td>ith training sample</td>
+            </tr>      
+        </table>
+        <p>
+          In a general table, you can imagine a text file or CSV of 3 columns. 
+          <ul>
+            <li> Column 1 is the # of rows. </li>
+            <li> Column 2 is the X values. (for a house prediction algo, we can say this is the size of it in square footing.) </li>
+            <li> Column 3 is the resulted value we want to caculate. We can say that fore very X there's a Y in our data set. We'd use this
+              to create our own predictions by creating training and test sets.
+            </li>
+          </ul>
+        </p>
+        <h2> Estimating our parameters </h2>
+        <p>
+          I'll go through both my notes and the textbooks approach, both are the same, just one uses different notation. It'll be up to you to use 
+          which ever you prefer.
+        </p>
+        <h3> Book's notation </h3>
+        <p>
+          So we know that 
+            \[(x^{(1)} , y^{(1)} ), (x^{(2)} , y^{(2)} ), . . . , (x^{(m)} , y^{(m)} )\]
+          represents the data sets we are given where m is our maximum number of rows. 
+        </p>
+        <p>
+          <figure>
+            <blockquote class="blockquote">
+              <p>Our goal is to obtain coeﬃcient estimates <code>β0</code> and <code>β̂1</code> such that the linear model fits the available data well.</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              <cite title="An Introduction to Statistical Learning">
+                An Introduction to Statistical Learning
+              </cite>
+            </figcaption>
+          </figure>
+          In other words, we want to find an intercept  <code>β0</code> and slope <code>β1</code> so that our line is the best fit as possible. This is called measuring 
+          <b>closeness</b>.
+        </p>
+        <p> One of the most common ways to measure closeness is to minimize least squares criterion. Alternative approaches will be addressed in a later update. </p>
+        <p> If we let \(\hat{y}^{(i)} = f_{w,b}(x^{(i)}) = \omega x + b  = Y \) based on the ith value of X then we can say
+          \[e^{(i)} = y^{(i)} − \hat{y}^{(i)} \]
+          represents the ith residual (The difference betweenthe ith observed response
+          and the ith response value that is predicted by our linear model.)
+        </p>
+        <p>
+          We define the residual sum of squares (RSS) as
+          \[RSS = e_1^2 + e_2^2 + ... + e_m^2 \]
+          or more equivalently
+          <div class="container flex-column position-static overflow-auto">
+            \[RSS = (y_1 -\hat{\beta}_0 - \hat{\beta}_1x_1)^2 + (y_2-\hat{\beta}_0 - \hat{\beta}_1x_2)^2 + ... + (y_m -\hat{\beta}_0 - \hat{\beta}_1x_m)^2\]
+          </div>
+          Do you notice something? 
+          I'll leave that as a hint for what's to come. 
+        </p>
+        <p> 
+          This book then does some magical calculus which gets a tad complex, ultimately arriving 
+          at the derivation of <code>β0</code> and <code>β1</code>. 
+          \[\hat{\beta}_1 = \frac{\sum_{i=1}^m(x_i-\bar{x})(y_i-\bar{y})}{\sum_{i=1}^{m}(x_i-\bar{x})^2}\]
+          and
+          \[\hat{\beta}_0 = \bar{y}-\hat{\beta}_1 \bar{x} \]
+        </p>
+        <p>
+          This seems a bit heavy. And bear with me, I'll try to simplify this further using my notes.
+        </p>
+        <h3> My notes approach </h3>
+        <p> Before we continue, just note that I change notation in my notes. \( \omega \) and b are the same \(\beta_0\) and \(\beta_1\), respectively.</p>
+        <p> Anyways off to business, to find \(\omega\) and b, we construct a cost function.
+          \[J(\omega,b)=\frac{1}{2m}\sum^m_{i=1}(\hat{y}-y)^2\]
+          where y is our error. This is known as the <b> squared error cost function </b>
+          This can be then expanded to look as such. 
+          \[J(\omega,b)=\frac{1}{2m}\sum_{i=1}^m(f_{\omega,b}(x^{(i)})-y^{(i)})\]
+        </p>
+        <p> 
+          Now the goal to find \(\omega\) and b are to minimize our cost function J. How do we do that?
+          Our approach would be to use an algorithm called <b>gradient descent </b>.
+          This is where we take the partial derivitaves of our cost function. 
+          The three main things about solving for \(\omega\) and b are to
+          <ol>
+            <li> start with some \(\omega\), b (set \(\omega\)=0, b=0) </li>
+            <li> Keep changing \(\omega\),b to reduce J(\(\omega\),b) (remember we want J at a <b> Minimum</b>)</li>
+            <li> Keep changing this until we settle at or near a minimum of J(\(\omega\),b) </li>
+          </ol>
+          Because the gradient descent helps us find a minima for our cost function, this implies that the error of our ML algorithm is as low as possible.
+          Just be aware that there may be more than one minima, a.k.a saddle points
+        </p>
+        <p>
+          The Gradient descent algorithm, as stated earlier, is a continuous update of both our \(\omega\) and our b values.
+          Below is how they would look.
+          <div class="container flex-column position-static overflow-auto">
+            \[temp\_\omega=\omega-\alpha\frac{\partial}{\partial\omega}J(\omega,b) \Rightarrow \omega-\frac{\alpha}{m}\sum_{i=1}^m(f_{\omega,b}(x^{(i)})-y^{(i)})(x^{(i)})\]
+          </div>
+          <div class="container flex-column position-static overflow-auto">
+            \[temp\_b=b-\alpha\frac{\partial}{\partial b}(J(\omega,b)) \Rightarrow b - \frac{\alpha}{m}\sum_{i=1}^m(f_{\omega,b}(x^{(i)})-y^{(i)})\]
+          </div>
+          \[\omega = temp\_\omega\]
+          \[b=temp\_b\]
+          Now rinse and repeat until the two converge. 
+          Note that \(\alpha\) is our learning rate. We can adjust that as needed when we graph J(\(\omega\),b). It can be as low as 0.01 or up to 0.1. Note
+          that this is basically the steps taken in our graph to find a minima. So if we make \(\alpha\) too large, we take large steps to reaching our
+          minima, potentially skipping over it. If we make it too small, we risk taking ages to get to our minima. There needs to be a balance.
+          So we normally choose a value between 0.1 and 0.001.  We can use the "Adam" algorithm to determine the learning rate. This is a 
+          deep learning subject and we'll tackle this in a later time. Otherwise, you can change this manually. 
+        </p>
+        <p>
+          More or less, the results end up at the same values. Also note that in this example, we used "Batched" gradient descent, where we look at all of the
+          training samples, to train our gradient descent algorithm.
+        </p>
+        <p>
+          This is all fine and dandy, whilst I ignore the error caculations. By using the latter, we're assuming we're reducing errors to a minima. 
+        </p>
+        <p><b> Last but not least, Batched Gradient Descent uses the entire dataset to come to an approximation.</b> This is useful when the error 
+          has a relitvely smooth manifold. You can learn more by following this <a target="_blank" rel="noopener noreferrer nofollow" href="https://stats.stackexchange.com/questions/49528/batch-gradient-descent-versus-stochastic-gradient-descent">
+            link</a>.
+        </p>
+        <h2>
+          Python Implementation
+        </h2>
+        <p>
+          Linear regression is rather straightforward, in this article, we've gone over a direct on approach on how to make predictions using it.
+          Thanks to this we can now use any tool to run Linear Regression Algorithms, even in excel. Goodluck with coding this to work with large datasets
+          from VBA however. I've done bubble sorting algorithms through that, and it wasn't pretty. 
+          Now we'll use Python's 
+          <a 
+            target="_blank" 
+            rel="noopener noreferrer nofollow" 
+            href='https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html'>scikit-learn</a>
+          library to make our lives easier instead of having to use create functions to calculate it directly. 
+          (You can find an example of it in action <a 
+          target="_blank" 
+          rel="noopener noreferrer nofollow" 
+          href='https://scikit-learn.org/stable/auto_examples/linear_model/plot_ols.html#sphx-glr-auto-examples-linear-model-plot-ols-py'>here</a>).
+        </p>
+        <p> Let's just make a quick scrape for the last 2 years of data using Yahoo's stellar API. If you read my article on webscrapes, you would know that
+          by peeking at the json response urls, we can get direct links to their API. 
+          In this case, I did a little test, found that their API does <b>0</b> security checks when we send a request, so it's perhaps the best
+          route to anonymously pull it. 
+          Anyways I'll drop the code below! Enjoy.
+        </p>
+        <p>
+          <pre><code>
+              import numpy as np
+              from datetime import datetime
+              import pandas as pd
+              import requests
+
+              stock = 'GME' #%5EDJI
+
+              header = {'Accept':	'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+                      'Accept-Encoding':	'gzip, deflate, br',
+                      'Accept-Language':	'en-US,en;q=0.5',
+                      'Connection':	'keep-alive',
+                      'DNT':	'1',
+                      'Host':	'query1.finance.yahoo.com',
+                      'Sec-Fetch-Dest':	'document',
+                      'Sec-Fetch-Mode':	'navigate',
+                      'Sec-Fetch-Site':	'none',
+                      'Sec-Fetch-User':	'?1',
+                      'Sec-GPC':	'1',
+                      'TE':	'trailers',
+                      'Upgrade-Insecure-Requests':	'1',
+                      'User-Agent':	'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/113.0'
+              }           
+
+
+              historical_data = 'https://query1.finance.yahoo.com/v8/finance/chart/' + stock + \
+                              '?formatted=true&crumb=%2FkqjCGeNMPG&lang=en-' + \
+                              'US&region=US&events=capitalGain%7Cdiv%7Csplit' + \
+                              '&includeAdjustedClose=true&interval=1d&range=' + \
+                              '1y&useYfid=true&corsDomain=finance.yahoo.com'
+              y = requests.get(historical_data, headers=header).json()
+              stock_timestamp = y['chart']['result'][0]['timestamp']
+              stock_volume = y['chart']['result'][0]['indicators']['quote'][0]['volume']
+              stock_low = y['chart']['result'][0]['indicators']['quote'][0]['low']
+              stock_close = y['chart']['result'][0]['indicators']['quote'][0]['close']
+              stock_open = y['chart']['result'][0]['indicators']['quote'][0]['open']
+              stock_high = y['chart']['result'][0]['indicators']['quote'][0]['high']
+
+
+              datetimes = [datetime.fromtimestamp(timestamp) for timestamp in stock_timestamp]
+              date_strings = [datetime.strftime(dt, "%m/%d") for dt in datetimes]
+              y_axis_close = np.array(stock_close)
+              y_axis_low = np.array(stock_low)
+              y_axis_volume = np.array(stock_volume)
+              y_axis_open = np.array(stock_open)
+              y_axis_high = np.array(stock_high)
+
+              x_axis = np.array(date_strings)
+              dataset = pd.DataFrame({
+                      'date': date_strings,
+                      'close': y_axis_close,
+                      'low': y_axis_low,
+                      'volume': y_axis_volume,
+                      'open': y_axis_open,
+                      'high': y_axis_high
+              })
+              print(dataset.head(), end='\n'+5*'-'+'\n')
+              print(dataset[1:].corr(numeric_only=True), end='\n'+5*'-'+'\n')
+              print(dataset.describe())
+              </code></pre>
+        </p>
+        <p>
+          The result would look something like this: 
+          <pre><code>
+            date      close        low    volume       open       high
+            0  06/06  32.025002  31.762501   9532800  33.825001  34.025002
+            1  06/07  36.625000  31.582500  24967600  32.500000  37.472500
+            2  06/08  34.682499  33.957500  24473600  35.347500  38.250000
+            3  06/09  32.244999  31.834999  13114400  34.697498  34.974998
+            4  06/10  32.272499  30.785000  11820000  31.500000  32.982498
+            -----
+                       close       low    volume      open      high
+            close   1.000000  0.993530  0.366338  0.984610  0.992249
+            low     0.993530  1.000000  0.333202  0.993579  0.991235
+            volume  0.366338  0.333202  1.000000  0.361612  0.407196
+            open    0.984610  0.993579  0.361612  1.000000  0.990989
+            high    0.992249  0.991235  0.407196  0.990989  1.000000
+            -----
+            close         low        volume        open        high
+            count  252.000000  252.000000  2.520000e+02  252.000000  252.000000
+            mean    25.548343   24.740347  5.905033e+06   25.524008   26.499347
+            std      6.175873    5.899326  5.817551e+06    6.145926    6.542873
+            min     15.950000   15.410000  1.122700e+06   16.000000   16.570000
+            25%     20.742500   20.217500  3.023825e+06   20.617501   21.522500
+            50%     24.555000   23.930000  4.321900e+06   24.570000   25.285200
+            75%     28.710000   27.932500  6.485875e+06   29.257500   29.757500
+            max     43.450001   40.750000  6.676470e+07   42.180000   47.990002
+          </code></pre>
+        </p>
+        <p>
+          Note that if you do this while the market is open, the values for the day are updated in the same category as  historical, resulting in a terrible day and
+          epoch time being mixed in with the minutes of he day. I'm not sure why they do this, but it's probably the same reason security is so lax. So if you want to
+          gather the data, save it as a txt file while the markets are closed. That way you don't run into any inconsistencies.
+        </p>
+        <h3> Analyzing the data </h3>
+        <p> 
+          There's some steps we need to do in regards to making sure the data is useful in anyway, so we can just print the correlation. A correlation matrix
+          will show us values from 1 to -1. 1 Showing us a strong correlation and -1 showing a strong negative correlation. Coefficients close to 
+          0 mean that there is no linear correlation.
+        </p>
+        <p>
+          For a more visual view of this corelation matrix, we can plot this on a scatter matrix plot using pandas. I'll provide the code, below.
+          <pre><code>
+            from pandas.plotting import scatter_matrix
+            import matplotlib.pyplot as plt
+
+            scatter_matrix(dataset[1:])
+            plt.show()
+          </pre></code>
+          which would result in this:
+          <br>
+          <img class="rounded mx-auto d-block img-fluid" src="{%static 'images/scatter_plot_gme.png' %}" alt="GME PyPlot"> 
+        </p>
+        <p>
+          To be honest, the relationship looks too linear, which is one of the difficulties of creating stock prediction tools. This would lead to overfitting.
+          There's lot's more data that goes into this.
+          All I created was a fast means of gathering data and presenting it. If you want to do more, you can take this and add to it. By no means
+          should you ever use this alone in your financial decisions. There can be over 20-50 variables that affect the stock price. Targeted
+          analysis alone is not sufficient with simply this data.
+        </p>
+        <h3>Validation Vs Training Sets </h3>
+        <p> If we wre using messier data, we could use Panda's Dataframe functions for <code>dropna()</code>, <code>drop()</code>, or <code>fillna()</code>.
+          This is a handy thing to know about and to use. However, we can simply use Scikit-Learn's <code>SimpleImputer</code> class. This one would
+          make it possible to impute missing values not only on the training set, but also the validation set.
+          To use it, we create SimpleImputer instances, where we can specify each attribute's missing valueswith the median,most frequent or constant values
+          of that attribute (-Hands on Machine Learning with
+          keras, tensorflow and scikit-learn).
+        </p>
+        <p>
+          Luckily for us, the dataset we nabbed from yahoo doesn't need that. So we don't necessarily need to clean any data. Though, one <b>must</b> know this
+          if they are to use more machine learning algorithms in the future. Cleaning data is a must.
+        </p>
+        <p>
+          Since we're well aware of the fact that stock data isn't a good dataset to be used with linear regression, we'll take this with a grain of //www.statlearning.com/
+          Below is the code of what we see when we test it out.
+          <pre><code>
+            from sklearn import datasets, linear_model
+            from sklearn.linear_model import LinearRegression
+            from sklearn.model_selection import train_test_split
+            from sklearn.metrics import mean_squared_error, r2_score
+            import matplotlib.pyplot as plt
+
+            sample_set = pd.DataFrame({"date": y['chart']['result'][0]['timestamp'], "Price": dataset["close"]})
+            X_train, X_test, y_train, y_test = train_test_split(sample_set['date'].values.reshape(-1, 1), sample_set['Price'], test_size=0.2, random_state=42)# Create linear regression object
+            regr = linear_model.LinearRegression()
+
+            model = LinearRegression()
+            model.fit(X_train, y_train)
+            predictions = model.predict(X_test)
+            print(mean_squared_error(y_test, predictions))
+
+            plt.scatter(X_test, y_test, color='blue', label='Actual')
+            plt.plot(X_test, predictions, color='red', label='Predicted')
+            plt.xlabel('Date')
+            plt.ylabel('Price')
+            plt.title('Actual vs. Predicted Stock Prices')
+            plt.legend()
+            plt.show()
+          </pre></code>
+        </p>
+        <p> 
+          Which ultimately results in the RMSE value of: <code>11.397655234937437</code>
+          And the plot below.
+        </p>
+        <p>
+          <img class="rounded mx-auto d-block img-fluid" src="{%static 'images/linear_regression_gme_prediction.png' %}" alt="GME PyPlot"> 
+        </p>
+        <p>
+          Nope! This isn't the right model to use. Why? We skipped an important step which was to figure out the best Algorithm to use!
+          In this case, we should have probably used a polynomial regression model, that way it would've been more accurate instead of a straight line
+          using this mess...
+          So let's try again.
+        </p>
+
+      </article>
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded bg-info text-white">
+          <h4 class="fst-italic">About Me</h4>
+          <p class="mb-0">I'm entirely self taught in data analytics and coding (both front and backend). I've been a data analyst for 6 years now, and a software developer for 2.
+            In fact, this entire website is ran off of Python Django! This allows me to be more flexible in the type of data that I display and how I can fully review it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
+
+{% endblock %}
+{% block extended_js %}
+{% endblock %}

@@ -8,6 +8,6 @@ urlpatterns = [
     path("netflix_map/", views.load_map, name="netflix_map"),
     path("table_load/<int:index>", views.indi_info, name="individual_info"),
     path("NF_DB_explanation_and_analysis", views.about_view, name="about_netflix"),
-    path("webscraping/", views.web_scrape_request, name="webscrapes")
-
+    path("webscraping/", views.web_scrape_request, name="webscrapes"),
+    path("Linear_regression/", views.lin_reg_view, name="linear_regression")
 ] 
