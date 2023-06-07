@@ -483,8 +483,11 @@
           <img class="rounded mx-auto d-block img-fluid" src="{%static 'images/scatter_plot_gme.png' %}" alt="GME PyPlot"> 
         </p>
         <p>
-          To be honest, the relationship looks too linear, which is one of the difficulties of creating stock prediction tools. This would lead to overfitting.
-          There's lot's more data that goes into this.
+          This looks great! A little too great..why? 
+          Well normally you don't include the highs, lows and open prices into this. They nearly have a correlation of 1. Which is perfect
+          if we didn't know the full story before hand. As such, we probably don't want to use this data in a serious approach. That 
+          volume however... It's kind of relevant, though not by much. Let's use it to create a polynomial regression program.
+          However I do have a comment to make: 
           All I created was a fast means of gathering data and presenting it. If you want to do more, you can take this and add to it. By no means
           should you ever use this alone in your financial decisions. There can be over 20-50 variables that affect the stock price. Targeted
           analysis alone is not sufficient with simply this data.
@@ -540,9 +543,56 @@
           Nope! This isn't the right model to use. Why? We skipped an important step which was to figure out the best Algorithm to use!
           In this case, we should have probably used a polynomial regression model, that way it would've been more accurate instead of a straight line
           using this mess...
-          So let's try again.
+          It would've been more logical to pay attention to it's movement anyways. We should've known better. Darnit. 
+          ANyways let's try again, using two parameters this time and polynomial regression. We'll use to the third degree as a standard.
         </p>
+        <h3> Second attempt </h3>
+        <p>Since we're using a polynomial approximation to the third power, our function would look like this:
+            \[f_{\bar{\omega},\bar{x}}(\bar{x}) = \alpha + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
+            where each bar represents a Matrix.. This is the basic notation for when we have several parameters. 
+            Anyways here's the code:
+            <pre><code>
+              sample_set = pd.DataFrame({"Price": dataset["close"], 'Volume': dataset['volume']})
+              sample_set.index=date_strings
+              poly_features = PolynomialFeatures(degree=3, include_bias=False)
 
+              # Create polynomial features
+              X_poly = poly_features.fit_transform(sample_set)
+
+              # Create the linear regression model
+              model = LinearRegression()
+              model.fit(X_poly, sample_set['Price'])
+              print(model.coef_, model.intercept_)
+              # Perform prediction using the trained model
+              y_pred = model.predict(X_poly)
+
+              # Plot the predicted prices against the index
+              plt.plot(sample_set.index, y_pred, label='Predicted Price')
+              plt.plot(sample_set.index, sample_set['Price'], color='red', label='Actual Price')
+              plt.xlabel('Index')
+              plt.ylabel('Price')
+              plt.legend()
+              plt.show()
+
+              # Create a new input sample for prediction
+              new_data = pd.DataFrame({"Price": [26.0], "Volume": [24967600]})
+              new_data_poly = poly_features.transform(new_data)  # Apply the same polynomial transformation
+
+              # Perform prediction using the trained model
+              prediction = model.predict(new_data_poly)
+
+              print("Predicted Price:", prediction)
+            </pre></code>
+            Running this would result in the graph below.
+            <br>
+            <img class="rounded mx-auto d-block img-fluid" src="{%static 'images/polynomial_gme.png' %}" alt="GME PyPlot Approximation"> 
+            Looks better right? It's not perfect but it's the right approach. The only things we have to do now are to fine tune the parameters, and
+            find more impactful data to use. I.E use data that has a strong correlation. How to do so is entirely up to you.
+
+            Lastly, I added a way to use this prediction algorithm to find future values. If you don't want to use price, you can remove it and retrain the model.
+            though if you do want to use model.predict, you're going to have to use the correct parameters that you used to train it in the first place. That is a
+            must to know.
+        </p>
       </article>
     </div>
 
