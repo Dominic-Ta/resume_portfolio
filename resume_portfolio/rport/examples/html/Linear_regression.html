@@ -548,10 +548,12 @@
         </p>
         <h3> Second attempt </h3>
         <p>Since we're using a polynomial approximation to the third power, our function would look like this:
-            \[f_{\bar{\omega},\bar{x}}(\bar{x}) = \alpha + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
+            \[f_{\bar{\omega},\bar{x}}(\bar{x}) = \epsilon + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
             where each bar represents a Matrix.. This is the basic notation for when we have several parameters. 
             Anyways here's the code:
             <pre><code>
+              from sklearn.preprocessing import PolynomialFeatures
+
               sample_set = pd.DataFrame({"Price": dataset["close"], 'Volume': dataset['volume']})
               sample_set.index=date_strings
               poly_features = PolynomialFeatures(degree=3, include_bias=False)
