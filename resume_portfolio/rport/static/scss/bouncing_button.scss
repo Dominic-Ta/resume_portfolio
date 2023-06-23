@@ -1,0 +1,38 @@
+@bg: #2d2d37; // Dark blue
+
+.arrow {
+  text-align: center;
+}
+#bouncy_rebel {
+  box-sizing: border-box;
+  background-size: contain;
+
+  &:not(:hover) {
+    animation: bouncy_rebel 2s infinite;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    animation: none;
+  }
+}
+
+@keyframes bouncy_rebel {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+rect.btn {
+  stroke:#fff;
+  fill:#fff;
+  fill-opacity:0;
+  stroke-opacity:0;
+}

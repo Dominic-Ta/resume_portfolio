@@ -1,0 +1,12 @@
+.light-saber {
+  border-radius: 10px;
+  height: 20px;
+  background: white; }
+
+@media (hover: hover) {
+  .light-saber:not(:hover) {
+    opacity: 0.3; }
+  .light-saber:hover {
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4; } }
+
+/*# sourceMappingURL=lightsaber.css.map */

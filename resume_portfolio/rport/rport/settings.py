@@ -37,6 +37,8 @@ else:
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+MEDIA_ROOT=os.path.join(BASE_DIR,"static")
+MEDIA_URL='/sound/'
 
 # This file will return a base directory.
 # e.g: '/home/pi/Documents/Django_files/djenv/test_site'

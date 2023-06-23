@@ -1,0 +1,196 @@
+{% extends "master.html" %}
+{% load static %}
+{% load sass_tags %}
+{% block additional_css %}
+<link href="{% sass_src 'scss/lightsaber.scss' %}" rel="stylesheet" type="text/css" />
+<link href="{% sass_src 'scss/bouncing_button.scss' %}" rel="stylesheet" type="text/css" />
+<link href="{% sass_src 'scss/nav_scroller.scss' %}" rel="stylesheet" type="text/css" />
+<link href="{% sass_src 'scss/carousel.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock additional_css %}
+{% block additional_js %}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+       
+       [ 'My Experience', 'Software Development', 100 ],
+       [ 'My Experience', 'Data Analysis', 100 ],
+       [ 'Software Development', "Python", 40 ],
+       [ 'Software Development', "Java", 20 ],
+       [ 'Software Development', "Machine Learning", 20 ],
+       [ 'Software Development', "HTML", 10 ],
+       [ 'Software Development', "JavaSCript", 10 ],
+       [ 'Data Analysis', 'SQL', 30 ],
+       [ 'Data Analysis', 'Python', 30 ],
+       [ 'Data Analysis', 'Java', 5 ],
+       [ 'Data Analysis', 'Tableue', 25 ],
+       [ 'Data Analysis', 'Quicksite', 5 ],
+       [ 'Data Analysis', 'PowerBI', 5 ],
+    ]);
+
+    // Set chart options
+    var options = {
+      width: 600,
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+
+{% endblock additional_js %}
+{% block title %}
+    Dashboards galore!
+{% endblock %}
+{% block content %}
+<div class=" bg-dark bg-gradient text-white">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 1"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000" style="background: linear-gradient(to right, #474c86 0%, #6600ff 100%);">
+        <div class="container">
+          <div class="carousel-caption">
+              <h1>Data Data Data!</h1>
+              <p>There's so many options to displaying Data. In this page I'll present some of the many options I am capable of producing thanks to my 
+                  background as a former Data Analyst and as a current a Software Developer.
+              </p>
+          </div>
+        </div>
+      </div>      
+      <div class="carousel-item" data-bs-interval="10000" style="background: linear-gradient(to left, #6600ff 0%, #6600cc 100%);">
+        <div class="container">
+            <div class="carousel-caption">
+                <h1>
+                    Telling a story is my specialty.
+                </h1>
+                <p>
+                    One of the core strengths that I hold, as an individual, is my ability to introduce interactivity to a dashboard while keeping it meaningful.
+                    I love stories, and I love data. By combining the two, I can create a compelling odyssey within any dashboard. I can also keep it short and brief.
+                    The point is, I'm a story teller, and I have the skillset to bring data to life.
+                </p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000" style="background: linear-gradient(to right, #6600ff 0%, #0033cc 100%);">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>
+                My Professional Experience
+            </h1>
+              <div id="sankey_multiple" style="width: 900px; height: 300px;" class="container-fluid"></div>
+                {% comment %} <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
+                <script type="text/javascript">
+                    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"reddit","geo":"","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&q=reddit&hl=en-US","guestPath":"https://trends.google.com:443/trends/embed/"});
+                </script> {% endcomment %}
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10000" style="background: linear-gradient(to right, #0033cc 0%, #3399ff 100%);">
+
+        <div class="container">
+            <div class="carousel-caption">
+              <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3349_RC01/embed_loader.js"></script>
+              <script type="text/javascript">
+                trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"starwars","geo":"","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&q=starwars&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+              </script>                 
+            </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        {% comment %} <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> {% endcomment %}
+        <img src="{% static 'images/Reypfp.jpeg' %}" class="bd-placeholder-img img-fluid bd-placeholder-img rounded-circle" width="140" height="140" height="100%" alt="Rey">
+
+        <h2 class="fw-normal">About me</h2>
+        <p>Want to learn more about me? Check out my resume!</p>
+        <p><a class="btn btn-primary" href="{% url 'resume'%}">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="{% static 'images/death_star.jpeg' %}" class="bd-placeholder-img img-fluid bd-placeholder-img rounded-circle" width="140" height="140" height="100%" alt="death_star">
+        <h2 class="fw-normal">LinkedIn</h2>
+        <p>Want to send a message? No worries! Click here to view my linkedin.</p>
+        <p><a class="btn btn-primary" href="https://www.linkedin.com/in/dominicmt/">Click me!&raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="{% static 'images/marauder.jpeg' %}" class="bd-placeholder-img img-fluid bd-placeholder-img rounded-circle" width="140" height="140" height="100%" alt="Marauder">
+
+        <h2 class="fw-normal">Portfolio</h2>
+        <p>Click here for some projects present in my little own portfolio.</p>
+        <p><a class="btn btn-primary" href="{% url 'example' %}">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+    <div class="container text-center">
+      <div class="arrow bounce bouncy_button" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+          <rect class="btn" x="0" y="0" width="10" height="10" onclick="light_it_up()" />
+        </svg>
+        <br>
+      </div>
+      <h2>
+        Let's begin
+      </h2>
+      <div class="light-saber" onclick="light_it_up()"><a type="button" class="btn"></a></div>
+      <br>
+    </div>
+    <!-- START THE FEATURETTES -->
+  </div>
+</div>
+
+
+{% endblock %}
+{% block extended_js %}
+<script>
+  function light_it_up() {
+    var lightSaber = document.querySelector(".light-saber");
+    lightSaber.style.boxShadow = "0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4";
+    
+    var buttonSound = new Audio('{% static "sound/open_lightsaber.mp3" %}'); // Replace "button-sound.mp3" with your sound file
+    var waitTime = buttonSound.duration * 5000;
+    buttonSound.play();
+    setTimeout(function() {
+      window.location.href = "{% url 'starwars' %}";
+    }, waitTime);
+  }
+
+
+  // Remove the box shadow on pageshow event
+  window.addEventListener('pageshow', function(event) {
+    var lightSaber = document.querySelector(".light-saber");
+    lightSaber.style.boxShadow = "";
+  });
+</script> {% endblock %}

@@ -1,0 +1,35 @@
+{% load static %}
+<script>
+function changeToSVG() {
+    try{
+        let arrowIcon = document.getElementById('bouncy_rebel');
+        arrowIcon.innerHTML = `
+            <object  data="{% static 'svg_files/empire_starwars.svg' %}" style="font-size: 3rem; cursor: pointer; display: inline-block;">
+            </object>`;
+        arrowIcon.setAttribute('style', "font-size: 3rem;");
+    }catch(e){
+        console.log(e);
+    }
+  }
+  
+  try{
+  function changeToOriginal() {
+    let arrowIcon = document.getElementById('bouncy_rebel');
+    arrowIcon.innerHTML = `
+    <object data="{% static 'svg_files/rebels_starwars.svg' %}" style="font-size: 3rem; cursor: pointer; display: inline-block;">
+    </object>`;
+  }
+}catch(e){
+    console.log(e);
+}
+try{
+  window.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      window.scrollTo({ top: document.getElementById('betaSection').offsetTop, behavior: 'smooth' });
+    }
+  });
+} catch(e){
+    console.log(e)
+}
+</script>

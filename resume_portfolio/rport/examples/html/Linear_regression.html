@@ -548,7 +548,7 @@
         </p>
         <h3> Second attempt </h3>
         <p>Since we're using a polynomial approximation to the third power, our function would look like this:
-            \[f_{\bar{\omega},\bar{x}}(\bar{x}) = \epsilon + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
+            \[f(\bar{x}) = \epsilon + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
             where each bar represents a Matrix.. This is the basic notation for when we have several parameters. 
             Anyways here's the code:
             <pre><code>
@@ -594,6 +594,56 @@
             Lastly, I added a way to use this prediction algorithm to find future values. If you don't want to use price, you can remove it and retrain the model.
             though if you do want to use model.predict, you're going to have to use the correct parameters that you used to train it in the first place. That is a
             must to know.
+        </p>
+        <h2>
+          Testing
+        </H2>
+        <p> 
+          In analyzing data, you're going to want to make sure that the data is useful.
+          You can do this by testing he null hypthesis and using several of the available 
+          statistical libraries to us. In this instance I will be using the statsmodels
+          library to analyze our data. 
+          You can learn more about that <a href="https://www.geeksforgeeks.org/interpreting-the-results-of-linear-regression-using-ols-summary/">here</a>.
+          <pre><code>
+            import statsmodels.api as sm
+
+            z = sm.add_constant(sample_set['Price'])
+            mod = sm.OLS(sample_set['Volume'], z).fit()
+            print(mod.summary())
+          </pre></code>
+          which would ultimately result in:
+          <pre><code>
+            OLS Regression Results                            
+            ==============================================================================
+            Dep. Variable:                 Volume   R-squared:                       0.105
+            Model:                            OLS   Adj. R-squared:                  0.101
+            Method:                 Least Squares   F-statistic:                     29.15
+            Date:                Sun, 11 Jun 2023   Prob (F-statistic):           1.56e-07
+            Time:                        10:26:46   Log-Likelihood:                -4245.1
+            No. Observations:                 251   AIC:                             8494.
+            Df Residuals:                     249   BIC:                             8501.
+            Df Model:                           1                                         
+            Covariance Type:            nonrobust                                         
+            ==============================================================================
+                             coef    std err          t      P&gt;|t|      [0.025      0.975]
+            ------------------------------------------------------------------------------
+            const      -1.805e+06   1.46e+06     -1.239      0.216   -4.67e+06    1.06e+06
+            Price       3.011e+05   5.58e+04      5.399      0.000    1.91e+05    4.11e+05
+            ==============================================================================
+            Omnibus:                      362.538   Durbin-Watson:                   1.270
+            Prob(Omnibus):                  0.000   Jarque-Bera (JB):            50386.650
+            Skew:                           6.722   Prob(JB):                         0.00
+            Kurtosis:                      71.096   Cond. No.                         112.
+            ==============================================================================
+          </pre></code>
+          All of this would take a full on statistics course to understand, so I won't spend
+          much time on this in this article. Maybe in a future date I'll provice a breakdown on
+          it. For now we note that the P-Value for Price is 0.. which implies that it's perfectly
+          correlated. Without any prior knowledge, we'd say great! This is exactly what we wanted.
+          But truth is, the data sets are nearly identical, so I would take this with a grain of salt.
+          There's a lot more we can infer from this, but I'll leave it up to the reader to 
+          decide what they should do! Anyways that's all I have for now. Come back for more updates
+          in different topics! I'll be adding more and more perodically :) 
         </p>
       </article>
     </div>
