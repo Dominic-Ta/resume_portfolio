@@ -1,0 +1,1330 @@
+{
+    "Ackbar": {
+        "height": "180",
+        "mass": "83",
+        "skin_color": "brown mottle",
+        "hair_color": "none",
+        "birth_year": "41BBY",
+        "gender": "male",
+        "homeworld": "Mon Cala",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [
+            "Mon Calamari"
+        ],
+        "char_num": 27
+    },
+    "Adi Gallia": {
+        "height": "184",
+        "mass": "50",
+        "skin_color": "dark",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Coruscant",
+        "films": [
+            "The Phantom Menace",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Tholothian"
+        ],
+        "char_num": 55
+    },
+    "Anakin Skywalker": {
+        "height": "188",
+        "mass": "84",
+        "skin_color": "fair",
+        "hair_color": "blond",
+        "birth_year": "41.9BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 11
+    },
+    "Arvel Crynyd": {
+        "height": "unknown",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "unknown",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [],
+        "char_num": 29
+    },
+    "Ayla Secura": {
+        "height": "178",
+        "mass": "55",
+        "skin_color": "blue",
+        "hair_color": "none",
+        "birth_year": "48BBY",
+        "gender": "female",
+        "homeworld": "Ryloth",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Twi'lek"
+        ],
+        "char_num": 46
+    },
+    "Bail Prestor Organa": {
+        "height": "191",
+        "mass": "unknown",
+        "skin_color": "tan",
+        "hair_color": "black",
+        "birth_year": "67BBY",
+        "gender": "male",
+        "homeworld": "Alderaan",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Human"
+        ],
+        "char_num": 68
+    },
+    "Barriss Offee": {
+        "height": "166",
+        "mass": "50",
+        "skin_color": "yellow",
+        "hair_color": "black",
+        "birth_year": "40BBY",
+        "gender": "female",
+        "homeworld": "Mirial",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Mirialan"
+        ],
+        "char_num": 65
+    },
+    "Ben Quadinaros": {
+        "height": "163",
+        "mass": "65",
+        "skin_color": "grey, green, yellow",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Tund",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Toong"
+        ],
+        "char_num": 50
+    },
+    "Beru Whitesun lars": {
+        "height": "165",
+        "mass": "75",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "47BBY",
+        "gender": "female",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 7
+    },
+    "Bib Fortuna": {
+        "height": "180",
+        "mass": "unknown",
+        "skin_color": "pale",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Ryloth",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [
+            "Twi'lek"
+        ],
+        "char_num": 45
+    },
+    "Biggs Darklighter": {
+        "height": "183",
+        "mass": "84",
+        "skin_color": "light",
+        "hair_color": "black",
+        "birth_year": "24BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope"
+        ],
+        "species": [],
+        "char_num": 9
+    },
+    "Boba Fett": {
+        "height": "183",
+        "mass": "78.2",
+        "skin_color": "fair",
+        "hair_color": "black",
+        "birth_year": "31.5BBY",
+        "gender": "male",
+        "homeworld": "Kamino",
+        "films": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 22
+    },
+    "Bossk": {
+        "height": "190",
+        "mass": "113",
+        "skin_color": "green",
+        "hair_color": "none",
+        "birth_year": "53BBY",
+        "gender": "male",
+        "homeworld": "Trandosha",
+        "films": [
+            "The Empire Strikes Back"
+        ],
+        "species": [
+            "Trandoshan"
+        ],
+        "char_num": 24
+    },
+    "C-3PO": {
+        "height": "167",
+        "mass": "75",
+        "skin_color": "gold",
+        "hair_color": "n/a",
+        "birth_year": "112BBY",
+        "gender": "n/a",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Droid"
+        ],
+        "char_num": 2
+    },
+    "Chewbacca": {
+        "height": "228",
+        "mass": "112",
+        "skin_color": "unknown",
+        "hair_color": "brown",
+        "birth_year": "200BBY",
+        "gender": "male",
+        "homeworld": "Kashyyyk",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Wookie"
+        ],
+        "char_num": 13
+    },
+    "Cliegg Lars": {
+        "height": "183",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "82BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 62
+    },
+    "Cordé": {
+        "height": "157",
+        "mass": "unknown",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Naboo",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 61
+    },
+    "Darth Maul": {
+        "height": "175",
+        "mass": "80",
+        "skin_color": "red",
+        "hair_color": "none",
+        "birth_year": "54BBY",
+        "gender": "male",
+        "homeworld": "Dathomir",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Zabrak"
+        ],
+        "char_num": 44
+    },
+    "Darth Vader": {
+        "height": "202",
+        "mass": "136",
+        "skin_color": "white",
+        "hair_color": "none",
+        "birth_year": "41.9BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 4
+    },
+    "Dexter Jettster": {
+        "height": "198",
+        "mass": "102",
+        "skin_color": "brown",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Ojom",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Besalisk"
+        ],
+        "char_num": 71
+    },
+    "Dooku": {
+        "height": "193",
+        "mass": "80",
+        "skin_color": "fair",
+        "hair_color": "white",
+        "birth_year": "102BBY",
+        "gender": "male",
+        "homeworld": "Serenno",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Human"
+        ],
+        "char_num": 67
+    },
+    "Dormé": {
+        "height": "165",
+        "mass": "unknown",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Naboo",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Human"
+        ],
+        "char_num": 66
+    },
+    "Dud Bolt": {
+        "height": "94",
+        "mass": "45",
+        "skin_color": "blue, grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Vulpter",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Vulptereen"
+        ],
+        "char_num": 48
+    },
+    "Eeth Koth": {
+        "height": "171",
+        "mass": "unknown",
+        "skin_color": "brown",
+        "hair_color": "black",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Iridonia",
+        "films": [
+            "The Phantom Menace",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Zabrak"
+        ],
+        "char_num": 54
+    },
+    "Finis Valorum": {
+        "height": "170",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "blond",
+        "birth_year": "91BBY",
+        "gender": "male",
+        "homeworld": "Coruscant",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [],
+        "char_num": 34
+    },
+    "Gasgano": {
+        "height": "122",
+        "mass": "unknown",
+        "skin_color": "white, blue",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Troiken",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Xexto"
+        ],
+        "char_num": 49
+    },
+    "Greedo": {
+        "height": "173",
+        "mass": "74",
+        "skin_color": "green",
+        "hair_color": "n/a",
+        "birth_year": "44BBY",
+        "gender": "male",
+        "homeworld": "Rodia",
+        "films": [
+            "A New Hope"
+        ],
+        "species": [
+            "Rodian"
+        ],
+        "char_num": 15
+    },
+    "Gregar Typho": {
+        "height": "185",
+        "mass": "85",
+        "skin_color": "dark",
+        "hair_color": "black",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 60
+    },
+    "Grievous": {
+        "height": "216",
+        "mass": "159",
+        "skin_color": "brown, white",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Kalee",
+        "films": [
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Kaleesh"
+        ],
+        "char_num": 79
+    },
+    "Han Solo": {
+        "height": "180",
+        "mass": "80",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "29BBY",
+        "gender": "male",
+        "homeworld": "Corellia",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi"
+        ],
+        "species": [],
+        "char_num": 14
+    },
+    "IG-88": {
+        "height": "200",
+        "mass": "140",
+        "skin_color": "metal",
+        "hair_color": "none",
+        "birth_year": "15BBY",
+        "gender": "none",
+        "homeworld": "unknown",
+        "films": [
+            "The Empire Strikes Back"
+        ],
+        "species": [
+            "Droid"
+        ],
+        "char_num": 23
+    },
+    "Jabba Desilijic Tiure": {
+        "height": "175",
+        "mass": "1,358",
+        "skin_color": "green-tan, brown",
+        "hair_color": "n/a",
+        "birth_year": "600BBY",
+        "gender": "hermaphrodite",
+        "homeworld": "Nal Hutta",
+        "films": [
+            "A New Hope",
+            "Return of the Jedi",
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Hutt"
+        ],
+        "char_num": 16
+    },
+    "Jango Fett": {
+        "height": "183",
+        "mass": "79",
+        "skin_color": "tan",
+        "hair_color": "black",
+        "birth_year": "66BBY",
+        "gender": "male",
+        "homeworld": "Concord Dawn",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 69
+    },
+    "Jar Jar Binks": {
+        "height": "196",
+        "mass": "66",
+        "skin_color": "orange",
+        "hair_color": "none",
+        "birth_year": "52BBY",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Gungan"
+        ],
+        "char_num": 36
+    },
+    "Jek Tono Porkins": {
+        "height": "180",
+        "mass": "110",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Bestine IV",
+        "films": [
+            "A New Hope"
+        ],
+        "species": [],
+        "char_num": 19
+    },
+    "Jocasta Nu": {
+        "height": "167",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "white",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Coruscant",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Human"
+        ],
+        "char_num": 74
+    },
+    "Ki-Adi-Mundi": {
+        "height": "198",
+        "mass": "82",
+        "skin_color": "pale",
+        "hair_color": "white",
+        "birth_year": "92BBY",
+        "gender": "male",
+        "homeworld": "Cerea",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Cerean"
+        ],
+        "char_num": 52
+    },
+    "Kit Fisto": {
+        "height": "196",
+        "mass": "87",
+        "skin_color": "green",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Glee Anselm",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Nautolan"
+        ],
+        "char_num": 53
+    },
+    "Lama Su": {
+        "height": "229",
+        "mass": "88",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Kamino",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Kaminoan"
+        ],
+        "char_num": 72
+    },
+    "Lando Calrissian": {
+        "height": "177",
+        "mass": "79",
+        "skin_color": "dark",
+        "hair_color": "black",
+        "birth_year": "31BBY",
+        "gender": "male",
+        "homeworld": "Socorro",
+        "films": [
+            "The Empire Strikes Back",
+            "Return of the Jedi"
+        ],
+        "species": [],
+        "char_num": 25
+    },
+    "Leia Organa": {
+        "height": "150",
+        "mass": "49",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "19BBY",
+        "gender": "female",
+        "homeworld": "Alderaan",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 5
+    },
+    "Lobot": {
+        "height": "175",
+        "mass": "79",
+        "skin_color": "light",
+        "hair_color": "none",
+        "birth_year": "37BBY",
+        "gender": "male",
+        "homeworld": "Bespin",
+        "films": [
+            "The Empire Strikes Back"
+        ],
+        "species": [],
+        "char_num": 26
+    },
+    "Luke Skywalker": {
+        "height": "172",
+        "mass": "77",
+        "skin_color": "fair",
+        "hair_color": "blond",
+        "birth_year": "19BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 1
+    },
+    "Luminara Unduli": {
+        "height": "170",
+        "mass": "56.2",
+        "skin_color": "yellow",
+        "hair_color": "black",
+        "birth_year": "58BBY",
+        "gender": "female",
+        "homeworld": "Mirial",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Mirialan"
+        ],
+        "char_num": 64
+    },
+    "Mace Windu": {
+        "height": "188",
+        "mass": "84",
+        "skin_color": "dark",
+        "hair_color": "none",
+        "birth_year": "72BBY",
+        "gender": "male",
+        "homeworld": "Haruun Kal",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 51
+    },
+    "Mas Amedda": {
+        "height": "196",
+        "mass": "unknown",
+        "skin_color": "blue",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Champala",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Chagrian"
+        ],
+        "char_num": 59
+    },
+    "Mon Mothma": {
+        "height": "150",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "auburn",
+        "birth_year": "48BBY",
+        "gender": "female",
+        "homeworld": "Chandrila",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [],
+        "char_num": 28
+    },
+    "Nien Nunb": {
+        "height": "160",
+        "mass": "68",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Sullust",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [
+            "Sullustan"
+        ],
+        "char_num": 31
+    },
+    "Nute Gunray": {
+        "height": "191",
+        "mass": "90",
+        "skin_color": "mottled green",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Cato Neimoidia",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Neimodian"
+        ],
+        "char_num": 33
+    },
+    "Obi-Wan Kenobi": {
+        "height": "182",
+        "mass": "77",
+        "skin_color": "fair",
+        "hair_color": "auburn, white",
+        "birth_year": "57BBY",
+        "gender": "male",
+        "homeworld": "Stewjon",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 10
+    },
+    "Owen Lars": {
+        "height": "178",
+        "mass": "120",
+        "skin_color": "light",
+        "hair_color": "brown, grey",
+        "birth_year": "52BBY",
+        "gender": "male",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 6
+    },
+    "Padmé Amidala": {
+        "height": "185",
+        "mass": "45",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "46BBY",
+        "gender": "female",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 35
+    },
+    "Palpatine": {
+        "height": "170",
+        "mass": "75",
+        "skin_color": "pale",
+        "hair_color": "grey",
+        "birth_year": "82BBY",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 21
+    },
+    "Plo Koon": {
+        "height": "188",
+        "mass": "80",
+        "skin_color": "orange",
+        "hair_color": "none",
+        "birth_year": "22BBY",
+        "gender": "male",
+        "homeworld": "Dorin",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Kel Dor"
+        ],
+        "char_num": 58
+    },
+    "Poggle the Lesser": {
+        "height": "183",
+        "mass": "80",
+        "skin_color": "green",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Geonosis",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Geonosian"
+        ],
+        "char_num": 63
+    },
+    "Quarsh Panaka": {
+        "height": "183",
+        "mass": "unknown",
+        "skin_color": "dark",
+        "hair_color": "black",
+        "birth_year": "62BBY",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [],
+        "char_num": 42
+    },
+    "Qui-Gon Jinn": {
+        "height": "193",
+        "mass": "89",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "92BBY",
+        "gender": "male",
+        "homeworld": "unknown",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [],
+        "char_num": 32
+    },
+    "R2-D2": {
+        "height": "96",
+        "mass": "32",
+        "skin_color": "white, blue",
+        "hair_color": "n/a",
+        "birth_year": "33BBY",
+        "gender": "n/a",
+        "homeworld": "Naboo",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Droid"
+        ],
+        "char_num": 3
+    },
+    "R4-P17": {
+        "height": "96",
+        "mass": "unknown",
+        "skin_color": "silver, red",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "unknown",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 75
+    },
+    "R5-D4": {
+        "height": "97",
+        "mass": "32",
+        "skin_color": "white, red",
+        "hair_color": "n/a",
+        "birth_year": "unknown",
+        "gender": "n/a",
+        "homeworld": "Tatooine",
+        "films": [
+            "A New Hope"
+        ],
+        "species": [
+            "Droid"
+        ],
+        "char_num": 8
+    },
+    "Ratts Tyerel": {
+        "height": "79",
+        "mass": "15",
+        "skin_color": "grey, blue",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Aleen Minor",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Aleena"
+        ],
+        "char_num": 47
+    },
+    "Raymus Antilles": {
+        "height": "188",
+        "mass": "79",
+        "skin_color": "light",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Alderaan",
+        "films": [
+            "A New Hope",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 81
+    },
+    "Ric Olié": {
+        "height": "183",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [],
+        "char_num": 39
+    },
+    "Roos Tarpals": {
+        "height": "224",
+        "mass": "82",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Gungan"
+        ],
+        "char_num": 37
+    },
+    "Rugor Nass": {
+        "height": "206",
+        "mass": "unknown",
+        "skin_color": "green",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Naboo",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Gungan"
+        ],
+        "char_num": 38
+    },
+    "Saesee Tiin": {
+        "height": "188",
+        "mass": "unknown",
+        "skin_color": "pale",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Iktotch",
+        "films": [
+            "The Phantom Menace",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Iktotchi"
+        ],
+        "char_num": 56
+    },
+    "San Hill": {
+        "height": "191",
+        "mass": "unknown",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Muunilinst",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Muun"
+        ],
+        "char_num": 77
+    },
+    "Sebulba": {
+        "height": "112",
+        "mass": "40",
+        "skin_color": "grey, red",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Malastare",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Dug"
+        ],
+        "char_num": 41
+    },
+    "Shaak Ti": {
+        "height": "178",
+        "mass": "57",
+        "skin_color": "red, blue, white",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Shili",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Togruta"
+        ],
+        "char_num": 78
+    },
+    "Shmi Skywalker": {
+        "height": "163",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "black",
+        "birth_year": "72BBY",
+        "gender": "female",
+        "homeworld": "Tatooine",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones"
+        ],
+        "species": [],
+        "char_num": 43
+    },
+    "Sly Moore": {
+        "height": "178",
+        "mass": "48",
+        "skin_color": "pale",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Umbara",
+        "films": [
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 82
+    },
+    "Tarfful": {
+        "height": "234",
+        "mass": "136",
+        "skin_color": "brown",
+        "hair_color": "brown",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Kashyyyk",
+        "films": [
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Wookie"
+        ],
+        "char_num": 80
+    },
+    "Taun We": {
+        "height": "213",
+        "mass": "unknown",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Kamino",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Kaminoan"
+        ],
+        "char_num": 73
+    },
+    "Tion Medon": {
+        "height": "206",
+        "mass": "80",
+        "skin_color": "grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Utapau",
+        "films": [
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Pau'an"
+        ],
+        "char_num": 83
+    },
+    "Wat Tambor": {
+        "height": "193",
+        "mass": "48",
+        "skin_color": "green, grey",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Skako",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Skakoan"
+        ],
+        "char_num": 76
+    },
+    "Watto": {
+        "height": "137",
+        "mass": "unknown",
+        "skin_color": "blue, grey",
+        "hair_color": "black",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Toydaria",
+        "films": [
+            "The Phantom Menace",
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Toydarian"
+        ],
+        "char_num": 40
+    },
+    "Wedge Antilles": {
+        "height": "170",
+        "mass": "77",
+        "skin_color": "fair",
+        "hair_color": "brown",
+        "birth_year": "21BBY",
+        "gender": "male",
+        "homeworld": "Corellia",
+        "films": [
+            "A New Hope",
+            "The Empire Strikes Back",
+            "Return of the Jedi"
+        ],
+        "species": [],
+        "char_num": 18
+    },
+    "Wicket Systri Warrick": {
+        "height": "88",
+        "mass": "20",
+        "skin_color": "brown",
+        "hair_color": "brown",
+        "birth_year": "8BBY",
+        "gender": "male",
+        "homeworld": "Endor",
+        "films": [
+            "Return of the Jedi"
+        ],
+        "species": [
+            "Ewok"
+        ],
+        "char_num": 30
+    },
+    "Wilhuff Tarkin": {
+        "height": "180",
+        "mass": "unknown",
+        "skin_color": "fair",
+        "hair_color": "auburn, grey",
+        "birth_year": "64BBY",
+        "gender": "male",
+        "homeworld": "Eriadu",
+        "films": [
+            "A New Hope",
+            "Revenge of the Sith"
+        ],
+        "species": [],
+        "char_num": 12
+    },
+    "Yarael Poof": {
+        "height": "264",
+        "mass": "unknown",
+        "skin_color": "white",
+        "hair_color": "none",
+        "birth_year": "unknown",
+        "gender": "male",
+        "homeworld": "Quermia",
+        "films": [
+            "The Phantom Menace"
+        ],
+        "species": [
+            "Quermian"
+        ],
+        "char_num": 57
+    },
+    "Yoda": {
+        "height": "66",
+        "mass": "17",
+        "skin_color": "green",
+        "hair_color": "white",
+        "birth_year": "896BBY",
+        "gender": "male",
+        "homeworld": "unknown",
+        "films": [
+            "The Empire Strikes Back",
+            "Return of the Jedi",
+            "The Phantom Menace",
+            "Attack of the Clones",
+            "Revenge of the Sith"
+        ],
+        "species": [
+            "Yoda's species"
+        ],
+        "char_num": 20
+    },
+    "Zam Wesell": {
+        "height": "168",
+        "mass": "55",
+        "skin_color": "fair, green, yellow",
+        "hair_color": "blonde",
+        "birth_year": "unknown",
+        "gender": "female",
+        "homeworld": "Zolan",
+        "films": [
+            "Attack of the Clones"
+        ],
+        "species": [
+            "Clawdite"
+        ],
+        "char_num": 70
+    }
+}

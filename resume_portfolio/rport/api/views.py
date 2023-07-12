@@ -210,3 +210,38 @@ class NetflixTitlesViewSet(viewsets.ModelViewSet):
     serializer_class = serializer.NetflixTitlesserializer
     http_method_names = ["get", "head"]
 
+
+class CharacterDataViewSet(viewsets.ModelViewSet):
+    queryset = models.CharacterData.objects.all()
+    serializer_class = serializer.CharacterDataSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsFilmsViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsFilms.objects.all()
+    serializer_class = serializer.StarwarsFilmsSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsPlanetsViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsPlanets.objects.all()
+    serializer_class = serializer.StarwarsPlanetsSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsSpeciesViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsSpecies.objects.all()
+    serializer_class = serializer.StarwarsSpeciesSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsStarshipsViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsStarships.objects.all()
+    serializer_class = serializer.StarwarsStarshipsSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsVehiclesViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsVehicles.objects.all()
+    serializer_class = serializer.StarwarsVehiclesSerializer
+    http_method_names = ["get", "head"]

@@ -18,12 +18,14 @@ env = environ.Env()
 environ.Env.read_env()
 
 
+
 if 'runserver' in sys.argv:
     DEBUG = True
     PREPEND_WWW = False
     SECURE_SSL_REDIRECT = False
     SESSION_COOKIE_SECURE = False
     CSRF_COOKIE_SECURE = False
+    CORS_ORIGIN_ALLOW_ALL = True
 else:
     DEBUG = False
     PREPEND_WWW = True
@@ -31,6 +33,16 @@ else:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+    CORS_ALLOWED_ORIGINS = [
+        'http://localhost:8000',# Add your domain(s) here
+        ]
+CORS_ORIGIN_WHITELIST = [
+    'http://127.0.0.1:8000',
+    'http://localhost:8000',
+    'https://datasadvocate.dev',
+    'http://datasadvocate.dev'
+]
+
 # DIRNAME = os.path.abspath(os.path.dirname(__file__))
 # This file will return a local directory.
 # e.g: '/home/pi/Documents/Django_files/djenv/test_site/test_site'
@@ -125,6 +137,8 @@ INSTALLED_APPS = [
     "sass_processor",
     "rest_framework",
     "bootstrap5",
+    'csp',
+    'corsheaders',
     # other stuff
     "django_user_agents",
     "django.contrib.admin",
@@ -135,14 +149,40 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'csp.middleware.CSPMiddleware',
 ]
+
+
+CSP_SCRIPT_SRC = ["'self'","'unsafe-eval'",
+                  "'unsafe-inline'","https://code.jquery.com", 
+                  "https://ssl.gstatic.com","https://cdnjs.cloudflare.com",
+                  "https://cdn.jsdelivr.net"]
+CSP_CONNECT_SRC = ["'self'","http://127.0.0.1:8000/*","'unsafe-inline'","https://127.0.0.1:8000/*", "'unsafe-eval'"]
+CSP_DEFAULT_SRC = ["'self'", 
+                   "http://127.0.0.1:8000",
+                   "https://127.0.0.1:8000", 
+                   "http://127.0.0.1:8000/favicon.ico",
+                   "https://127.0.0.1:8000/favicon.ico",
+                   "'unsafe-inline'", 
+                   "https://www.youtube.com",
+                   "https://trends.google.com",
+                   "https://cdn.jsdelivr.net",
+                   "https://fonts.googleapis.com",
+                   "https://cdnjs.cloudflare.com",
+                   "https://cdn.datatables.net"]
+CSP_IMG_SRC = ["'self'", "data:", "https://s3-us-west-2.amazonaws.com"]
+CSP_FONT_SRC = ["'self'", 'https://fonts.gstatic.com/', 
+                "https://cdnjs.cloudflare.com", 
+                "https://cdn.datatables.net",
+                "https://cdn.jsdelivr.net"]
 
 ROOT_URLCONF = "rport.urls"
 # to add html templates simply add the source into the DIRS array.

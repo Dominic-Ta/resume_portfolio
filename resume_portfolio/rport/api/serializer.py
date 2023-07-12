@@ -985,3 +985,128 @@ class NetflixTitlesserializer(serializers.HyperlinkedModelSerializer):
             "listed_in",
             "description",
         ]
+
+
+class CharacterDataSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.CharacterData
+        fields = [
+            "index",
+            "height",
+            "mass",
+            "skin_color",
+            "hair_color",
+            "birth_year",
+            "gender",
+            "homeworld",
+            "films",
+            "species",
+            "char_num",
+        ]
+
+
+class StarwarsFilmsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsFilms
+        fields = [
+            "index",
+            "title",
+            "episode_id",
+            "opening_crawl",
+            "director",
+            "producer",
+            "release_date",
+            "characters",
+            "planets",
+            "starships",
+            "vehicles",
+            "species",
+            "url",
+        ]
+
+
+class StarwarsPlanetsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsPlanets
+        fields = [
+            "index",
+            "name",
+            "rotation_period",
+            "orbital_period",
+            "diameter",
+            "climate",
+            "gravity",
+            "terrain",
+            "surface_water",
+            "population",
+            "residents",
+            "films",
+            "url",
+        ]
+
+
+class StarwarsSpeciesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsSpecies
+        fields = [
+            "index",
+            "name",
+            "classification",
+            "designation",
+            "average_height",
+            "skin_colors",
+            "hair_colors",
+            "eye_colors",
+            "average_lifespan",
+            "homeworld",
+            "language",
+            "people",
+            "films",
+            "url",
+        ]
+
+
+class StarwarsStarshipsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsStarships
+        fields = [
+            "index",
+            "name",
+            "model",
+            "manufacturer",
+            "cost_in_credits",
+            "length",
+            "max_atmosphering_speed",
+            "crew",
+            "passengers",
+            "cargo_capacity",
+            "consumables",
+            "hyperdrive_rating",
+            "mglt",
+            "starship_class",
+            "pilots",
+            "films",
+            "url",
+        ]
+
+
+class StarwarsVehiclesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsVehicles
+        fields = [
+            "index",
+            "name",
+            "model",
+            "manufacturer",
+            "cost_in_credits",
+            "length",
+            "max_atmosphering_speed",
+            "crew",
+            "passengers",
+            "cargo_capacity",
+            "consumables",
+            "vehicle_class",
+            "pilots",
+            "films",
+            "url",
+        ]

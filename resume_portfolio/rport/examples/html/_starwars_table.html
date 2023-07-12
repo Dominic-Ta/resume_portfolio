@@ -1,0 +1,17 @@
+{% load static%}
+<div class="row card mb-4 text-warning">
+    <div class="card-header">
+        <i class="bi bi-table"></i>
+        DataTable Example
+    </div>
+    <div class="card-body">
+        <p class="text-dark"> Data taken from 
+            <a href="https://www.the-numbers.com/movies/franchise/Star-Wars#tab=summary" class="small text-whitdarke text-center" target="_blank" ref="noreferrer nofollow noopener">
+                here
+            </a>.
+        </p>
+        <div class="container-sm overflow-scroll">
+            {% include '_starwars_budget_profit.html' %}
+        </div>
+    </div>
+</div>

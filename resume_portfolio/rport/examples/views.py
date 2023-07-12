@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseNotFound
 from django.template import loader
-from django.shortcuts import render
-from .models import NetflixTitles
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import NetflixTitles, CharacterData, StarwarsPlanets
 from datetime import datetime
 import json, requests
 from django.core.cache import cache  # This is the memcache cache.
@@ -12,6 +12,10 @@ from collections import defaultdict
 import warnings,heapq
 from pathlib import Path
 from dotenv import load_dotenv
+from django.http import JsonResponse
+from django.core import serializers
+from django.conf import settings
+import re
 
 warnings.filterwarnings("ignore")
 # from django.http import HttpResponse
@@ -28,8 +32,58 @@ def main_view(request):
     template = loader.get_template("main.html")
     return HttpResponse(template.render())
 def starwars(request):
-    template = loader.get_template("starwars_crawler.html")
-    return HttpResponse(template.render())
+    model=CharacterData.objects.all()
+    model_list = [obj.index for obj in model]
+    return render(request, "starwars_crawler.html", {"starwars_characters": model_list})
+def get_characters(request, index):
+    model=CharacterData.objects.filter(index=index)
+    qs_json = serializers.serialize('json', model)
+    y = json.loads(qs_json)
+    character_data = {
+        "character": y[0]['pk'],
+        "fields": y[0]['fields']
+    }
+    return JsonResponse(character_data)
+def get_planet_info(request, plan_name):
+    models = StarwarsPlanets.objects.filter(name=plan_name)
+    qs_json = serializers.serialize('json', models)
+    y = json.loads(qs_json)
+    planet_data = {
+        "fields": y[0]['fields']
+    }
+    return JsonResponse(planet_data)
+def char_img_view(request, id_num, tval):
+    # Assuming you have an Image model with an 'id' field
+    dict_types = {
+        'char': 'characters',
+        'film': 'films',
+        'planets': 'planets',
+        'species': 'species',
+        'starships': 'starships',
+        'vehicles': 'vehicles'
+    }
+    if tval in dict_types.keys():
+        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', dict_types[tval], str(id_num) + '.jpg')
+    else:
+        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', 'placeholder.jpg') # Only if tval is not one of our categories
+    # Second check is to see if the image even exists. 
+    if os.path.isfile(image_path) == False:
+        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', 'placeholder.jpg')
+    with open(image_path, 'rb') as f:
+        response = HttpResponse(f.read(), content_type='image/jpeg')
+        response['Content-Disposition'] = 'inline; filename=' + os.path.basename(image_path)
+        return response
+def get_planet(request, plan_name):
+    models = StarwarsPlanets.objects.filter(name=plan_name)
+    pattern = r"\d+"
+    if models.exists():
+        model = models.first()  # Retrieve the first (and only) object in the queryset
+        url = model.url
+        match = re.search(pattern, url)
+        if match:
+            planet_id = int(match.group())
+    return redirect(char_img_view, id_num = planet_id, tval='planets')
+    
 def web_scrape_request(request):
     template = loader.get_template("webscraping_tutorial.html")
     return HttpResponse(template.render())
@@ -198,28 +252,6 @@ def return_dict_from_data(dict_val) -> dict:
             continue
     return temp_dict
 
-
-# def table_load(request):
-#     client = Client('localhost', 11211)
-
-#     title_information = client.get('netflix_query_cache_message')
-
-#     if title_information is None:
-
-#         netflix_query = NetflixTitles.objects.all()
-#          # filter(release_year = 1993)
-#         title_information = return_dict_from_data(netflix_query)
-
-#         temp = json.dumps(title_information, ensure_ascii=False)
-
-#         client.set(key = 'netflix_query_cache_message', value=temp.encode('utf-8'), expire=2592000, noreply=False, flags=0)
-#     else:
-#         title_information = title_information.decode('utf-8')
-#         title_information = json.loads(title_information)
-#     netflix_data = {"meow": title_information}
-#     return render(request, "netflix_dataset.html", netflix_data)
-
-
 def load_map(request):
     available_titles = cache.get("title_count_cache")
     if available_titles is None:
@@ -239,21 +271,6 @@ def load_map(request):
         cache.set("title_count_cache", available_titles, timeout=60 * 60 * 24 * 5)
     netflix_data = {"titles_per_country": json.dumps(available_titles), 'maps_API_key': maps_API}
     return render(request, "netflix_map_of_countries.html", netflix_data)
-
-
-# def indi_info(request, index):
-#     netflix_item = NetflixTitles.objects.get(index=index)
-#     template = loader.get_template("details.html")
-#     x = netflix_item.country.split(",")
-#     for i in range(0, len(x), 1):
-#         x[i] = x[i].strip()
-#     y = {"countries_available": x}
-#     context = {
-#         "info": netflix_item,
-#         "map_json": json.dumps(y),
-#     }
-#     return HttpResponse(template.render(context, request))
-
 
 def indi_info(request, index):
     netflix_item = NetflixTitles.objects.get(index=index)
@@ -548,49 +565,3 @@ def tes_val():
         "Montenegro": 1,
     }
     return json.dumps({"countries_available": x})
-
-
-# class send_the_email(forms.Form):
-#     contact_name = forms.CharField(max_length=35, label="Name")
-#     contact_email = forms.EmailField()
-#     Subject = forms.CharField(max_length=35, label="Subject")
-#     contact_Message = forms.CharField(
-#         widget=forms.Textarea(attrs={"cols": "50", "rows": "15"}), label="Message"
-#     )
-
-
-# def email(request):
-#     env = environ.Env()
-#     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#     environ.Env.read_env(os.path.join(BASE_DIR, "rport/.env"))
-#     email_to = env("app_email")
-#     if request.method == "GET":
-#         form = send_the_email()
-#     else:
-#         form = send_the_email(request.POST)
-#         if form.is_valid():
-#             subject = form.cleaned_data["Subject"]
-#             from_email = form.cleaned_data["contact_email"]
-#             message = (
-#                 "subject: "
-#                 + subject
-#                 + "\n"
-#                 + "message: "
-#                 + form.cleaned_data["contact_Message"]
-#                 + "\nsent by: "
-#                 + form.cleaned_data["contact_name"]
-#                 + "\ncontact email: "
-#                 + form.cleaned_data["contact_email"]
-#             )
-#             print(message)
-#             try:
-#                 send_mail(subject, message, from_email, [email_to])
-#             except BadHeaderError:
-#                 return HttpResponse("Invalid header found.")
-#             return redirect("resume")
-#     return render(request, "send_email.html", {"form": form})
-
-
-# def thanks(request):
-#     return HttpResponse("Thank you for your message.")
-

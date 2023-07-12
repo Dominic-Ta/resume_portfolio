@@ -1,0 +1,31 @@
+<div class="row card mb-4 text-dark" id="container-forms">
+    <div class="card-header">
+        <i class="bi bi-person-circle"></i>
+        Characters and their homeworlds
+    </div>
+    <div class="container-fluid px-4 card">
+        <div class="container p-5 mx-auto">
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-floating" id="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected value={{character_data.0}} id={{character_data.0}}>{{character_data.0}}</option>
+                            {% for i in character_data|slice:"1:" %}
+                                <option value="{{i}}" id="{{i}}">{{i}}</option>
+                            {% endfor %}
+                            </select>
+                            <label for="floatingSelect">Select a character</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-5">
+                    <div class="col-lg-6 text-center overflow-auto" id="character">
+                    </div>
+                    <div class="col-lg-6 text-center overflow-auto" id="planet_card">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

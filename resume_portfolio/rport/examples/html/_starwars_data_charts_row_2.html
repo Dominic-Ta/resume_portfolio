@@ -1,0 +1,31 @@
+{% load static %}
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4 text-dark">
+            <div class="card-header">
+                    <i class="bi bi-graph-up"></i>
+                    Theaters Showing Each Film
+                </div>
+            <div class="card-body">
+                <canvas id="donut-chart" width="800" height="450" style="background-image: url('{% static 'images/xwing-x-wing.jpg' %}'); background-size: cover;"></canvas>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4 text-dark">
+            <div class="card-header">
+                <i class="bi bi-graph-up"></i>
+                Adjusted Profit Per Film.
+            </div>
+            <div class="card-body">
+                <canvas id="donut2-profit-chart" width="800" height="450" style="background-image: url('{% static 'images/DeathStar.jpg' %}'); background-size: cover;"></canvas>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+        </div>
+    </div>
+</div>

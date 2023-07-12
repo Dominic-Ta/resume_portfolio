@@ -143,10 +143,38 @@ router.register(
     views.AnimalCrossingNewHorizonCatalogWallpaperViewSet,
 )
 router.register("Netflix_Titles", views.NetflixTitlesViewSet)
-
+router.register("Starwars_Character_Data", views.CharacterDataViewSet)
+router.register("Starwars_Film_Data", views.StarwarsFilmsViewSet)
+router.register("Starwars_Planets_Data", views.StarwarsPlanetsViewSet)
+router.register("Starwars_Species_Data", views.StarwarsSpeciesViewSet)
+router.register("Starwars_Starships_Data", views.StarwarsStarshipsViewSet)
+router.register("Starwars_Vehicles_Data", views.StarwarsVehiclesViewSet)
 urlpatterns = [
     path("", include(router.urls)),
-    path("", include("rest_framework.urls", namespace="rest_framework")),
+    path(
+        "/Starwars_Character_data/",
+        include("rest_framework.urls", namespace="Starwars_Character_Data"),
+    ),
+    path(
+        "/Starwars_Film_Data/",
+        include("rest_framework.urls", namespace="Starwars_Film_Data"),
+    ),
+    path(
+        "/Starwars_Planets_Data/",
+        include("rest_framework.urls", namespace="Starwars_Planets_Data"),
+    ),
+    path(
+        "/Starwars_Species_Data/",
+        include("rest_framework.urls", namespace="Starwars_Species_Data"),
+    ),
+    path(
+        "/Starwars_Starships_Data/",
+        include("rest_framework.urls", namespace="Starwars_Starships_Data"),
+    ),
+    path(
+        "/Starwars_Vehicles_Data/",
+        include("rest_framework.urls", namespace="Starwars_Vehicles_Data"),
+    ),
     path(
         "/student_performance/",
         include("rest_framework.urls", namespace="student_framework"),
@@ -358,6 +386,6 @@ urlpatterns = [
     path(
         "/Netflix_Titles/",
         include("rest_framework.urls", namespace="Netflix_Titles"),
-        name="netflix_titles"
+        name="netflix_titles",
     ),
 ]
