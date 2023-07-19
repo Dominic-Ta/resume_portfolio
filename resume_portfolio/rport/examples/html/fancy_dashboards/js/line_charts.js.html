@@ -1,0 +1,522 @@
+{% load static %}
+
+<script>
+    let dat_label = {{ search_parameters|safe }};
+    let ttl = document.getElementById('DashboardTitle');
+    let dat;
+    let gb = document.getElementById("dashboard_buttons");
+    let buttons = gb.querySelectorAll("a");
+    let TG = document.getElementById("TG");
+    let budget = document.getElementById("Budget");
+    let RD = document.getElementById("ReleaseDate");
+    let selectElements = document.querySelectorAll('select');
+
+
+    // console.log(selectElements)
+    selectElements.forEach(function(selectElement) {
+      selectElement.addEventListener('change', function() {
+        let selectedOption = selectElement.options[selectElement.selectedIndex];
+        // let selectedValue = selectedOption.value;
+        let selectedId = selectedOption.id;
+        // alert(`Selected Value: ${selectedValue}\nSelected ID: ${selectedId}`);
+        // let doc_id = document.getElementById('meow');
+        getChar(selectedId);
+        // console.log(x);
+      });
+    });
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        let RUrl = get_url('/examples/weekly_data/', button.id);
+        let NP = document.getElementById("NetProfit");
+        
+        fetch(RUrl)
+        .then(data => data.json())
+        .then(val => {
+          dat = val;
+          if (button.id.includes(':')){
+            pull_crawler_script(button.id.split(':')[1].trim());
+
+          } else{
+            pull_crawler_script(button.id.trim());
+          }          
+          if (button.id === "Star Wars: The Clone Wars"){
+            let ctx2 = document.getElementById("myPieChart");
+            console.log(ctx2);
+            let parentElement = ctx2.parentElement;
+            ctx2.remove();
+            let newDiv = document.createElement("p");
+            // Create a new canvas element
+            newDiv.id = "myPieChart";
+            newDiv.textContent = "No data :(";
+            // Append the new canvas to the parent element
+            parentElement.appendChild(newDiv);
+          } else{
+            FetchCharScreentime(button.id);
+          }
+          ttl.innerHTML = button.id;
+          FetchFinancials(dat ,button.id);
+          dat.Dates = dat.Dates.map(str=>str.split('T')[0]);
+          make_line_chart(button.id, "myAreaChart", dat.Dates, dat.Per_Theater);
+        });
+        
+        // Your event handling code here
+      });
+    });
+    
+    
+    initial_start(dat_label[0])
+    
+    function initial_start(data_label){
+      let url = get_url('/examples/weekly_data/',data_label);
+      ttl.innerHTML = dat_label[0];
+      
+      fetch(url)
+      .then(data => data.json())
+      .then(val => {
+        dat = val;
+        dat.Dates = dat.Dates.map(str=>str.split('T')[0]);
+        pull_crawler_script(dat_label[0].split(':')[1].trim());
+        FetchCharScreentime(dat_label[0]);
+        FetchFinancials(dat, dat_label[0]);
+        make_line_chart(dat_label[0], "myAreaChart", dat.Dates, dat.Per_Theater);
+        {% comment %} make_line_chart("myAreaChart",['a','b','c','d','e','f','g'], [65, 59, 80, 81, 56, 55, 40]) {% endcomment %}
+      });
+    }
+    function get_url(input_url, search_crit){
+      // General function mainly used for testing. No need to input specific domain names now. 
+      let protocol = window.location.protocol;
+      let hostname = window.location.hostname;
+      let port = window.location.port ? ":" + window.location.port : ""; // Include the port if it exists
+      let domain = protocol + "//" + hostname + port;
+      return domain + input_url + search_crit;
+    }
+    function make_line_chart(lID, elId, label, dat) {
+      var ctx = document.getElementById(elId);
+      let myLineChart = null;
+    
+      if (window.myLineChart) {
+        myLineChart = window.myLineChart;
+        myLineChart.data.labels = label;
+        myLineChart.data.datasets[0].label = lID;
+        myLineChart.data.datasets[0].data = dat;
+        myLineChart.update();
+      } else {
+        const data = {
+          labels: label,
+          datasets: [{
+            label: lID,
+            data: dat,
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            backgroundColor: 'rgb(185,18,18)',
+            color: "#FFFF00",
+            tension: 0.1
+          }]
+        };
+        const config = {
+          type: 'line',
+          data: data,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            legend: {
+              display: false
+            },
+          }
+        };
+      
+      myLineChart = new Chart(ctx, config);
+      window.myLineChart = myLineChart; // Store the chart instance in a variable accessible from the global scope
+    }
+  }
+    function formatNumberToCurrency(number) {
+      // Convert the number to a string and remove any non-digit characters
+      const cleanNumber = String(number).replace(/\D/g, '');
+      // Split the number into groups of three digits
+      const numberGroups = cleanNumber.split(/(?=(?:\d{3})+(?!\d))/);
+      // Join the number groups with commas
+      let formattedNumber = numberGroups.join(',');
+
+      // Add the dollar sign and preserve the negative sign if the value is negative
+      if (number < 0) {
+        return `-$${formattedNumber}`;
+      }
+    
+      // Return the formatted number with the dollar sign
+      return `$${formattedNumber}`;
+    }
+    
+    function FetchCharScreentime(movie){
+      let cleaned_movie = movie
+      // Split the string based on the colon delimiter
+      let splitArray = cleaned_movie.split(':');
+      let extractedString;
+      // Extract the portion after the first occurrence of the delimiter
+      if (splitArray.length >1){
+        extractedString = splitArray.slice(1).join(':').trim();
+      }
+      else{
+        extractedString = splitArray[0].trim();
+      }
+
+
+      let url = get_url('/examples/swcscreentime/', extractedString);
+      fetch(url)
+      .then(data => data.json())
+      .then(val => {
+        make_pie_chart(extractedString, "myPieChart", val.character, val.percentage);
+      })
+      
+    }
+    function FetchFinancials(dat, movie){
+      let url = get_url('/examples/starwarsGrossProfits/',movie);
+      
+      let NP = document.getElementById("NetProfit");
+      fetch(url)
+      .then(data => data.json())
+      .then(val => {
+        let data = val;
+        let prod = data.production_budget;
+        let profit = data.domestic_box_office
+        RD.innerHTML = data.release_date
+        TG.innerHTML = formatNumberToCurrency(data.domestic_box_office);
+        budget.innerHTML = formatNumberToCurrency(data.production_budget);
+        let net = profit - prod
+        NP.innerHTML = formatNumberToCurrency(net);
+      })
+    }
+    function make_pie_chart(lID, elId, label, dat) {
+      let ctx2 = document.getElementById(elId);
+      let myPieChart = null;
+      const dataLength = label.length; // Replace with the actual length of your data
+      const gradientColors = generateColorGradient(dataLength);
+
+      // Get the parent element of the canvas
+      const parentElement = ctx2.parentElement;
+
+      // Remove the canvas element
+      if (ctx2) {
+        ctx2.remove();
+      }
+    
+
+      // Create a new canvas element
+      const newCanvas = document.createElement("canvas");
+      newCanvas.id = "myPieChart";
+
+      // Append the new canvas to the parent element
+      parentElement.appendChild(newCanvas);
+      ctx2 = document.getElementById(elId);;
+      let data = {
+        labels: label,
+        datasets: [{
+          label: "% of screentime",
+          data: dat,
+          backgroundColor: gradientColors,
+          hoverOffset: 4
+        }]
+      };
+    
+      let config = {
+        type: 'bar',
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+            }
+          },
+          legend: {
+            display: false,
+          },
+          options: {
+            scales: {
+              y: {
+                ticks: {
+                  format: {
+                    style: 'percent'
+                  }
+                }
+              }
+            }
+          }
+        },
+      }
+      myPieChart = new Chart(ctx2, config);
+    }
+    
+    
+    function generateColorGradient(dataLength) {
+      const gradient = [];
+      const startColor = [42, 250, 42]; // RGB values for the starting color
+      const endColor = [181, 38, 38]; // RGB values for the ending color
+    
+      // Calculate the step size for each RGB component
+      const stepSize = [
+        (endColor[0] - startColor[0]) / dataLength,
+        (endColor[1] - startColor[1]) / dataLength,
+        (endColor[2] - startColor[2]) / dataLength
+      ];
+    
+      // Generate the gradient colors
+      for (let i = 0; i < dataLength; i++) {
+        const currentColor = [
+          Math.round(startColor[0] + stepSize[0] * i),
+          Math.round(startColor[1] + stepSize[1] * i),
+          Math.round(startColor[2] + stepSize[2] * i)
+        ];
+        gradient.push(`rgb(${currentColor.join(',')})`);
+      }
+    
+      return gradient;
+    }
+    
+  function pull_crawler_script(sVal){
+    let url = get_url("/examples/movie_data/", sVal);
+    let el = document.getElementById('crawler_data');
+    let mov = document.getElementById('trailer');
+    fetch(url)
+    .then(data => {
+        return data.json();
+      }
+    )
+    .then(val => {
+      dat = val;
+      console.log(dat);
+      mov.innerHTML = dat.trailer;
+      el.innerHTML = dat.crawl;
+    })
+  }
+  function image_promise(data, ElId, typeVar, field, output) {
+    let y = data;
+    let meow_element = document.getElementById(ElId);
+    let imagePromise = get_image(typeVar, field);
+    let tchar 
+    imagePromise
+      .then(image_output => {
+        let x = image_output;
+        let cardElement;
+        let cardContainer = document.getElementById(ElId);
+        if (data.hasOwnProperty('character')){
+          tchar = document.getElementById('tchar');
+          cardElement = createCard(x, data.character, '');
+          tchar.innerHTML = '<p class="text-center">'+ data.character + '</p><br>' + output;
+        } else {
+          console.log(data);
+          tplan= document.getElementById('tplan');
+          cardElement = createCard(x, data.fields.name, '');
+          tplan.innerHTML = '<p class="text-center">'+ data.fields.name + '</p><br>' + output;
+        }
+        
+        // Clear the previous content of the cardContainer
+        cardContainer.innerHTML = '';
+  
+        // Append the new cardElement to the cardContainer
+        cardContainer.appendChild(cardElement);
+        // Add a slight delay before applying the animation class to allow time for the element to be rendered
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+  
+  {% comment %} function image_promise(data, ElId, typeVar, field, output) {
+    let y = data;
+    let meow_element = document.getElementById(ElId);
+    let imagePromise = get_image(typeVar, field);
+  
+    imagePromise
+      .then(image_output => {
+        let x = image_output;
+  
+        let cardElement = meow_element.querySelector('.card');
+        if (!cardElement) {
+          cardElement = document.createElement('div');
+          cardElement.setAttribute("id", "picture_this");
+          cardElement.classList.add('card');
+          // cardElement.style.width = '18rem';
+          meow_element.appendChild(cardElement);
+        }
+  
+        let imgElement = cardElement.querySelector('img');
+        if (!imgElement) {
+          imgElement = document.createElement('img');
+          imgElement.classList.add('card-img-top');
+          imgElement.classList.add('img-fluid');
+          cardElement.appendChild(imgElement);
+        }
+        imgElement.src = x;
+        imgElement.alt = y.character;
+  
+        let cardBody = cardElement.querySelector('.card-body');
+        if (!cardBody) {
+          cardBody = document.createElement('div');
+          cardBody.classList.add('card-body');
+          cardBody.classList.add('overflow-auto');
+          cardBody.classList.add('text-center');
+          cardElement.appendChild(cardBody);
+        }
+  
+        let cardText = cardBody.querySelector('p');
+        if (!cardText) {
+          cardText = document.createElement('p');
+          cardText.classList.add('card-text');
+          cardText.classList.add('text-dark');
+          cardBody.appendChild(cardText);
+        }
+        cardText.innerHTML = output;
+        // Reset the animation by removing and re-adding the element with the animation class
+        let clonedCardElement = cardElement.cloneNode(true);
+        cardElement.parentNode.replaceChild(clonedCardElement, cardElement);
+  
+        // Add a slight delay before applying the animation class to allow time for the element to be rendered
+        setTimeout(() => {
+          clonedCardElement.classList.add('slideInLeft');
+        }, 10);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+   {% endcomment %}
+  function get_planet(planet){
+    let url = get_url('/examples/get-planet_json/', planet)
+    fetch(url, {method: 'GET'})
+    .then(response => {
+      if (response.ok) {
+        return response.json(); // or response.text() for plain text response
+      } else {
+        throw new Error('Error: ' + response.status);
+      }})
+      .then(data => {
+        let y = data;
+        let fields = y.fields; 
+        let output = table_creation(data, 0);
+        let pattern = /\d+/;
+        let match = fields.url.match(pattern);
+        let planetImgUrlnum=parseInt(match[0], 10)
+        image_promise(data,'planet_card', 'planets', planetImgUrlnum, output)
+        });
+  }
+  function table_creation(data, range){
+    let y = data;
+    let fields = y.fields; // Get the fields object
+    let keys = Object.keys(fields);
+    let output = "<table class='table table-striped table-dark table-hover'>"; // Start the table
+    
+    // Iterate over the fields and generate table rows
+    for (let i = 0; i < keys.length - range; i++) {
+      let key = keys[i];
+      output += `<tr><td>${key}</td><td>${fields[key]}</td></tr>`;
+    }
+    
+    output += "</table>";
+    return output
+  }
+  function getChar(char){
+    window.stop() // incase any fetch requests are waiting.
+    let url = get_url('/examples/get-char/', char);
+  
+  
+    fetch(url, {
+      method: 'GET'
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.json(); // or response.text() for plain text response
+        } else {
+          throw new Error('Error: ' + response.status);
+        }
+      })
+      .then(data => {
+        let y = data; // Store the response data in the 'y' variable
+        let fields = y.fields; // Get the fields object
+        let keys = Object.keys(fields);
+        let output = table_creation(y, 1)
+        // doc_id.innerHTML = output;
+        image_promise(y, "character", "char", fields.char_num, output)
+        get_planet(fields.homeworld);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }
+  function get_image(tval, id_num) {
+    let url = get_url("/examples/assets/", tval + "/" + id_num)
+    return fetch(url, {
+      method: 'GET'
+    })
+      .then(response => {
+        if (response.ok) {
+          return response.url
+        } else {
+          throw new Error('Error: ' + response.status);
+        }
+      });
+  }
+  function createCard(imageSrc, title, description) {
+    const container = document.createElement('div');
+    container.classList.add('container', 'd-flex', 'align-items-center', 'justify-content-center', 'flex-wrap');
+  
+    const box = document.createElement('div');
+    box.classList.add('box');
+  
+    const body = document.createElement('div');
+    body.classList.add('body', 'd-flex'); // Make 'body' a flex container
+  
+    const imgContainer = document.createElement('div');
+    imgContainer.classList.add('imgContainer');
+    imgContainer.style.flex = '1'; // Make 'imgContainer' grow to take available space
+  
+    const imgElement = document.createElement('img');
+    imgElement.src = imageSrc;
+    imgElement.alt = title;
+  
+    imgContainer.appendChild(imgElement);
+  
+    const content = document.createElement('div');
+    content.classList.add('content', 'd-flex', 'flex-column', 'align-items-center', 'justify-content-center');
+    content.style.flex = '1'; // Make 'content' grow to take available space
+  
+    const info = document.createElement('div');
+  
+    const titleElement = document.createElement('h3');
+    titleElement.classList.add('text-white', 'fs-5');
+    titleElement.textContent = title;
+  
+    const descriptionElement = document.createElement('p');
+    descriptionElement.classList.add('fs-6', 'text-white');
+    descriptionElement.innerText = description;
+  
+    info.appendChild(titleElement);
+    info.appendChild(descriptionElement);
+  
+    content.appendChild(info);
+  
+    body.appendChild(imgContainer);
+    body.appendChild(content);
+  
+    box.appendChild(body);
+  
+    container.appendChild(box);
+  
+    return container;
+  }
+
+
+
+</script>

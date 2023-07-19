@@ -22,4 +22,3 @@ def landing_view(request, *args, **kwargs):
     #     print("you aren't a friend wtf.")
     # return HttpResponse("Hello, world. You're at the polls index.")
     return render(request, "landing.html")
-

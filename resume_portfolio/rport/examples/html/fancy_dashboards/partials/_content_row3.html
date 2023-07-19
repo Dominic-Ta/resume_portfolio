@@ -1,0 +1,66 @@
+{% load static %}
+<div class="row">
+    <div class="col">
+
+        <div class="card shadow mb-4" id="crawlercard" style="background-color: rgba(0,0,0,0.5);">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary"><img class="img-profile rounded-circle" src="{% static 'images/starwars/Icons/Sandcrawler.ico' %}"> Opening Crawl <img class="img-profile rounded-circle" src="{% static 'images/starwars/Icons/Sandcrawler.ico' %}"></h6>
+            </div>
+            <div class="card-body" id="crawler_data"></div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-4">
+
+        <!-- Illustrations -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Trailer</h6>
+            </div>
+            <div class="card-body ratio ratio-1x1" style="margin: 0 auto;display: block;" id="trailer">
+                {% comment %} <div class="text-center">
+                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                        src="{% static 'svg_files/undraw_posting_photo.svg' %}" alt="...">
+                </div>
+                <p>Add some quality, svg illustrations to your project courtesy of <a
+                        target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
+                    constantly updated collection of beautiful svg images that you can use
+                    completely free and without attribution!</p>
+                <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                    unDraw &rarr;</a> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card shadow mb-4" style="background-color: rgba(0,0,0,0.5);">
+        <div class="card-header py-3 m-2">
+            <h6 class="m-0 font-weight-bold text-primary">Characters and Planet</h6>
+        </div>
+        <div class="card-body" id="table_info">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-floating" id="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <option selected value={{starwars_characters.0}} id={{starwars_characters.0}}>{{starwars_characters.0}}</option>
+                        {% for i in starwars_characters|slice:"1:" %}
+                            <option value="{{i}}" id="{{i}}">{{i}}</option>
+                        {% endfor %}
+                        </select>
+                        <label for="floatingSelect">Select a character</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5">
+                <div class="col-lg-6 text-center overflow-auto mx-auto p-1" id="character">
+                </div>
+                <div class="col-lg-6 text-center overflow-auto mx-auto p-1" id="planet_card">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="tchar"></div>
+                <div class="col" id="tplan"></div>
+            </div>
+        </div>
+    </div>
+</div>

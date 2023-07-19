@@ -1,0 +1,81 @@
+{% load static %}
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <div class="sidebar-brand-icon rotate-n-15">
+        <img src={% static 'images/Reypfp.jpeg' %} class="img-fluid img-thumbnail"></img>
+    </div>
+    
+    <div class="mx-3">Datas Advocate</div>
+</a>
+
+<!-- Divider -->
+<hr class="sidebar-divider my-0">
+
+<!-- Nav Item - Dashboard -->
+<li class="nav-item active">
+    <a class="nav-link" href="{% url 'home' %}">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Home</span>
+    </a>
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+<!-- Heading -->
+<div class="sidebar-heading">
+    Codebase
+</div>
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a class="nav-link" href="https://github.com/Dominic-Ta/resume_portfolio">
+        <i class="bi bi-github"></i>
+        <span>Git</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'example' %}">
+        <i class="bi bi-hdd-network"></i>
+        <span>examples</span>
+    </a>
+</li>
+<!-- Nav Item - Utilities Collapse Menu -->
+
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+<!-- Heading -->
+<div class="sidebar-heading">
+    Resume
+</div>
+
+<!-- Nav Item - Pages Collapse Menu -->
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'resume_url' %}">
+        <i class="bi bi-file-earmark-pdf-fill"></i>
+        <span>Resume PDF</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'resume' %}">
+        <i class="bi bi-person-circle"></i>
+        <span>Resume</span>
+    </a>
+</li>
+
+
+<!-- Divider -->
+<hr class="sidebar-divider d-none d-md-block">
+{% comment %} 
+<!-- Sidebar Toggler (Sidebar) -->
+<div class="text-center d-none d-md-inline">
+    
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+</div> {% endcomment %}
+
+<!-- Sidebar Message -->
+<div class="sidebar-card d-none d-lg-flex">
+    <p> Take a look around, have fun. Message me if you have any questions at martineztadominic@gmail.com </p>
+</div>
+

@@ -245,3 +245,23 @@ class StarwarsVehiclesViewSet(viewsets.ModelViewSet):
     queryset = models.StarwarsVehicles.objects.all()
     serializer_class = serializer.StarwarsVehiclesSerializer
     http_method_names = ["get", "head"]
+
+
+class WeeklyBoxOfficeViewSet(viewsets.ModelViewSet):
+    queryset = models.WeeklyBoxOffice.objects.all()
+    serializer_class = serializer.WeeklyBoxOfficeSerializer
+    http_method_names = ["get", "head"]
+
+
+class StarwarsbudgetandprofitViewSet(viewsets.ModelViewSet):
+    queryset = models.Starwarsbudgetandprofit.objects.all()
+    serializer_class = serializer.StarwarsbudgetandprofitSerializer
+    http_method_names = ["get", "head"]
+class SwcscreentimeViewSet(viewsets.ModelViewSet):
+    queryset = models.Swcscreentime.objects.all()
+    serializer_class = serializer.SwcscreentimeSerializer
+    http_method_names = ["get", "head"]
+class StarwarsCrawlersViewSet(viewsets.ModelViewSet):
+    queryset = models.StarwarsCrawlers.objects.all()
+    serializer_class = serializer.StarwarsCrawlersSerializer
+    http_method_names = ["get", "head"]

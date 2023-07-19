@@ -1,0 +1,1514 @@
+[
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Qui-Gon Jinn",
+        "Length of Movie": "7980",
+        "Character Screentime": "2130",
+        "Percentage": "26.69%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "7980",
+        "Character Screentime": "1410",
+        "Percentage": "17.67%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Queen Padme Amidala",
+        "Length of Movie": "7980",
+        "Character Screentime": "1290",
+        "Percentage": "16.17%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "7980",
+        "Character Screentime": "1275",
+        "Percentage": "15.98%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Jar Jar Binks",
+        "Length of Movie": "7980",
+        "Character Screentime": "1065",
+        "Percentage": "13.35%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Captain Panaka",
+        "Length of Movie": "7980",
+        "Character Screentime": "450",
+        "Percentage": "5.64%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Shmi Skywalker",
+        "Length of Movie": "7980",
+        "Character Screentime": "435",
+        "Percentage": "5.45%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "7980",
+        "Character Screentime": "435",
+        "Percentage": "5.45%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "R2-D2",
+        "Length of Movie": "7980",
+        "Character Screentime": "435",
+        "Percentage": "5.45%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Darth Maul",
+        "Length of Movie": "7980",
+        "Character Screentime": "360",
+        "Percentage": "4.51%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Nute Gunray",
+        "Length of Movie": "7980",
+        "Character Screentime": "360",
+        "Percentage": "4.51%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Watto",
+        "Length of Movie": "7980",
+        "Character Screentime": "270",
+        "Percentage": "3.38%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Yoda",
+        "Length of Movie": "7980",
+        "Character Screentime": "210",
+        "Percentage": "2.63%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Boss Nass",
+        "Length of Movie": "7980",
+        "Character Screentime": "180",
+        "Percentage": "2.26%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Governor Sio Bibble",
+        "Length of Movie": "7980",
+        "Character Screentime": "165",
+        "Percentage": "2.07%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Mace Windu",
+        "Length of Movie": "7980",
+        "Character Screentime": "135",
+        "Percentage": "1.69%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Sabe",
+        "Length of Movie": "7980",
+        "Character Screentime": "135",
+        "Percentage": "1.69%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "C-3PO",
+        "Length of Movie": "7980",
+        "Character Screentime": "120",
+        "Percentage": "1.50%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Sebulba",
+        "Length of Movie": "7980",
+        "Character Screentime": "105",
+        "Percentage": "1.32%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Supreme Chancellor Valorum",
+        "Length of Movie": "7980",
+        "Character Screentime": "90",
+        "Percentage": "1.13%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Captain Tarpals",
+        "Length of Movie": "7980",
+        "Character Screentime": "90",
+        "Percentage": "1.13%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Ki-Adi-Mundi",
+        "Length of Movie": "7980",
+        "Character Screentime": "75",
+        "Percentage": "0.94%"
+    },
+    {
+        "Movie": "The Phantom Menace ",
+        "Character": "Jabba the Hutt",
+        "Length of Movie": "7980",
+        "Character Screentime": "30",
+        "Percentage": "0.38%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "8580",
+        "Character Screentime": "2880",
+        "Percentage": "33.57%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "8580",
+        "Character Screentime": "2040",
+        "Percentage": "23.78%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Senator Padme Amidala",
+        "Length of Movie": "8580",
+        "Character Screentime": "1935",
+        "Percentage": "22.55%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Yoda",
+        "Length of Movie": "8580",
+        "Character Screentime": "585",
+        "Percentage": "6.82%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Count Dooku",
+        "Length of Movie": "8580",
+        "Character Screentime": "570",
+        "Percentage": "6.64%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Mace Windu",
+        "Length of Movie": "8580",
+        "Character Screentime": "420",
+        "Percentage": "4.90%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "R2-D2",
+        "Length of Movie": "8580",
+        "Character Screentime": "315",
+        "Percentage": "3.67%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Jango Fett",
+        "Length of Movie": "8580",
+        "Character Screentime": "285",
+        "Percentage": "3.32%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "C-3PO",
+        "Length of Movie": "8580",
+        "Character Screentime": "255",
+        "Percentage": "2.97%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "8580",
+        "Character Screentime": "240",
+        "Percentage": "2.80%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Zam Wesell",
+        "Length of Movie": "8580",
+        "Character Screentime": "165",
+        "Percentage": "1.92%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Taun We",
+        "Length of Movie": "8580",
+        "Character Screentime": "150",
+        "Percentage": "1.75%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Boba Fett",
+        "Length of Movie": "8580",
+        "Character Screentime": "135",
+        "Percentage": "1.57%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Jar Jar Binks",
+        "Length of Movie": "8580",
+        "Character Screentime": "135",
+        "Percentage": "1.57%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Shmi Skywalker",
+        "Length of Movie": "8580",
+        "Character Screentime": "120",
+        "Percentage": "1.40%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Cliegg Lars",
+        "Length of Movie": "8580",
+        "Character Screentime": "120",
+        "Percentage": "1.40%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Captain Typho",
+        "Length of Movie": "8580",
+        "Character Screentime": "120",
+        "Percentage": "1.40%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Lama Su",
+        "Length of Movie": "8580",
+        "Character Screentime": "120",
+        "Percentage": "1.40%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Dextor Jettster",
+        "Length of Movie": "8580",
+        "Character Screentime": "105",
+        "Percentage": "1.22%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Watto",
+        "Length of Movie": "8580",
+        "Character Screentime": "90",
+        "Percentage": "1.05%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Dorme",
+        "Length of Movie": "8580",
+        "Character Screentime": "90",
+        "Percentage": "1.05%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Beru Lars",
+        "Length of Movie": "8580",
+        "Character Screentime": "75",
+        "Percentage": "0.87%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Nute Gunray",
+        "Length of Movie": "8580",
+        "Character Screentime": "75",
+        "Percentage": "0.87%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Senator Bail Organa",
+        "Length of Movie": "8580",
+        "Character Screentime": "45",
+        "Percentage": "0.52%"
+    },
+    {
+        "Movie": "Attack Of the Clones",
+        "Character": "Governor Sio Bibble",
+        "Length of Movie": "8580",
+        "Character Screentime": "30",
+        "Percentage": "0.35%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "8400",
+        "Character Screentime": "3165",
+        "Percentage": "37.68%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "8400",
+        "Character Screentime": "2235",
+        "Percentage": "26.61%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "8400",
+        "Character Screentime": "1485",
+        "Percentage": "17.68%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Senator Padme Amidala",
+        "Length of Movie": "8400",
+        "Character Screentime": "1095",
+        "Percentage": "13.04%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Yoda",
+        "Length of Movie": "8400",
+        "Character Screentime": "705",
+        "Percentage": "8.39%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "General Grevious",
+        "Length of Movie": "8400",
+        "Character Screentime": "360",
+        "Percentage": "4.29%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Mace Windu",
+        "Length of Movie": "8400",
+        "Character Screentime": "315",
+        "Percentage": "3.75%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "R2-D2",
+        "Length of Movie": "8400",
+        "Character Screentime": "300",
+        "Percentage": "3.57%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Count Dooku",
+        "Length of Movie": "8400",
+        "Character Screentime": "120",
+        "Percentage": "1.43%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Ki-Adi-Mundi",
+        "Length of Movie": "8400",
+        "Character Screentime": "105",
+        "Percentage": "1.25%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Commander Cody",
+        "Length of Movie": "8400",
+        "Character Screentime": "75",
+        "Percentage": "0.89%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Nute Gunray",
+        "Length of Movie": "8400",
+        "Character Screentime": "60",
+        "Percentage": "0.71%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Chewbacca",
+        "Length of Movie": "8400",
+        "Character Screentime": "60",
+        "Percentage": "0.71%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "8400",
+        "Character Screentime": "45",
+        "Percentage": "0.54%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Leia Organa",
+        "Length of Movie": "8400",
+        "Character Screentime": "30",
+        "Percentage": "0.36%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Beru Lars",
+        "Length of Movie": "8400",
+        "Character Screentime": "30",
+        "Percentage": "0.36%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Captain Typho",
+        "Length of Movie": "8400",
+        "Character Screentime": "15",
+        "Percentage": "0.18%"
+    },
+    {
+        "Movie": "Revenge of the Sith",
+        "Character": "Jar Jar Binks",
+        "Length of Movie": "8400",
+        "Character Screentime": "15",
+        "Percentage": "0.18%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "7260",
+        "Character Screentime": "2250",
+        "Percentage": "30.99%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Han Solo",
+        "Length of Movie": "7260",
+        "Character Screentime": "1170",
+        "Percentage": "16.12%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "C-3PO",
+        "Length of Movie": "7260",
+        "Character Screentime": "1155",
+        "Percentage": "15.91%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "R2-D2",
+        "Length of Movie": "7260",
+        "Character Screentime": "1080",
+        "Percentage": "14.88%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "7260",
+        "Character Screentime": "1050",
+        "Percentage": "14.46%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Leia Organa",
+        "Length of Movie": "7260",
+        "Character Screentime": "810",
+        "Percentage": "11.16%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Chewbacca",
+        "Length of Movie": "7260",
+        "Character Screentime": "660",
+        "Percentage": "9.09%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "7260",
+        "Character Screentime": "555",
+        "Percentage": "7.64%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Grand Moff Tarkin",
+        "Length of Movie": "7260",
+        "Character Screentime": "330",
+        "Percentage": "4.55%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Owen Lars",
+        "Length of Movie": "7260",
+        "Character Screentime": "195",
+        "Percentage": "2.69%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "General Dodonna",
+        "Length of Movie": "7260",
+        "Character Screentime": "90",
+        "Percentage": "1.24%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Biggs Darklighter",
+        "Length of Movie": "7260",
+        "Character Screentime": "60",
+        "Percentage": "0.83%"
+    },
+    {
+        "Movie": "A New Hope",
+        "Character": "Wedge Antilles",
+        "Length of Movie": "7260",
+        "Character Screentime": "45",
+        "Percentage": "0.62%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "7440",
+        "Character Screentime": "2085",
+        "Percentage": "28.02%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Han Solo",
+        "Length of Movie": "7440",
+        "Character Screentime": "1410",
+        "Percentage": "18.95%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Leia Organa",
+        "Length of Movie": "7440",
+        "Character Screentime": "1365",
+        "Percentage": "18.35%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Chewbacca",
+        "Length of Movie": "7440",
+        "Character Screentime": "990",
+        "Percentage": "13.31%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "C-3PO",
+        "Length of Movie": "7440",
+        "Character Screentime": "870",
+        "Percentage": "11.69%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "7440",
+        "Character Screentime": "795",
+        "Percentage": "10.69%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Yoda",
+        "Length of Movie": "7440",
+        "Character Screentime": "750",
+        "Percentage": "10.08%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "R2-D2",
+        "Length of Movie": "7440",
+        "Character Screentime": "675",
+        "Percentage": "9.07%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Lando Calrissian",
+        "Length of Movie": "7440",
+        "Character Screentime": "555",
+        "Percentage": "7.46%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Admiral Piett",
+        "Length of Movie": "7440",
+        "Character Screentime": "135",
+        "Percentage": "1.81%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Boba Fett",
+        "Length of Movie": "7440",
+        "Character Screentime": "105",
+        "Percentage": "1.41%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "General Rieekan",
+        "Length of Movie": "7440",
+        "Character Screentime": "90",
+        "Percentage": "1.21%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Captain Needa",
+        "Length of Movie": "7440",
+        "Character Screentime": "90",
+        "Percentage": "1.21%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Lobot",
+        "Length of Movie": "7440",
+        "Character Screentime": "75",
+        "Percentage": "1.01%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "7440",
+        "Character Screentime": "60",
+        "Percentage": "0.81%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "7440",
+        "Character Screentime": "60",
+        "Percentage": "0.81%"
+    },
+    {
+        "Movie": "The Empire Strikes Back",
+        "Character": "Wedge Antilles",
+        "Length of Movie": "7440",
+        "Character Screentime": "30",
+        "Percentage": "0.40%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "7980",
+        "Character Screentime": "1455",
+        "Percentage": "18.23%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Leia Organa",
+        "Length of Movie": "7980",
+        "Character Screentime": "1275",
+        "Percentage": "15.98%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Han Solo",
+        "Length of Movie": "7980",
+        "Character Screentime": "1065",
+        "Percentage": "13.35%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "7980",
+        "Character Screentime": "885",
+        "Percentage": "11.09%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "C-3PO",
+        "Length of Movie": "7980",
+        "Character Screentime": "810",
+        "Percentage": "10.15%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Chewbacca",
+        "Length of Movie": "7980",
+        "Character Screentime": "630",
+        "Percentage": "7.89%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "R2-D2",
+        "Length of Movie": "7980",
+        "Character Screentime": "435",
+        "Percentage": "5.45%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "7980",
+        "Character Screentime": "375",
+        "Percentage": "4.70%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Jabba the Hutt",
+        "Length of Movie": "7980",
+        "Character Screentime": "375",
+        "Percentage": "4.70%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Lando Calrissian",
+        "Length of Movie": "7980",
+        "Character Screentime": "315",
+        "Percentage": "3.95%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Yoda",
+        "Length of Movie": "7980",
+        "Character Screentime": "240",
+        "Percentage": "3.01%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Wicket",
+        "Length of Movie": "7980",
+        "Character Screentime": "210",
+        "Percentage": "2.63%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Admiral Ackbar",
+        "Length of Movie": "7980",
+        "Character Screentime": "165",
+        "Percentage": "2.07%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Bib Fortuna",
+        "Length of Movie": "7980",
+        "Character Screentime": "165",
+        "Percentage": "2.07%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Obi-Wan Kenobi",
+        "Length of Movie": "7980",
+        "Character Screentime": "135",
+        "Percentage": "1.69%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Moff Jerjerod",
+        "Length of Movie": "7980",
+        "Character Screentime": "90",
+        "Percentage": "1.13%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Nien Nunb",
+        "Length of Movie": "7980",
+        "Character Screentime": "90",
+        "Percentage": "1.13%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Wedge Antilles",
+        "Length of Movie": "7980",
+        "Character Screentime": "75",
+        "Percentage": "0.94%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Boba Fett",
+        "Length of Movie": "7980",
+        "Character Screentime": "60",
+        "Percentage": "0.75%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Mon Mothma",
+        "Length of Movie": "7980",
+        "Character Screentime": "60",
+        "Percentage": "0.75%"
+    },
+    {
+        "Movie": "Return of the Jedi",
+        "Character": "Admiral Piett",
+        "Length of Movie": "7980",
+        "Character Screentime": "60",
+        "Percentage": "0.75%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Rey",
+        "Length of Movie": "8280",
+        "Character Screentime": "2580",
+        "Percentage": "31.16%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Finn",
+        "Length of Movie": "8280",
+        "Character Screentime": "1905",
+        "Percentage": "23.01%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Han Solo",
+        "Length of Movie": "8280",
+        "Character Screentime": "1230",
+        "Percentage": "14.86%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Ben Solo",
+        "Length of Movie": "8280",
+        "Character Screentime": "1140",
+        "Percentage": "13.77%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "BB-8",
+        "Length of Movie": "8280",
+        "Character Screentime": "645",
+        "Percentage": "7.79%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Poe Dameron",
+        "Length of Movie": "8280",
+        "Character Screentime": "525",
+        "Percentage": "6.34%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Chewbacca",
+        "Length of Movie": "8280",
+        "Character Screentime": "510",
+        "Percentage": "6.16%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Leia Organa",
+        "Length of Movie": "8280",
+        "Character Screentime": "375",
+        "Percentage": "4.53%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Maz Kanata",
+        "Length of Movie": "8280",
+        "Character Screentime": "300",
+        "Percentage": "3.62%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "General Hux",
+        "Length of Movie": "8280",
+        "Character Screentime": "225",
+        "Percentage": "2.72%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Snoke",
+        "Length of Movie": "8280",
+        "Character Screentime": "120",
+        "Percentage": "1.45%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Captain Phasma",
+        "Length of Movie": "8280",
+        "Character Screentime": "105",
+        "Percentage": "1.27%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Lor San Tekka",
+        "Length of Movie": "8280",
+        "Character Screentime": "105",
+        "Percentage": "1.27%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "C-3PO",
+        "Length of Movie": "8280",
+        "Character Screentime": "105",
+        "Percentage": "1.27%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "R2-D2",
+        "Length of Movie": "8280",
+        "Character Screentime": "75",
+        "Percentage": "0.91%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "8280",
+        "Character Screentime": "60",
+        "Percentage": "0.72%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Unkar Plutt",
+        "Length of Movie": "8280",
+        "Character Screentime": "60",
+        "Percentage": "0.72%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Admiral Ackbar",
+        "Length of Movie": "8280",
+        "Character Screentime": "15",
+        "Percentage": "0.18%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Nien Nunb",
+        "Length of Movie": "8280",
+        "Character Screentime": "15",
+        "Percentage": "0.18%"
+    },
+    {
+        "Movie": "The Force Awakens",
+        "Character": "Lt. Connix",
+        "Length of Movie": "8280",
+        "Character Screentime": "15",
+        "Percentage": "0.18%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Rey",
+        "Length of Movie": "9120",
+        "Character Screentime": "1815",
+        "Percentage": "19.90%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "9120",
+        "Character Screentime": "1275",
+        "Percentage": "13.98%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Finn",
+        "Length of Movie": "9120",
+        "Character Screentime": "1050",
+        "Percentage": "11.51%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Ben Solo",
+        "Length of Movie": "9120",
+        "Character Screentime": "915",
+        "Percentage": "10.03%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Rose Tico",
+        "Length of Movie": "9120",
+        "Character Screentime": "780",
+        "Percentage": "8.55%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Poe Dameron",
+        "Length of Movie": "9120",
+        "Character Screentime": "735",
+        "Percentage": "8.06%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Leia Organa",
+        "Length of Movie": "9120",
+        "Character Screentime": "525",
+        "Percentage": "5.76%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Vice-Admiral Amilyn Holdo",
+        "Length of Movie": "9120",
+        "Character Screentime": "330",
+        "Percentage": "3.62%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Snoke",
+        "Length of Movie": "9120",
+        "Character Screentime": "285",
+        "Percentage": "3.13%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "BB-8",
+        "Length of Movie": "9120",
+        "Character Screentime": "286",
+        "Percentage": "3.14%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "General Hux",
+        "Length of Movie": "9120",
+        "Character Screentime": "270",
+        "Percentage": "2.96%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "DJ",
+        "Length of Movie": "9120",
+        "Character Screentime": "225",
+        "Percentage": "2.47%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "C-3PO",
+        "Length of Movie": "9120",
+        "Character Screentime": "150",
+        "Percentage": "1.64%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Lt. Connix",
+        "Length of Movie": "9120",
+        "Character Screentime": "150",
+        "Percentage": "1.64%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Yoda",
+        "Length of Movie": "9120",
+        "Character Screentime": "120",
+        "Percentage": "1.32%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Chewbacca",
+        "Length of Movie": "9120",
+        "Character Screentime": "120",
+        "Percentage": "1.32%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Captain Phasma",
+        "Length of Movie": "9120",
+        "Character Screentime": "105",
+        "Percentage": "1.15%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Commander D’Acy",
+        "Length of Movie": "9120",
+        "Character Screentime": "105",
+        "Percentage": "1.15%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Paige Tico",
+        "Length of Movie": "9120",
+        "Character Screentime": "90",
+        "Percentage": "0.99%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "R2-D2",
+        "Length of Movie": "9120",
+        "Character Screentime": "60",
+        "Percentage": "0.66%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Maz Kanata",
+        "Length of Movie": "9120",
+        "Character Screentime": "45",
+        "Percentage": "0.49%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Nien nunb",
+        "Length of Movie": "9120",
+        "Character Screentime": "15",
+        "Percentage": "0.16%"
+    },
+    {
+        "Movie": "The Last Jedi",
+        "Character": "Admiral Ackbar",
+        "Length of Movie": "9120",
+        "Character Screentime": "15",
+        "Percentage": "0.16%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Rey",
+        "Length of Movie": "8460",
+        "Character Screentime": "3345",
+        "Percentage": "39.54%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Poe Dameron",
+        "Length of Movie": "8460",
+        "Character Screentime": "1545",
+        "Percentage": "18.26%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Finn",
+        "Length of Movie": "8460",
+        "Character Screentime": "1485",
+        "Percentage": "17.55%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Ben Solo",
+        "Length of Movie": "8460",
+        "Character Screentime": "1230",
+        "Percentage": "14.54%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "C-3PO",
+        "Length of Movie": "8460",
+        "Character Screentime": "645",
+        "Percentage": "7.62%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Chewbacca",
+        "Length of Movie": "8460",
+        "Character Screentime": "555",
+        "Percentage": "6.56%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "BB-8",
+        "Length of Movie": "8460",
+        "Character Screentime": "390",
+        "Percentage": "4.61%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Emperor Palpatine",
+        "Length of Movie": "8460",
+        "Character Screentime": "360",
+        "Percentage": "4.26%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Jannah",
+        "Length of Movie": "8460",
+        "Character Screentime": "300",
+        "Percentage": "3.55%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Zorii Bliss",
+        "Length of Movie": "8460",
+        "Character Screentime": "270",
+        "Percentage": "3.19%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Leia Organa",
+        "Length of Movie": "8460",
+        "Character Screentime": "255",
+        "Percentage": "3.01%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Rose Tico",
+        "Length of Movie": "8460",
+        "Character Screentime": "180",
+        "Percentage": "2.13%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Lando Calrissian",
+        "Length of Movie": "8460",
+        "Character Screentime": "180",
+        "Percentage": "2.13%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Allegiant General Pryde",
+        "Length of Movie": "8460",
+        "Character Screentime": "180",
+        "Percentage": "2.13%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Luke Skywalker",
+        "Length of Movie": "8460",
+        "Character Screentime": "165",
+        "Percentage": "1.95%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "D-0",
+        "Length of Movie": "8460",
+        "Character Screentime": "135",
+        "Percentage": "1.60%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "General Hux",
+        "Length of Movie": "8460",
+        "Character Screentime": "120",
+        "Percentage": "1.42%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "R2-D2",
+        "Length of Movie": "8460",
+        "Character Screentime": "120",
+        "Percentage": "1.42%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Han Solo",
+        "Length of Movie": "8460",
+        "Character Screentime": "105",
+        "Percentage": "1.24%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Beaumont",
+        "Length of Movie": "8460",
+        "Character Screentime": "90",
+        "Percentage": "1.06%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Snap Wexley",
+        "Length of Movie": "8460",
+        "Character Screentime": "90",
+        "Percentage": "1.06%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Babu Frik",
+        "Length of Movie": "8460",
+        "Character Screentime": "90",
+        "Percentage": "1.06%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Lt. Connix",
+        "Length of Movie": "8460",
+        "Character Screentime": "75",
+        "Percentage": "0.89%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Maz Kanata",
+        "Length of Movie": "8460",
+        "Character Screentime": "60",
+        "Percentage": "0.71%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Commander D’Acy",
+        "Length of Movie": "8460",
+        "Character Screentime": "60",
+        "Percentage": "0.71%"
+    },
+    {
+        "Movie": "The Rise of Skywalker",
+        "Character": "Nien Nunb",
+        "Length of Movie": "8460",
+        "Character Screentime": "30",
+        "Percentage": "0.35%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Jyn Erso",
+        "Length of Movie": "7980",
+        "Character Screentime": "2160",
+        "Percentage": "27.07%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Captain Cassian Andor",
+        "Length of Movie": "7980",
+        "Character Screentime": "1500",
+        "Percentage": "18.80%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Bodhi Rook",
+        "Length of Movie": "7980",
+        "Character Screentime": "705",
+        "Percentage": "8.83%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Director Orsen Krennic",
+        "Length of Movie": "7980",
+        "Character Screentime": "600",
+        "Percentage": "7.52%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "K-2S0",
+        "Length of Movie": "7980",
+        "Character Screentime": "540",
+        "Percentage": "6.77%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Chirrut Imwe",
+        "Length of Movie": "7980",
+        "Character Screentime": "540",
+        "Percentage": "6.77%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Baze Malbus",
+        "Length of Movie": "7980",
+        "Character Screentime": "495",
+        "Percentage": "6.20%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Galen Erso",
+        "Length of Movie": "7980",
+        "Character Screentime": "390",
+        "Percentage": "4.89%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Saw Gerrera",
+        "Length of Movie": "7980",
+        "Character Screentime": "285",
+        "Percentage": "3.57%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Grand Moff Tarkin",
+        "Length of Movie": "7980",
+        "Character Screentime": "195",
+        "Percentage": "2.44%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Anakin Skywalker",
+        "Length of Movie": "7980",
+        "Character Screentime": "180",
+        "Percentage": "2.26%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Mon Mothma",
+        "Length of Movie": "7980",
+        "Character Screentime": "135",
+        "Percentage": "1.69%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "General Draven",
+        "Length of Movie": "7980",
+        "Character Screentime": "135",
+        "Percentage": "1.69%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Lyra Erso",
+        "Length of Movie": "7980",
+        "Character Screentime": "90",
+        "Percentage": "1.13%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Senator Bail Organa",
+        "Length of Movie": "7980",
+        "Character Screentime": "75",
+        "Percentage": "0.94%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Admiral Raddus",
+        "Length of Movie": "7980",
+        "Character Screentime": "75",
+        "Percentage": "0.94%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "General Dodonna",
+        "Length of Movie": "7980",
+        "Character Screentime": "45",
+        "Percentage": "0.56%"
+    },
+    {
+        "Movie": "Rogue One",
+        "Character": "Leia Organa",
+        "Length of Movie": "7980",
+        "Character Screentime": "15",
+        "Percentage": "0.19%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Han Solo",
+        "Length of Movie": "8100",
+        "Character Screentime": "3330",
+        "Percentage": "41.11%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Qi’ra",
+        "Length of Movie": "8100",
+        "Character Screentime": "1770",
+        "Percentage": "21.85%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Tobias Beckett",
+        "Length of Movie": "8100",
+        "Character Screentime": "1290",
+        "Percentage": "15.93%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Chewbacca",
+        "Length of Movie": "8100",
+        "Character Screentime": "720",
+        "Percentage": "8.89%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Lando Calrissian",
+        "Length of Movie": "8100",
+        "Character Screentime": "450",
+        "Percentage": "5.56%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Dryden Vos",
+        "Length of Movie": "8100",
+        "Character Screentime": "450",
+        "Percentage": "5.56%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "L3-37",
+        "Length of Movie": "8100",
+        "Character Screentime": "435",
+        "Percentage": "5.37%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Val",
+        "Length of Movie": "8100",
+        "Character Screentime": "315",
+        "Percentage": "3.89%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Enfys Nest",
+        "Length of Movie": "8100",
+        "Character Screentime": "255",
+        "Percentage": "3.15%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Rio Durant",
+        "Length of Movie": "8100",
+        "Character Screentime": "180",
+        "Percentage": "2.22%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Lady Proxima",
+        "Length of Movie": "8100",
+        "Character Screentime": "75",
+        "Percentage": "0.93%"
+    },
+    {
+        "Movie": "Solo",
+        "Character": "Darth Maul",
+        "Length of Movie": "8100",
+        "Character Screentime": "45",
+        "Percentage": "0.56%"
+    }
+]

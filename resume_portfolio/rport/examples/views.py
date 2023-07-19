@@ -1,7 +1,16 @@
-from django.http import HttpResponse,HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound
 from django.template import loader
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import NetflixTitles, CharacterData, StarwarsPlanets
+from .models import (
+    NetflixTitles,
+    CharacterData,
+    StarwarsPlanets,
+    WeeklyBoxOffice,
+    Starwarsbudgetandprofit,
+    Swcscreentime,
+    StarwarsFilms,
+    StarwarsCrawlers,
+)
 from datetime import datetime
 import json, requests
 from django.core.cache import cache  # This is the memcache cache.
@@ -9,70 +18,175 @@ import os
 import environ
 from django.db.models import Case, CharField, Count, Value, When, Func, Q
 from collections import defaultdict
-import warnings,heapq
+import warnings, heapq
 from pathlib import Path
 from dotenv import load_dotenv
 from django.http import JsonResponse
 from django.core import serializers
 from django.conf import settings
 import re
+from django.utils.safestring import mark_safe
 
 warnings.filterwarnings("ignore")
 # from django.http import HttpResponse
-path =  os.path.abspath(os.path.dirname(__file__))
+path = os.path.abspath(os.path.dirname(__file__))
 env = environ.Env()
 environ.Env.read_env()
-relative_path_to_env = Path('../report/.env')
+relative_path_to_env = Path("../report/.env")
 dotenv_path = (path / relative_path_to_env).resolve()
 load_dotenv(dotenv_path)
-maps_API = os.environ.get('maps_api_key')
+maps_API = os.environ.get("maps_api_key")
 
 # Create your views here.
+def get_crawl_data(requests, movie):
+    model = StarwarsCrawlers.objects.filter(title__icontains=movie)
+    qs_json = serializers.serialize("json", model)
+    y = json.loads(qs_json)
+    return JsonResponse(y[0]["fields"])
+
+def SwcscreentimeView(requests, movie_name):
+    model = Swcscreentime.objects.values('character', 'percentage').filter(movie__icontains=movie_name)
+    combined_dict = {}
+    characters = []
+    scper = []
+    for item in model:
+        characters.append(item['character'])
+        scper.append(float(item['percentage'].replace('%', '')))
+    combined_dict = {
+        'character' : characters,
+        'percentage': scper
+    }
+    return JsonResponse(combined_dict)
+"""
+Logic here is Load Movie names -> select a movie and use that to load_data_weekly to get the weekly data for that 
+selected title. 
+"""
+def load_movie_names(requests):
+    """_summary_
+    Not being used for now but just provides us with a url for the dictinct movies in our starwars database.
+
+    """
+    model = WeeklyBoxOffice.objects.values_list("movie", flat=True).distinct()
+    movie = []
+    for i in model:
+        movie.append(i)
+    return JsonResponse({"movie_name": movie})
+
+
+def load_movie_profits(requests, movie):
+    model = Starwarsbudgetandprofit.objects.filter(title=movie)
+    qs_json = serializers.serialize("json", model)
+    y = json.loads(qs_json)
+    return JsonResponse(y[0]["fields"])
+
+
+def load_dat_weekly(request, movie):
+    model = WeeklyBoxOffice.objects.filter(movie=movie)
+    qs_json = serializers.serialize("json", model)
+    y = json.loads(qs_json)
+    dates = []
+    theaters = []
+    gross = []
+    per_theater = []
+    total_gross = []
+    week = []
+    for i in y:
+        dates.append(i["fields"]["date"])
+        theaters.append(i["fields"]["theaters"])
+        gross.append(i["fields"]["gross"])
+        per_theater.append(i["fields"]["per_theater"])
+        total_gross.append(i["fields"]["total_gross"])
+        week.append(i["fields"]["week"])
+    movie_data = {
+        "Dates": dates,
+        "Gross": gross,
+        "Theaters": theaters,
+        "Per_Theater": per_theater,
+        "Total_Gross": total_gross,
+        "Week": week,
+    }
+    return JsonResponse(movie_data)
+
+
+def fancy_dashboard(request):
+    model = WeeklyBoxOffice.objects.values_list("movie", flat=True).distinct()
+    model2 = CharacterData.objects.all()
+    model_list = [obj.index for obj in model2]
+    qs_json = serializers.serialize("json", model2)
+    y = json.loads(qs_json)
+    char_in_movie = {}
+    for i in y:
+        char_in_movie[i['pk']] =  i['fields']['films'].split(',')
+    movie = []
+    for i in model:
+        movie.append(i)
+    return render(
+        request, "fancy_dashboards/fancy_dashboard.html", {"search_parameters": movie, "chars_and_movies": char_in_movie, "starwars_characters": model_list}
+    )
+
+
 def main_view(request):
     template = loader.get_template("main.html")
     return HttpResponse(template.render())
+
+
 def starwars(request):
-    model=CharacterData.objects.all()
+    model = CharacterData.objects.all()
     model_list = [obj.index for obj in model]
     return render(request, "starwars_crawler.html", {"starwars_characters": model_list})
+
+
 def get_characters(request, index):
-    model=CharacterData.objects.filter(index=index)
-    qs_json = serializers.serialize('json', model)
+    model = CharacterData.objects.filter(index=index)
+    qs_json = serializers.serialize("json", model)
     y = json.loads(qs_json)
-    character_data = {
-        "character": y[0]['pk'],
-        "fields": y[0]['fields']
-    }
+    character_data = {"character": y[0]["pk"], "fields": y[0]["fields"]}
     return JsonResponse(character_data)
+
+
 def get_planet_info(request, plan_name):
     models = StarwarsPlanets.objects.filter(name=plan_name)
-    qs_json = serializers.serialize('json', models)
+    qs_json = serializers.serialize("json", models)
     y = json.loads(qs_json)
-    planet_data = {
-        "fields": y[0]['fields']
-    }
+    planet_data = {"fields": y[0]["fields"]}
     return JsonResponse(planet_data)
+
+
 def char_img_view(request, id_num, tval):
     # Assuming you have an Image model with an 'id' field
     dict_types = {
-        'char': 'characters',
-        'film': 'films',
-        'planets': 'planets',
-        'species': 'species',
-        'starships': 'starships',
-        'vehicles': 'vehicles'
+        "char": "characters",
+        "film": "films",
+        "planets": "planets",
+        "species": "species",
+        "starships": "starships",
+        "vehicles": "vehicles",
     }
     if tval in dict_types.keys():
-        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', dict_types[tval], str(id_num) + '.jpg')
+        image_path = os.path.join(
+            settings.STATIC_ROOT,
+            "images",
+            "starwars",
+            dict_types[tval],
+            str(id_num) + ".jpg",
+        )
     else:
-        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', 'placeholder.jpg') # Only if tval is not one of our categories
-    # Second check is to see if the image even exists. 
+        image_path = os.path.join(
+            settings.STATIC_ROOT, "images", "starwars", "placeholder.jpg"
+        )  # Only if tval is not one of our categories
+    # Second check is to see if the image even exists.
     if os.path.isfile(image_path) == False:
-        image_path = os.path.join(settings.STATIC_ROOT, 'images', 'starwars', 'placeholder.jpg')
-    with open(image_path, 'rb') as f:
-        response = HttpResponse(f.read(), content_type='image/jpeg')
-        response['Content-Disposition'] = 'inline; filename=' + os.path.basename(image_path)
+        image_path = os.path.join(
+            settings.STATIC_ROOT, "images", "starwars", "placeholder.jpg"
+        )
+    with open(image_path, "rb") as f:
+        response = HttpResponse(f.read(), content_type="image/jpeg")
+        response["Content-Disposition"] = "inline; filename=" + os.path.basename(
+            image_path
+        )
         return response
+
+
 def get_planet(request, plan_name):
     models = StarwarsPlanets.objects.filter(name=plan_name)
     pattern = r"\d+"
@@ -82,18 +196,24 @@ def get_planet(request, plan_name):
         match = re.search(pattern, url)
         if match:
             planet_id = int(match.group())
-    return redirect(char_img_view, id_num = planet_id, tval='planets')
-    
+    return redirect(char_img_view, id_num=planet_id, tval="planets")
+
+
 def web_scrape_request(request):
     template = loader.get_template("webscraping_tutorial.html")
     return HttpResponse(template.render())
 
+
 def lin_reg_view(request):
     template = loader.get_template("Linear_regression.html")
     return HttpResponse(template.render())
+
+
 def dash(request):
     template = loader.get_template("dashboards.html")
     return HttpResponse(template.render())
+
+
 def about_view(request):
     total_items = cache.get("total_items")
 
@@ -173,7 +293,9 @@ def about_view(request):
         for year in genre_count_all_years:
             genres_count = genre_count_all_years[year]
             top_5 = heapq.nlargest(5, genres_count, key=genres_count.get)
-            top_5_genres_by_year[year] = [{genre: genres_count[genre] for genre in top_5}]
+            top_5_genres_by_year[year] = [
+                {genre: genres_count[genre] for genre in top_5}
+            ]
 
         netflix_query = NetflixTitles.objects.values("country")
         # netflix_query = NetflixTitles.objects.all() #filter(release_year = 1993)
@@ -204,9 +326,11 @@ def about_view(request):
         "top_5_genres_by_year": dict(total_items["top_5_genres_by_year"]),
         "genre_count_all_years": dict(total_items["genre_count_all_years"]),
         "maps_API_key": maps_API,
-        "years_in_order":  sorted(dict(total_items["top_5_genres_by_year"]).keys(), key=int),
+        "years_in_order": sorted(
+            dict(total_items["top_5_genres_by_year"]).keys(), key=int
+        ),
     }
-   
+
     return render(request, "about_netflix_dataset.html", netflix_data)
 
 
@@ -252,6 +376,7 @@ def return_dict_from_data(dict_val) -> dict:
             continue
     return temp_dict
 
+
 def load_map(request):
     available_titles = cache.get("title_count_cache")
     if available_titles is None:
@@ -269,8 +394,12 @@ def load_map(request):
                     elif len(y) > 0:
                         available_titles[y] = 1
         cache.set("title_count_cache", available_titles, timeout=60 * 60 * 24 * 5)
-    netflix_data = {"titles_per_country": json.dumps(available_titles), 'maps_API_key': maps_API}
+    netflix_data = {
+        "titles_per_country": json.dumps(available_titles),
+        "maps_API_key": maps_API,
+    }
     return render(request, "netflix_map_of_countries.html", netflix_data)
+
 
 def indi_info(request, index):
     netflix_item = NetflixTitles.objects.get(index=index)

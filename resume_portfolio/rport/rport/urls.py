@@ -35,7 +35,6 @@ urlpatterns = [
     path("", landing_view, name="home"),
     path("resume", email, name="resume"),
     path("resume/url", link_to_resume, name="resume_url"),
-    path("api/", include("api.urls"), name='api_urls'),
+    path("api/", include("api.urls"), name="api_urls"),
     path("examples/", include("examples.urls")),
 ]
-

@@ -1,0 +1,2081 @@
+[
+    {
+        "Date": "Dec 20, 19",
+        "Gross": "289796816",
+        "Theaters": "4406",
+        "Per Theater": "65773",
+        "Total Gross": "289796816",
+        "Week": "1",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Dec 27, 19",
+        "Gross": "127260625",
+        "Theaters": "4406",
+        "Per Theater": "28883",
+        "Total Gross": "417057441",
+        "Week": "2",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Jan 3, 20",
+        "Gross": "46053249",
+        "Theaters": "4406",
+        "Per Theater": "10452",
+        "Total Gross": "463110690",
+        "Week": "3",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Jan 10, 20",
+        "Gross": "20535111",
+        "Theaters": "4279",
+        "Per Theater": "4799",
+        "Total Gross": "483645801",
+        "Week": "4",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Jan 17, 20",
+        "Gross": "12764339",
+        "Theaters": "3058",
+        "Per Theater": "4174",
+        "Total Gross": "496410140",
+        "Week": "5",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Jan 24, 20",
+        "Gross": "7452881",
+        "Theaters": "2800",
+        "Per Theater": "2662",
+        "Total Gross": "503863021",
+        "Week": "6",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Jan 31, 20",
+        "Gross": "4458457",
+        "Theaters": "2202",
+        "Per Theater": "2025",
+        "Total Gross": "508321478",
+        "Week": "7",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Feb 7, 20",
+        "Gross": "3164885",
+        "Theaters": "1746",
+        "Per Theater": "1813",
+        "Total Gross": "511486363",
+        "Week": "8",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Feb 14, 20",
+        "Gross": "2077009",
+        "Theaters": "992",
+        "Per Theater": "2094",
+        "Total Gross": "513563372",
+        "Week": "9",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Feb 21, 20",
+        "Gross": "762516",
+        "Theaters": "558",
+        "Per Theater": "1367",
+        "Total Gross": "514325888",
+        "Week": "10",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Feb 28, 20",
+        "Gross": "503925",
+        "Theaters": "393",
+        "Per Theater": "1282",
+        "Total Gross": "514829813",
+        "Week": "11",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Mar 6, 20",
+        "Gross": "285961",
+        "Theaters": "269",
+        "Per Theater": "1063",
+        "Total Gross": "515115774",
+        "Week": "12",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "Mar 13, 20",
+        "Gross": "86768",
+        "Theaters": "189",
+        "Per Theater": "459",
+        "Total Gross": "515202542",
+        "Week": "13",
+        "Movie": "Star Wars: The Rise of Skywalker"
+    },
+    {
+        "Date": "May 25, 18",
+        "Gross": "119592692",
+        "Theaters": "4381",
+        "Per Theater": "27298",
+        "Total Gross": "119592692",
+        "Week": "1",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jun 1, 18",
+        "Gross": "41358782",
+        "Theaters": "4381",
+        "Per Theater": "9440",
+        "Total Gross": "160951474",
+        "Week": "2",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jun 8, 18",
+        "Gross": "22812613",
+        "Theaters": "4335",
+        "Per Theater": "5262",
+        "Total Gross": "183764087",
+        "Week": "3",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jun 15, 18",
+        "Gross": "14367783",
+        "Theaters": "3182",
+        "Per Theater": "4515",
+        "Total Gross": "198131870",
+        "Week": "4",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jun 22, 18",
+        "Gross": "6854245",
+        "Theaters": "2338",
+        "Per Theater": "2932",
+        "Total Gross": "204986115",
+        "Week": "5",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jun 29, 18",
+        "Gross": "4873982",
+        "Theaters": "1654",
+        "Per Theater": "2947",
+        "Total Gross": "209860097",
+        "Week": "6",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jul 6, 18",
+        "Gross": "1652879",
+        "Theaters": "778",
+        "Per Theater": "2125",
+        "Total Gross": "211512976",
+        "Week": "7",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jul 13, 18",
+        "Gross": "661331",
+        "Theaters": "315",
+        "Per Theater": "2099",
+        "Total Gross": "212174307",
+        "Week": "8",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jul 20, 18",
+        "Gross": "404452",
+        "Theaters": "208",
+        "Per Theater": "1944",
+        "Total Gross": "212578759",
+        "Week": "9",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Jul 27, 18",
+        "Gross": "257742",
+        "Theaters": "165",
+        "Per Theater": "1562",
+        "Total Gross": "212836501",
+        "Week": "10",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Aug 3, 18",
+        "Gross": "317944",
+        "Theaters": "200",
+        "Per Theater": "1590",
+        "Total Gross": "213154445",
+        "Week": "11",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Aug 10, 18",
+        "Gross": "207217",
+        "Theaters": "170",
+        "Per Theater": "1219",
+        "Total Gross": "213361662",
+        "Week": "12",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Aug 17, 18",
+        "Gross": "159987",
+        "Theaters": "152",
+        "Per Theater": "1053",
+        "Total Gross": "213521649",
+        "Week": "13",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Aug 24, 18",
+        "Gross": "103581",
+        "Theaters": "118",
+        "Per Theater": "878",
+        "Total Gross": "213625230",
+        "Week": "14",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Aug 31, 18",
+        "Gross": "91639",
+        "Theaters": "90",
+        "Per Theater": "1018",
+        "Total Gross": "213716869",
+        "Week": "15",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Sep 7, 18",
+        "Gross": "32885",
+        "Theaters": "62",
+        "Per Theater": "530",
+        "Total Gross": "213749754",
+        "Week": "16",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Sep 14, 18",
+        "Gross": "17758",
+        "Theaters": "40",
+        "Per Theater": "444",
+        "Total Gross": "213767512",
+        "Week": "17",
+        "Movie": "Solo"
+    },
+    {
+        "Date": "Dec 16, 16",
+        "Gross": "221999674",
+        "Theaters": "4157",
+        "Per Theater": "53404",
+        "Total Gross": "221999674",
+        "Week": "1",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Dec 23, 16",
+        "Gross": "153379031",
+        "Theaters": "4157",
+        "Per Theater": "36897",
+        "Total Gross": "375378705",
+        "Week": "2",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Dec 30, 16",
+        "Gross": "79922649",
+        "Theaters": "4157",
+        "Per Theater": "19226",
+        "Total Gross": "455301354",
+        "Week": "3",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Jan 6, 17",
+        "Gross": "29790380",
+        "Theaters": "4157",
+        "Per Theater": "7166",
+        "Total Gross": "485091734",
+        "Week": "4",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Jan 13, 17",
+        "Gross": "20073829",
+        "Theaters": "3162",
+        "Per Theater": "6348",
+        "Total Gross": "505165563",
+        "Week": "5",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Jan 20, 17",
+        "Gross": "9760010",
+        "Theaters": "2603",
+        "Per Theater": "3750",
+        "Total Gross": "514925573",
+        "Week": "6",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Jan 27, 17",
+        "Gross": "6783939",
+        "Theaters": "2049",
+        "Per Theater": "3311",
+        "Total Gross": "521709512",
+        "Week": "7",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Feb 3, 17",
+        "Gross": "3957456",
+        "Theaters": "1613",
+        "Per Theater": "2453",
+        "Total Gross": "525666968",
+        "Week": "8",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Feb 10, 17",
+        "Gross": "2144500",
+        "Theaters": "929",
+        "Per Theater": "2308",
+        "Total Gross": "527811468",
+        "Week": "9",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Feb 17, 17",
+        "Gross": "1209076",
+        "Theaters": "435",
+        "Per Theater": "2779",
+        "Total Gross": "529020544",
+        "Week": "10",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Feb 24, 17",
+        "Gross": "584248",
+        "Theaters": "284",
+        "Per Theater": "2057",
+        "Total Gross": "529604792",
+        "Week": "11",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Mar 3, 17",
+        "Gross": "303608",
+        "Theaters": "165",
+        "Per Theater": "1840",
+        "Total Gross": "529908400",
+        "Week": "12",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Mar 10, 17",
+        "Gross": "337132",
+        "Theaters": "166",
+        "Per Theater": "2031",
+        "Total Gross": "530245532",
+        "Week": "13",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Mar 17, 17",
+        "Gross": "621967",
+        "Theaters": "179",
+        "Per Theater": "3475",
+        "Total Gross": "530867499",
+        "Week": "14",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Mar 24, 17",
+        "Gross": "604997",
+        "Theaters": "267",
+        "Per Theater": "2266",
+        "Total Gross": "531472496",
+        "Week": "15",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Mar 31, 17",
+        "Gross": "332379",
+        "Theaters": "224",
+        "Per Theater": "1484",
+        "Total Gross": "531804875",
+        "Week": "16",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Apr 7, 17",
+        "Gross": "198072",
+        "Theaters": "177",
+        "Per Theater": "1119",
+        "Total Gross": "532002947",
+        "Week": "17",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Apr 14, 17",
+        "Gross": "88962",
+        "Theaters": "121",
+        "Per Theater": "735",
+        "Total Gross": "532091909",
+        "Week": "18",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Apr 21, 17",
+        "Gross": "50995",
+        "Theaters": "71",
+        "Per Theater": "718",
+        "Total Gross": "532142904",
+        "Week": "19",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Apr 28, 17",
+        "Gross": "34420",
+        "Theaters": "43",
+        "Per Theater": "800",
+        "Total Gross": "532177324",
+        "Week": "20",
+        "Movie": "Rogue One"
+    },
+    {
+        "Date": "Dec 15, 17",
+        "Gross": "296602356",
+        "Theaters": "4232",
+        "Per Theater": "70086",
+        "Total Gross": "296602356",
+        "Week": "1",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Dec 22, 17",
+        "Gross": "168095872",
+        "Theaters": "4232",
+        "Per Theater": "39720",
+        "Total Gross": "464698228",
+        "Week": "2",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Dec 29, 17",
+        "Gross": "84264374",
+        "Theaters": "4232",
+        "Per Theater": "19911",
+        "Total Gross": "548962602",
+        "Week": "3",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Jan 5, 18",
+        "Gross": "31311982",
+        "Theaters": "4232",
+        "Per Theater": "7399",
+        "Total Gross": "580274584",
+        "Week": "4",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Jan 12, 18",
+        "Gross": "17443892",
+        "Theaters": "3090",
+        "Per Theater": "5645",
+        "Total Gross": "597718476",
+        "Week": "5",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Jan 19, 18",
+        "Gross": "8823345",
+        "Theaters": "2456",
+        "Per Theater": "3593",
+        "Total Gross": "606541821",
+        "Week": "6",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Jan 26, 18",
+        "Gross": "5574959",
+        "Theaters": "1745",
+        "Per Theater": "3195",
+        "Total Gross": "612116780",
+        "Week": "7",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Feb 2, 18",
+        "Gross": "3319499",
+        "Theaters": "1467",
+        "Per Theater": "2263",
+        "Total Gross": "615436279",
+        "Week": "8",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Feb 9, 18",
+        "Gross": "1986498",
+        "Theaters": "830",
+        "Per Theater": "2393",
+        "Total Gross": "617422777",
+        "Week": "9",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Feb 16, 18",
+        "Gross": "952941",
+        "Theaters": "351",
+        "Per Theater": "2715",
+        "Total Gross": "618375718",
+        "Week": "10",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Feb 23, 18",
+        "Gross": "487918",
+        "Theaters": "292",
+        "Per Theater": "1671",
+        "Total Gross": "618863636",
+        "Week": "11",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Mar 2, 18",
+        "Gross": "354095",
+        "Theaters": "221",
+        "Per Theater": "1602",
+        "Total Gross": "619217731",
+        "Week": "12",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Mar 9, 18",
+        "Gross": "398886",
+        "Theaters": "246",
+        "Per Theater": "1621",
+        "Total Gross": "619616617",
+        "Week": "13",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Mar 16, 18",
+        "Gross": "249192",
+        "Theaters": "211",
+        "Per Theater": "1181",
+        "Total Gross": "619865809",
+        "Week": "14",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Mar 23, 18",
+        "Gross": "165094",
+        "Theaters": "150",
+        "Per Theater": "1101",
+        "Total Gross": "620030903",
+        "Week": "15",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Mar 30, 18",
+        "Gross": "100118",
+        "Theaters": "109",
+        "Per Theater": "919",
+        "Total Gross": "620131021",
+        "Week": "16",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Apr 6, 18",
+        "Gross": "41729",
+        "Theaters": "61",
+        "Per Theater": "684",
+        "Total Gross": "620172750",
+        "Week": "17",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Apr 13, 18",
+        "Gross": "8632",
+        "Theaters": "28",
+        "Per Theater": "308",
+        "Total Gross": "620181382",
+        "Week": "18",
+        "Movie": "Star Wars Ep. VIII: The Last Jedi"
+    },
+    {
+        "Date": "Dec 18, 15",
+        "Gross": "390856054",
+        "Theaters": "4134",
+        "Per Theater": "94547",
+        "Total Gross": "390856054",
+        "Week": "1",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Dec 25, 15",
+        "Gross": "261111215",
+        "Theaters": "4134",
+        "Per Theater": "63162",
+        "Total Gross": "651967269",
+        "Week": "2",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Jan 1, 16",
+        "Gross": "118413774",
+        "Theaters": "4134",
+        "Per Theater": "28644",
+        "Total Gross": "770381043",
+        "Week": "3",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Jan 8, 16",
+        "Gross": "55551798",
+        "Theaters": "4134",
+        "Per Theater": "13438",
+        "Total Gross": "825932841",
+        "Week": "4",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Jan 15, 16",
+        "Gross": "39099505",
+        "Theaters": "3822",
+        "Per Theater": "10230",
+        "Total Gross": "865032346",
+        "Week": "5",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Jan 22, 16",
+        "Gross": "19611816",
+        "Theaters": "3365",
+        "Per Theater": "5828",
+        "Total Gross": "884644162",
+        "Week": "6",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Jan 29, 16",
+        "Gross": "14427307",
+        "Theaters": "2556",
+        "Per Theater": "5644",
+        "Total Gross": "899071469",
+        "Week": "7",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Feb 5, 16",
+        "Gross": "9573495",
+        "Theaters": "2262",
+        "Per Theater": "4232",
+        "Total Gross": "908644964",
+        "Week": "8",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Feb 12, 16",
+        "Gross": "9161331",
+        "Theaters": "1810",
+        "Per Theater": "5062",
+        "Total Gross": "917806295",
+        "Week": "9",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Feb 19, 16",
+        "Gross": "5195589",
+        "Theaters": "1618",
+        "Per Theater": "3211",
+        "Total Gross": "923001884",
+        "Week": "10",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Feb 26, 16",
+        "Gross": "3975631",
+        "Theaters": "1433",
+        "Per Theater": "2774",
+        "Total Gross": "926977515",
+        "Week": "11",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Mar 4, 16",
+        "Gross": "2481745",
+        "Theaters": "1021",
+        "Per Theater": "2431",
+        "Total Gross": "929459260",
+        "Week": "12",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Mar 11, 16",
+        "Gross": "1898927",
+        "Theaters": "760",
+        "Per Theater": "2499",
+        "Total Gross": "931358187",
+        "Week": "13",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Mar 18, 16",
+        "Gross": "1499341",
+        "Theaters": "568",
+        "Per Theater": "2640",
+        "Total Gross": "932857528",
+        "Week": "14",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Mar 25, 16",
+        "Gross": "1358991",
+        "Theaters": "552",
+        "Per Theater": "2462",
+        "Total Gross": "934216519",
+        "Week": "15",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Apr 1, 16",
+        "Gross": "932870",
+        "Theaters": "462",
+        "Per Theater": "2019",
+        "Total Gross": "935149389",
+        "Week": "16",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Apr 8, 16",
+        "Gross": "493300",
+        "Theaters": "346",
+        "Per Theater": "1426",
+        "Total Gross": "935642689",
+        "Week": "17",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Apr 15, 16",
+        "Gross": "268223",
+        "Theaters": "260",
+        "Per Theater": "1032",
+        "Total Gross": "935910912",
+        "Week": "18",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Apr 22, 16",
+        "Gross": "210596",
+        "Theaters": "208",
+        "Per Theater": "1012",
+        "Total Gross": "936121508",
+        "Week": "19",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Apr 29, 16",
+        "Gross": "161794",
+        "Theaters": "158",
+        "Per Theater": "1024",
+        "Total Gross": "936283302",
+        "Week": "20",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "May 6, 16",
+        "Gross": "133891",
+        "Theaters": "117",
+        "Per Theater": "1144",
+        "Total Gross": "936417193",
+        "Week": "21",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "May 13, 16",
+        "Gross": "122883",
+        "Theaters": "78",
+        "Per Theater": "1575",
+        "Total Gross": "936540076",
+        "Week": "22",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "May 20, 16",
+        "Gross": "101802",
+        "Theaters": "58",
+        "Per Theater": "1755",
+        "Total Gross": "936641878",
+        "Week": "23",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "May 27, 16",
+        "Gross": "20347",
+        "Theaters": "20",
+        "Per Theater": "1017",
+        "Total Gross": "936662225",
+        "Week": "24",
+        "Movie": "Star Wars Ep. VII: The Force Awakens"
+    },
+    {
+        "Date": "Aug 15, 08",
+        "Gross": "19337598",
+        "Theaters": "3452",
+        "Per Theater": "5602",
+        "Total Gross": "19337598",
+        "Week": "1",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Aug 22, 08",
+        "Gross": "7570424",
+        "Theaters": "3452",
+        "Per Theater": "2193",
+        "Total Gross": "26908022",
+        "Week": "2",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Aug 29, 08",
+        "Gross": "4152522",
+        "Theaters": "2444",
+        "Per Theater": "1699",
+        "Total Gross": "31060544",
+        "Week": "3",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Sep 5, 08",
+        "Gross": "1977307",
+        "Theaters": "1952",
+        "Per Theater": "1013",
+        "Total Gross": "33037851",
+        "Week": "4",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Sep 12, 08",
+        "Gross": "1046050",
+        "Theaters": "1005",
+        "Per Theater": "1041",
+        "Total Gross": "34083901",
+        "Week": "5",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Sep 19, 08",
+        "Gross": "471043",
+        "Theaters": "688",
+        "Per Theater": "685",
+        "Total Gross": "34554944",
+        "Week": "6",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Sep 26, 08",
+        "Gross": "231488",
+        "Theaters": "315",
+        "Per Theater": "735",
+        "Total Gross": "34786432",
+        "Week": "7",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Oct 3, 08",
+        "Gross": "85083",
+        "Theaters": "166",
+        "Per Theater": "513",
+        "Total Gross": "34871515",
+        "Week": "8",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Oct 10, 08",
+        "Gross": "38923",
+        "Theaters": "76",
+        "Per Theater": "512",
+        "Total Gross": "34910438",
+        "Week": "9",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Oct 17, 08",
+        "Gross": "131034",
+        "Theaters": "234",
+        "Per Theater": "560",
+        "Total Gross": "35041472",
+        "Week": "10",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Oct 24, 08",
+        "Gross": "60003",
+        "Theaters": "140",
+        "Per Theater": "429",
+        "Total Gross": "35101475",
+        "Week": "11",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Oct 31, 08",
+        "Gross": "38284",
+        "Theaters": "84",
+        "Per Theater": "456",
+        "Total Gross": "35139759",
+        "Week": "12",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "Nov 7, 08",
+        "Gross": "21795",
+        "Theaters": "49",
+        "Per Theater": "445",
+        "Total Gross": "35161554",
+        "Week": "13",
+        "Movie": "Star Wars: The Clone Wars"
+    },
+    {
+        "Date": "May 13, 05",
+        "Gross": "50013859",
+        "Theaters": "3661",
+        "Per Theater": "13661",
+        "Total Gross": "50013859",
+        "Week": "1",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "May 20, 05",
+        "Gross": "150428880",
+        "Theaters": "3661",
+        "Per Theater": "41090",
+        "Total Gross": "200442739",
+        "Week": "2",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "May 27, 05",
+        "Gross": "82361886",
+        "Theaters": "3663",
+        "Per Theater": "22485",
+        "Total Gross": "282804625",
+        "Week": "3",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jun 3, 05",
+        "Gross": "34453072",
+        "Theaters": "3650",
+        "Per Theater": "9439",
+        "Total Gross": "317257697",
+        "Week": "4",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jun 10, 05",
+        "Gross": "20844490",
+        "Theaters": "3322",
+        "Per Theater": "6275",
+        "Total Gross": "338102187",
+        "Week": "5",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jun 17, 05",
+        "Gross": "14253961",
+        "Theaters": "2923",
+        "Per Theater": "4876",
+        "Total Gross": "352356148",
+        "Week": "6",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jun 24, 05",
+        "Gross": "9114966",
+        "Theaters": "2371",
+        "Per Theater": "3844",
+        "Total Gross": "361471114",
+        "Week": "7",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jul 1, 05",
+        "Gross": "6747975",
+        "Theaters": "1759",
+        "Per Theater": "3836",
+        "Total Gross": "368219089",
+        "Week": "8",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jul 8, 05",
+        "Gross": "4003737",
+        "Theaters": "1355",
+        "Per Theater": "2955",
+        "Total Gross": "372222826",
+        "Week": "9",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jul 15, 05",
+        "Gross": "2606840",
+        "Theaters": "988",
+        "Per Theater": "2639",
+        "Total Gross": "374829666",
+        "Week": "10",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jul 22, 05",
+        "Gross": "1677928",
+        "Theaters": "667",
+        "Per Theater": "2516",
+        "Total Gross": "376507594",
+        "Week": "11",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Jul 29, 05",
+        "Gross": "933692",
+        "Theaters": "429",
+        "Per Theater": "2176",
+        "Total Gross": "377441286",
+        "Week": "12",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Aug 5, 05",
+        "Gross": "689191",
+        "Theaters": "359",
+        "Per Theater": "1920",
+        "Total Gross": "378130477",
+        "Week": "13",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Aug 12, 05",
+        "Gross": "519629",
+        "Theaters": "300",
+        "Per Theater": "1732",
+        "Total Gross": "378650106",
+        "Week": "14",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Aug 19, 05",
+        "Gross": "494381",
+        "Theaters": "307",
+        "Per Theater": "1610",
+        "Total Gross": "379144487",
+        "Week": "15",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Aug 26, 05",
+        "Gross": "354162",
+        "Theaters": "268",
+        "Per Theater": "1322",
+        "Total Gross": "379498649",
+        "Week": "16",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Sep 2, 05",
+        "Gross": "354862",
+        "Theaters": "281",
+        "Per Theater": "1263",
+        "Total Gross": "379853511",
+        "Week": "17",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Sep 9, 05",
+        "Gross": "159792",
+        "Theaters": "213",
+        "Per Theater": "750",
+        "Total Gross": "380013303",
+        "Week": "18",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Sep 16, 05",
+        "Gross": "117689",
+        "Theaters": "166",
+        "Per Theater": "709",
+        "Total Gross": "380130992",
+        "Week": "19",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Sep 23, 05",
+        "Gross": "57250",
+        "Theaters": "99",
+        "Per Theater": "578",
+        "Total Gross": "380188242",
+        "Week": "20",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Sep 30, 05",
+        "Gross": "29587",
+        "Theaters": "49",
+        "Per Theater": "604",
+        "Total Gross": "380217829",
+        "Week": "21",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Oct 7, 05",
+        "Gross": "31765",
+        "Theaters": "38",
+        "Per Theater": "836",
+        "Total Gross": "380249594",
+        "Week": "22",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "Oct 14, 05",
+        "Gross": "20983",
+        "Theaters": "27",
+        "Per Theater": "777",
+        "Total Gross": "380270577",
+        "Week": "23",
+        "Movie": "Star Wars Ep. III: Revenge of the Sith"
+    },
+    {
+        "Date": "May 17, 02",
+        "Gross": "123287767",
+        "Theaters": "3161",
+        "Per Theater": "39003",
+        "Total Gross": "141305821",
+        "Week": "2",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "May 24, 02",
+        "Gross": "57892284",
+        "Theaters": "3161",
+        "Per Theater": "18315",
+        "Total Gross": "211321468",
+        "Week": "3",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "May 31, 02",
+        "Gross": "29773171",
+        "Theaters": "3161",
+        "Per Theater": "9419",
+        "Total Gross": "241094639",
+        "Week": "4",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jun 7, 02",
+        "Gross": "20219231",
+        "Theaters": "3161",
+        "Per Theater": "6396",
+        "Total Gross": "261313870",
+        "Week": "5",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jun 14, 02",
+        "Gross": "13363813",
+        "Theaters": "2401",
+        "Per Theater": "5566",
+        "Total Gross": "274677683",
+        "Week": "6",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jun 21, 02",
+        "Gross": "7907857",
+        "Theaters": "2107",
+        "Per Theater": "3753",
+        "Total Gross": "282585540",
+        "Week": "7",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jun 28, 02",
+        "Gross": "6261203",
+        "Theaters": "1801",
+        "Per Theater": "3477",
+        "Total Gross": "288846743",
+        "Week": "8",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jul 5, 02",
+        "Gross": "3688904",
+        "Theaters": "1162",
+        "Per Theater": "3175",
+        "Total Gross": "292535647",
+        "Week": "9",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jul 12, 02",
+        "Gross": "2065272",
+        "Theaters": "632",
+        "Per Theater": "3268",
+        "Total Gross": "294600919",
+        "Week": "10",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jul 19, 02",
+        "Gross": "1604494",
+        "Theaters": "562",
+        "Per Theater": "2855",
+        "Total Gross": "296205413",
+        "Week": "11",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Jul 26, 02",
+        "Gross": "1275086",
+        "Theaters": "463",
+        "Per Theater": "2754",
+        "Total Gross": "297480499",
+        "Week": "12",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Aug 2, 02",
+        "Gross": "1016456",
+        "Theaters": "422",
+        "Per Theater": "2409",
+        "Total Gross": "298496955",
+        "Week": "13",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Aug 9, 02",
+        "Gross": "578343",
+        "Theaters": "331",
+        "Per Theater": "1747",
+        "Total Gross": "299075298",
+        "Week": "14",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Aug 16, 02",
+        "Gross": "526769",
+        "Theaters": "278",
+        "Per Theater": "1895",
+        "Total Gross": "299602067",
+        "Week": "15",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Aug 23, 02",
+        "Gross": "593822",
+        "Theaters": "298",
+        "Per Theater": "1993",
+        "Total Gross": "300195889",
+        "Week": "16",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Aug 30, 02",
+        "Gross": "573200",
+        "Theaters": "353",
+        "Per Theater": "1624",
+        "Total Gross": "300769089",
+        "Week": "17",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Sep 6, 02",
+        "Gross": "462385",
+        "Theaters": "380",
+        "Per Theater": "1217",
+        "Total Gross": "301231474",
+        "Week": "18",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Sep 13, 02",
+        "Gross": "344041",
+        "Theaters": "309",
+        "Per Theater": "1113",
+        "Total Gross": "301575515",
+        "Week": "19",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Sep 20, 02",
+        "Gross": "239017",
+        "Theaters": "236",
+        "Per Theater": "1013",
+        "Total Gross": "301814532",
+        "Week": "20",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Sep 27, 02",
+        "Gross": "137971",
+        "Theaters": "168",
+        "Per Theater": "821",
+        "Total Gross": "301952503",
+        "Week": "21",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Oct 4, 02",
+        "Gross": "111265",
+        "Theaters": "139",
+        "Per Theater": "800",
+        "Total Gross": "302063768",
+        "Week": "22",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Oct 11, 02",
+        "Gross": "61844",
+        "Theaters": "81",
+        "Per Theater": "764",
+        "Total Gross": "302125612",
+        "Week": "23",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "Oct 18, 02",
+        "Gross": "41998",
+        "Theaters": "57",
+        "Per Theater": "737",
+        "Total Gross": "302167610",
+        "Week": "24",
+        "Movie": "Star Wars Ep. II: Attack of the Clones"
+    },
+    {
+        "Date": "May 14, 99",
+        "Gross": "40850267",
+        "Theaters": "2970",
+        "Per Theater": "13754",
+        "Total Gross": "40850267",
+        "Week": "1",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "May 21, 99",
+        "Gross": "99155555",
+        "Theaters": "2970",
+        "Per Theater": "33386",
+        "Total Gross": "140005822",
+        "Week": "2",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "May 28, 99",
+        "Gross": "67167276",
+        "Theaters": "3022",
+        "Per Theater": "22226",
+        "Total Gross": "222866471",
+        "Week": "3",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jun 4, 99",
+        "Gross": "48465579",
+        "Theaters": "3024",
+        "Per Theater": "16027",
+        "Total Gross": "271332050",
+        "Week": "4",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jun 11, 99",
+        "Gross": "37881798",
+        "Theaters": "3024",
+        "Per Theater": "12527",
+        "Total Gross": "309213848",
+        "Week": "5",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jun 18, 99",
+        "Gross": "28343914",
+        "Theaters": "3019",
+        "Per Theater": "9389",
+        "Total Gross": "337557762",
+        "Week": "6",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jun 25, 99",
+        "Gross": "22317549",
+        "Theaters": "3126",
+        "Per Theater": "7139",
+        "Total Gross": "359875311",
+        "Week": "7",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jul 2, 99",
+        "Gross": "17817665",
+        "Theaters": "2628",
+        "Per Theater": "6780",
+        "Total Gross": "377692976",
+        "Week": "8",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jul 9, 99",
+        "Gross": "11860633",
+        "Theaters": "2447",
+        "Per Theater": "4847",
+        "Total Gross": "389553609",
+        "Week": "9",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jul 16, 99",
+        "Gross": "9020017",
+        "Theaters": "1850",
+        "Per Theater": "4876",
+        "Total Gross": "398573626",
+        "Week": "10",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jul 23, 99",
+        "Gross": "6602686",
+        "Theaters": "1614",
+        "Per Theater": "4091",
+        "Total Gross": "405176312",
+        "Week": "11",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Jul 30, 99",
+        "Gross": "5375641",
+        "Theaters": "1628",
+        "Per Theater": "3302",
+        "Total Gross": "410551953",
+        "Week": "12",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Aug 6, 99",
+        "Gross": "3574752",
+        "Theaters": "1199",
+        "Per Theater": "2981",
+        "Total Gross": "414126705",
+        "Week": "13",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Aug 13, 99",
+        "Gross": "2452787",
+        "Theaters": "765",
+        "Per Theater": "3206",
+        "Total Gross": "416579492",
+        "Week": "14",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Aug 20, 99",
+        "Gross": "1934229",
+        "Theaters": "631",
+        "Per Theater": "3065",
+        "Total Gross": "418513721",
+        "Week": "15",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Aug 27, 99",
+        "Gross": "1333175",
+        "Theaters": "497",
+        "Per Theater": "2682",
+        "Total Gross": "419846896",
+        "Week": "16",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Sep 3, 99",
+        "Gross": "1752778",
+        "Theaters": "604",
+        "Per Theater": "2902",
+        "Total Gross": "421599674",
+        "Week": "17",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Sep 10, 99",
+        "Gross": "900045",
+        "Theaters": "518",
+        "Per Theater": "1738",
+        "Total Gross": "422499719",
+        "Week": "18",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Sep 17, 99",
+        "Gross": "1098076",
+        "Theaters": "732",
+        "Per Theater": "1500",
+        "Total Gross": "423597795",
+        "Week": "19",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Sep 24, 99",
+        "Gross": "1065393",
+        "Theaters": "766",
+        "Per Theater": "1391",
+        "Total Gross": "424663188",
+        "Week": "20",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Oct 1, 99",
+        "Gross": "940420",
+        "Theaters": "689",
+        "Per Theater": "1365",
+        "Total Gross": "425603608",
+        "Week": "21",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Oct 8, 99",
+        "Gross": "778939",
+        "Theaters": "550",
+        "Per Theater": "1416",
+        "Total Gross": "426382547",
+        "Week": "22",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Oct 15, 99",
+        "Gross": "579883",
+        "Theaters": "494",
+        "Per Theater": "1174",
+        "Total Gross": "426962430",
+        "Week": "23",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Oct 22, 99",
+        "Gross": "422843",
+        "Theaters": "386",
+        "Per Theater": "1095",
+        "Total Gross": "427385273",
+        "Week": "24",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "Oct 29, 99",
+        "Gross": "324522",
+        "Theaters": "331",
+        "Per Theater": "980",
+        "Total Gross": "427709795",
+        "Week": "25",
+        "Movie": "Star Wars Ep. I: The Phantom Menace"
+    },
+    {
+        "Date": "May 27, 83",
+        "Gross": "45339692",
+        "Theaters": "1002",
+        "Per Theater": "45249",
+        "Total Gross": "52810693",
+        "Week": "2",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jun 3, 83",
+        "Gross": "36874818",
+        "Theaters": "1002",
+        "Per Theater": "36801",
+        "Total Gross": "89685511",
+        "Week": "3",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jun 10, 83",
+        "Gross": "20663091",
+        "Theaters": "1002",
+        "Per Theater": "20622",
+        "Total Gross": "110348602",
+        "Week": "4",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jun 17, 83",
+        "Gross": "19562752",
+        "Theaters": "1002",
+        "Per Theater": "19524",
+        "Total Gross": "129911354",
+        "Week": "5",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jun 24, 83",
+        "Gross": "15884678",
+        "Theaters": "1302",
+        "Per Theater": "12200",
+        "Total Gross": "145796032",
+        "Week": "6",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jul 1, 83",
+        "Gross": "17076245",
+        "Theaters": "1296",
+        "Per Theater": "13176",
+        "Total Gross": "162872277",
+        "Week": "7",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jul 8, 83",
+        "Gross": "13059581",
+        "Theaters": "1301",
+        "Per Theater": "10038",
+        "Total Gross": "175931858",
+        "Week": "8",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jul 15, 83",
+        "Gross": "12580009",
+        "Theaters": "1644",
+        "Per Theater": "7652",
+        "Total Gross": "188511867",
+        "Week": "9",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jul 22, 83",
+        "Gross": "7239419",
+        "Theaters": "1554",
+        "Per Theater": "4659",
+        "Total Gross": "195751286",
+        "Week": "10",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jul 29, 83",
+        "Gross": "9405914",
+        "Theaters": "1729",
+        "Per Theater": "5440",
+        "Total Gross": "205157200",
+        "Week": "11",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Aug 5, 83",
+        "Gross": "7957418",
+        "Theaters": "1764",
+        "Per Theater": "4511",
+        "Total Gross": "213114618",
+        "Week": "12",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Aug 12, 83",
+        "Gross": "6340956",
+        "Theaters": "1515",
+        "Per Theater": "4185",
+        "Total Gross": "219455574",
+        "Week": "13",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Aug 19, 83",
+        "Gross": "5081560",
+        "Theaters": "1284",
+        "Per Theater": "3958",
+        "Total Gross": "224537134",
+        "Week": "14",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Aug 26, 83",
+        "Gross": "4210398",
+        "Theaters": "1178",
+        "Per Theater": "3574",
+        "Total Gross": "228747532",
+        "Week": "15",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Sep 2, 83",
+        "Gross": "4146604",
+        "Theaters": "957",
+        "Per Theater": "4333",
+        "Total Gross": "232894136",
+        "Week": "16",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Sep 9, 83",
+        "Gross": "2141661",
+        "Theaters": "715",
+        "Per Theater": "2995",
+        "Total Gross": "235035797",
+        "Week": "17",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Sep 16, 83",
+        "Gross": "1754856",
+        "Theaters": "575",
+        "Per Theater": "3052",
+        "Total Gross": "236790653",
+        "Week": "18",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Sep 23, 83",
+        "Gross": "1427262",
+        "Theaters": "496",
+        "Per Theater": "2878",
+        "Total Gross": "238217915",
+        "Week": "19",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Sep 30, 83",
+        "Gross": "1172549",
+        "Theaters": "373",
+        "Per Theater": "3144",
+        "Total Gross": "239390464",
+        "Week": "20",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Oct 7, 83",
+        "Gross": "949221",
+        "Theaters": "306",
+        "Per Theater": "3102",
+        "Total Gross": "240339685",
+        "Week": "21",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Oct 14, 83",
+        "Gross": "821325",
+        "Theaters": "293",
+        "Per Theater": "2803",
+        "Total Gross": "241161010",
+        "Week": "22",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Oct 21, 83",
+        "Gross": "638728",
+        "Theaters": "234",
+        "Per Theater": "2730",
+        "Total Gross": "241799738",
+        "Week": "23",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Oct 28, 83",
+        "Gross": "466260",
+        "Theaters": "194",
+        "Per Theater": "2403",
+        "Total Gross": "242265998",
+        "Week": "24",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Nov 4, 83",
+        "Gross": "456541",
+        "Theaters": "157",
+        "Per Theater": "2908",
+        "Total Gross": "242722539",
+        "Week": "25",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Nov 11, 83",
+        "Gross": "476081",
+        "Theaters": "140",
+        "Per Theater": "3401",
+        "Total Gross": "243198620",
+        "Week": "26",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Nov 18, 83",
+        "Gross": "430550",
+        "Theaters": "121",
+        "Per Theater": "3558",
+        "Total Gross": "243629170",
+        "Week": "27",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Nov 25, 83",
+        "Gross": "485079",
+        "Theaters": "103",
+        "Per Theater": "4710",
+        "Total Gross": "244114249",
+        "Week": "28",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Dec 2, 83",
+        "Gross": "311247",
+        "Theaters": "111",
+        "Per Theater": "2804",
+        "Total Gross": "244425496",
+        "Week": "29",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Dec 9, 83",
+        "Gross": "202761",
+        "Theaters": "94",
+        "Per Theater": "2157",
+        "Total Gross": "244628257",
+        "Week": "30",
+        "Movie": "Star Wars Ep. VI: Return of the Jedi"
+    },
+    {
+        "Date": "Jun 13, 80",
+        "Gross": "40098546",
+        "Theaters": "126",
+        "Per Theater": "318242",
+        "Total Gross": "36492546",
+        "Week": "5",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jun 20, 80",
+        "Gross": "19193955",
+        "Theaters": "823",
+        "Per Theater": "23322",
+        "Total Gross": "55686501",
+        "Week": "6",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jun 27, 80",
+        "Gross": "17961732",
+        "Theaters": "821",
+        "Per Theater": "21878",
+        "Total Gross": "73648233",
+        "Week": "7",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jul 4, 80",
+        "Gross": "13995275",
+        "Theaters": "880",
+        "Per Theater": "15904",
+        "Total Gross": "87643508",
+        "Week": "8",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jul 11, 80",
+        "Gross": "11349492",
+        "Theaters": "858",
+        "Per Theater": "13228",
+        "Total Gross": "98993000",
+        "Week": "9",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jul 18, 80",
+        "Gross": "12187568",
+        "Theaters": "1089",
+        "Per Theater": "11192",
+        "Total Gross": "111180568",
+        "Week": "10",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jul 25, 80",
+        "Gross": "13060643",
+        "Theaters": "1278",
+        "Per Theater": "10220",
+        "Total Gross": "124241211",
+        "Week": "11",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Aug 1, 80",
+        "Gross": "10274074",
+        "Theaters": "1139",
+        "Per Theater": "9020",
+        "Total Gross": "134515285",
+        "Week": "12",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Aug 8, 80",
+        "Gross": "7057422",
+        "Theaters": "1195",
+        "Per Theater": "5906",
+        "Total Gross": "141572707",
+        "Week": "13",
+        "Movie": "Star Wars Ep. V: The Empire Strikes Back"
+    },
+    {
+        "Date": "Jun 17, 77",
+        "Gross": "5473681",
+        "Theaters": "157",
+        "Per Theater": "34864",
+        "Total Gross": "15628913",
+        "Week": "5",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Jun 24, 77",
+        "Gross": "9075456",
+        "Theaters": "360",
+        "Per Theater": "25210",
+        "Total Gross": "24704369",
+        "Week": "6",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Jul 8, 77",
+        "Gross": "11038368",
+        "Theaters": "589",
+        "Per Theater": "18741",
+        "Total Gross": "46970900",
+        "Week": "8",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Jul 15, 77",
+        "Gross": "11916019",
+        "Theaters": "757",
+        "Per Theater": "15741",
+        "Total Gross": "58886919",
+        "Week": "9",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Jul 22, 77",
+        "Gross": "12202130",
+        "Theaters": "843",
+        "Per Theater": "14475",
+        "Total Gross": "71089049",
+        "Week": "10",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Jul 29, 77",
+        "Gross": "12000083",
+        "Theaters": "950",
+        "Per Theater": "12632",
+        "Total Gross": "83089132",
+        "Week": "11",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Aug 5, 77",
+        "Gross": "12473041",
+        "Theaters": "1044",
+        "Per Theater": "11947",
+        "Total Gross": "95562173",
+        "Week": "12",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Aug 12, 77",
+        "Gross": "11560351",
+        "Theaters": "1074",
+        "Per Theater": "10764",
+        "Total Gross": "107122524",
+        "Week": "13",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Aug 19, 77",
+        "Gross": "10213996",
+        "Theaters": "1096",
+        "Per Theater": "9319",
+        "Total Gross": "117336520",
+        "Week": "14",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Aug 26, 77",
+        "Gross": "8653096",
+        "Theaters": "1048",
+        "Per Theater": "8257",
+        "Total Gross": "125989616",
+        "Week": "15",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Oct 28, 77",
+        "Gross": "4144585",
+        "Theaters": "739",
+        "Per Theater": "5608",
+        "Total Gross": "178663051",
+        "Week": "24",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Nov 4, 77",
+        "Gross": "3465669",
+        "Theaters": "665",
+        "Per Theater": "5212",
+        "Total Gross": "182128720",
+        "Week": "25",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Nov 11, 77",
+        "Gross": "2846784",
+        "Theaters": "642",
+        "Per Theater": "4434",
+        "Total Gross": "184975504",
+        "Week": "26",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Nov 18, 77",
+        "Gross": "3314361",
+        "Theaters": "605",
+        "Per Theater": "5478",
+        "Total Gross": "188289865",
+        "Week": "27",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Nov 25, 77",
+        "Gross": "3013831",
+        "Theaters": "593",
+        "Per Theater": "5082",
+        "Total Gross": "191303696",
+        "Week": "28",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Dec 2, 77",
+        "Gross": "1970491",
+        "Theaters": "561",
+        "Per Theater": "3512",
+        "Total Gross": "193274187",
+        "Week": "29",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    },
+    {
+        "Date": "Dec 9, 77",
+        "Gross": "1547262",
+        "Theaters": "485",
+        "Per Theater": "3190",
+        "Total Gross": "194821449",
+        "Week": "30",
+        "Movie": "Star Wars Ep. IV: A New Hope"
+    }
+]

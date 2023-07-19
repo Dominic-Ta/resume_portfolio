@@ -18,8 +18,7 @@ env = environ.Env()
 environ.Env.read_env()
 
 
-
-if 'runserver' in sys.argv:
+if "runserver" in sys.argv:
     DEBUG = True
     PREPEND_WWW = False
     SECURE_SSL_REDIRECT = False
@@ -34,13 +33,13 @@ else:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     CORS_ALLOWED_ORIGINS = [
-        'http://localhost:8000',# Add your domain(s) here
-        ]
+        "http://localhost:8000",  # Add your domain(s) here
+    ]
 CORS_ORIGIN_WHITELIST = [
-    'http://127.0.0.1:8000',
-    'http://localhost:8000',
-    'https://datasadvocate.dev',
-    'http://datasadvocate.dev'
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+    "https://datasadvocate.dev",
+    "http://datasadvocate.dev",
 ]
 
 # DIRNAME = os.path.abspath(os.path.dirname(__file__))
@@ -49,8 +48,8 @@ CORS_ORIGIN_WHITELIST = [
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEDIA_ROOT=os.path.join(BASE_DIR,"static")
-MEDIA_URL='/sound/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_URL = "/sound/"
 
 # This file will return a base directory.
 # e.g: '/home/pi/Documents/Django_files/djenv/test_site'
@@ -70,7 +69,6 @@ ALLOWED_HOSTS = [
 # Default settings
 
 BOOTSTRAP5 = {
-
     # The complete URL to the Bootstrap CSS file
     # Note that a URL can be either a string,
     # e.g. "https://stackpath.bootstrapcdn.com/bootstrap/5.1.1/css/bootstrap.min.css",
@@ -80,48 +78,38 @@ BOOTSTRAP5 = {
         "integrity": "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65",
         "crossorigin": "anonymous",
     },
-
     # The complete URL to the Bootstrap JavaScript file
     "javascript_url": {
         "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
         "integrity": "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4",
         "crossorigin": "anonymous",
     },
-
     # The complete URL to the Bootstrap CSS file (None means no theme)
     "theme_url": None,
-
     # Put JavaScript in the HEAD section of the HTML document (only relevant if you use bootstrap5.html)
-    'javascript_in_head': False,
-
+    "javascript_in_head": False,
     # Label class to use in horizontal forms
-    'horizontal_label_class': 'col-md-3',
-
+    "horizontal_label_class": "col-md-3",
     # Field class to use in horizontal forms
-    'horizontal_field_class': 'col-md-9',
-
+    "horizontal_field_class": "col-md-9",
     # Set placeholder attributes to label if no placeholder is provided
-    'set_placeholder': True,
-
+    "set_placeholder": True,
     # Class to indicate required (better to set this in your Django form)
-    'required_css_class': '',
-
+    "required_css_class": "",
     # Class to indicate error (better to set this in your Django form)
-    'error_css_class': 'is-invalid',
-
+    "error_css_class": "is-invalid",
     # Class to indicate success, meaning the field has valid input (better to set this in your Django form)
-    'success_css_class': 'is-valid',
-
+    "success_css_class": "is-valid",
     # Renderers (only set these if you have studied the source and understand the inner workings)
-    'formset_renderers':{
-        'default': 'bootstrap5.renderers.FormsetRenderer',
+    "formset_renderers": {
+        "default": "bootstrap5.renderers.FormsetRenderer",
     },
-    'form_renderers': {
-        'default': 'bootstrap5.renderers.FormRenderer',
+    "form_renderers": {
+        "default": "bootstrap5.renderers.FormRenderer",
     },
-    'field_renderers': {
-        'default': 'bootstrap5.renderers.FieldRenderer',
-        'inline': 'bootstrap5.renderers.InlineFieldRenderer',
+    "field_renderers": {
+        "default": "bootstrap5.renderers.FieldRenderer",
+        "inline": "bootstrap5.renderers.InlineFieldRenderer",
     },
 }
 
@@ -137,8 +125,8 @@ INSTALLED_APPS = [
     "sass_processor",
     "rest_framework",
     "bootstrap5",
-    'csp',
-    'corsheaders',
+    "csp",
+    "corsheaders",
     # other stuff
     "django_user_agents",
     "django.contrib.admin",
@@ -149,7 +137,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -157,32 +145,56 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'csp.middleware.CSPMiddleware',
+    "csp.middleware.CSPMiddleware",
 ]
 
 
-CSP_SCRIPT_SRC = ["'self'","'unsafe-eval'",
-                  "'unsafe-inline'","https://code.jquery.com", 
-                  "https://ssl.gstatic.com","https://cdnjs.cloudflare.com",
-                  "https://cdn.jsdelivr.net"]
-CSP_CONNECT_SRC = ["'self'","http://127.0.0.1:8000/*","'unsafe-inline'","https://127.0.0.1:8000/*", "'unsafe-eval'"]
-CSP_DEFAULT_SRC = ["'self'", 
-                   "http://127.0.0.1:8000",
-                   "https://127.0.0.1:8000", 
-                   "http://127.0.0.1:8000/favicon.ico",
-                   "https://127.0.0.1:8000/favicon.ico",
-                   "'unsafe-inline'", 
-                   "https://www.youtube.com",
-                   "https://trends.google.com",
-                   "https://cdn.jsdelivr.net",
-                   "https://fonts.googleapis.com",
-                   "https://cdnjs.cloudflare.com",
-                   "https://cdn.datatables.net"]
-CSP_IMG_SRC = ["'self'", "data:", "https://s3-us-west-2.amazonaws.com"]
-CSP_FONT_SRC = ["'self'", 'https://fonts.gstatic.com/', 
-                "https://cdnjs.cloudflare.com", 
-                "https://cdn.datatables.net",
-                "https://cdn.jsdelivr.net"]
+CSP_SCRIPT_SRC = [
+    "'self'",
+    "'unsafe-eval'",
+    "'unsafe-inline'",
+    "https://code.jquery.com",
+    "https://ssl.gstatic.com",
+    "https://cdnjs.cloudflare.com",
+    "https://cdn.jsdelivr.net",
+    "https://www.gstatic.com",
+]
+CSP_CONNECT_SRC = [
+    "'self'",
+    "http://127.0.0.1:8000/*",
+    "'unsafe-inline'",
+    "https://127.0.0.1:8000/*",
+    "'unsafe-eval'",
+]
+CSP_DEFAULT_SRC = [
+    "'self'",
+    "http://127.0.0.1:8000",
+    "https://127.0.0.1:8000",
+    "http://127.0.0.1:8000/favicon.ico",
+    "https://127.0.0.1:8000/favicon.ico",
+    "'unsafe-inline'",
+    "https://www.youtube.com",
+    "https://trends.google.com",
+    "https://cdn.jsdelivr.net",
+    "https://fonts.googleapis.com",
+    "https://cdnjs.cloudflare.com",
+    "https://cdn.datatables.net",
+    "https://www.gstatic.com"
+]
+CSP_IMG_SRC = [
+    "'self'",
+    "data:",
+    "https://s3-us-west-2.amazonaws.com",
+    "https://i.kym-cdn.com",
+    "https://images.pexels.com"
+]
+CSP_FONT_SRC = [
+    "'self'",
+    "https://fonts.gstatic.com/",
+    "https://cdnjs.cloudflare.com",
+    "https://cdn.datatables.net",
+    "https://cdn.jsdelivr.net",
+]
 
 ROOT_URLCONF = "rport.urls"
 # to add html templates simply add the source into the DIRS array.
@@ -256,9 +268,9 @@ USE_L10N = True
 USE_TZ = True
 
 STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+    "sass_processor.finders.CssFinder",
 ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -273,7 +285,7 @@ SASS_PROCESSOR_ROOT = STATIC_ROOT
 SASS_PROCESSOR_INCLUDE_DIRS = [
     STATIC_ROOT + "scss/",  # Path to your SCSS files
 ]
-SASS_PROCESSOR_OUTPUT_DIR = 'css'
+SASS_PROCESSOR_OUTPUT_DIR = "css"
 SASS_PRECISION = 8
 
 
@@ -316,4 +328,3 @@ EMAIL_PORT = 587
 # SECURE_SSL_REDIRECT=False
 # SESSION_COOKIE_SECURE=False
 # CSRF_COOKIE_SECURE=False
-

@@ -1,0 +1,31 @@
+{% load static %}
+<div id="content">
+
+    <!-- Topbar -->
+    {% include 'fancy_dashboards/partials/_navbar.html' %}
+    <!-- End of Topbar -->
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center position-relative justify-content-between mb-4" style="z-index: 5;">
+            <h1 class="h3 mb-0 text-gray-800" id="DashboardTitle"></h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onClick="alert('There is nothing here right now to show. An update will be on the way shortly.');">
+                <iclass="fas fa-download fa-sm text-white-50"></i>
+                 Generate Report
+            </a>
+        </div>
+
+        <!-- Content Row -->
+        {% include 'fancy_dashboards/partials/_content_row1.html' with search_parameters=search_parameters %}
+        <!-- Content Row -->
+
+        {% include 'fancy_dashboards/partials/_content_row2.html'%}
+
+        <!-- Content Row -->
+        {% include 'fancy_dashboards/partials/_content_row3.html'  with starwars_characters=starwars_characters %}
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>

@@ -41,7 +41,6 @@
     <link href="{% sass_src 'scss/carousel.scss' %}" rel="stylesheet" type="text/css" />
     <link href="{% sass_src 'scss/bouncing_button.scss' %}" rel="stylesheet" type="text/css" />
     <link href="{% sass_src 'scss/pretty_table.scss' %}" rel="stylesheet" type="text/css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <style>
       body {
         height: 100vh;
@@ -190,7 +189,7 @@
         {% include '_carousel_starwars_crawler.html' %}
       </section>
       <section id="betaSection" class="beta">
-        {% include '_test.html' with character_data=starwars_characters%}
+        {% include '_starwars_beta_dashboard.html' with character_data=starwars_characters%}
       </section>
     </div>
     

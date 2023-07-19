@@ -8,6 +8,33 @@
 from django.db import models
 
 
+class Swcscreentime(models.Model):
+    index = models.BigIntegerField(blank=True, null=True)
+    movie = models.TextField(db_column='Movie', blank=True, null=True)  # Field name made lowercase.
+    character = models.TextField(db_column='Character', blank=True, null=True)  # Field name made lowercase.
+    length_of_movie = models.TextField(db_column='Length of Movie', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    character_screentime = models.TextField(db_column='Character Screentime', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    percentage = models.TextField(db_column='Percentage', blank=True, null=True)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'SWCScreentime'
+
+
+class Starwarsbudgetandprofit(models.Model):
+    index = models.BigIntegerField(blank=True, null=True)
+    release_date = models.TextField(db_column='Release Date', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    title = models.TextField(db_column='Title', blank=True, null=True)  # Field name made lowercase.
+    production_budget = models.TextField(db_column='Production Budget', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    opening_weekend = models.TextField(db_column='Opening Weekend', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    domestic_box_office = models.TextField(db_column='Domestic Box Office', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    worldwide_box_office = models.TextField(db_column='Worldwide Box Office', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+
+    class Meta:
+        managed = False
+        db_table = 'StarwarsBudgetAndProfit'
+
+
 class AnimalCrossingNewHorizonCatalogAccessories(models.Model):
     index = models.BigIntegerField(blank=True, null=True)
     name = models.TextField(db_column='Name', blank=True, null=True)  # Field name made lowercase.
@@ -1048,6 +1075,17 @@ class SqlExamples(models.Model):
         db_table = 'sql_examples'
 
 
+class StarwarsCrawlers(models.Model):
+    index = models.BigIntegerField(blank=True, null=True)
+    title = models.TextField(blank=True, null=True)
+    trailer = models.TextField(blank=True, null=True)
+    crawl = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'starwars_crawlers'
+
+
 class StarwarsFilms(models.Model):
     index = models.BigIntegerField(blank=True, null=True)
     title = models.TextField(blank=True, null=True)
@@ -1168,3 +1206,18 @@ class StudentPerformance(models.Model):
     class Meta:
         managed = False
         db_table = 'student_performance'
+
+
+class WeeklyBoxOffice(models.Model):
+    index = models.BigIntegerField(blank=True, null=True)
+    date = models.DateTimeField(db_column='Date', blank=True, null=True)  # Field name made lowercase.
+    gross = models.BigIntegerField(db_column='Gross', blank=True, null=True)  # Field name made lowercase.
+    theaters = models.BigIntegerField(db_column='Theaters', blank=True, null=True)  # Field name made lowercase.
+    per_theater = models.BigIntegerField(db_column='Per Theater', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    total_gross = models.BigIntegerField(db_column='Total Gross', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters.
+    week = models.BigIntegerField(db_column='Week', blank=True, null=True)  # Field name made lowercase.
+    movie = models.TextField(db_column='Movie', blank=True, null=True)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'weekly_box_office'

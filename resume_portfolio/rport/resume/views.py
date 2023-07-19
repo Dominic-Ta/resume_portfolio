@@ -81,4 +81,3 @@ def email(request):
 
 def thanks(request):
     return HttpResponse("Thank you for your message.")
-

@@ -1110,3 +1110,52 @@ class StarwarsVehiclesSerializer(serializers.HyperlinkedModelSerializer):
             "films",
             "url",
         ]
+
+
+class WeeklyBoxOfficeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.WeeklyBoxOffice
+        fields = [
+            "index",
+            "date",
+            "gross",
+            "theaters",
+            "per_theater",
+            "total_gross",
+            "week",
+            "movie",
+        ]
+
+
+class StarwarsbudgetandprofitSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.Starwarsbudgetandprofit
+        fields = [
+            "index",
+            "release_date",
+            "title",
+            "production_budget",
+            "opening_weekend",
+            "domestic_box_office",
+            "worldwide_box_office",
+        ]
+class SwcscreentimeSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.Swcscreentime
+        fields = [
+            "index",
+            "movie",
+            "character",
+            "length_of_movie",
+            "character_screentime",
+            "percentage",
+        ]
+class StarwarsCrawlersSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = models.StarwarsCrawlers
+        fields = [
+            "index",
+            "title",
+            "trailer",
+            "crawl",
+        ]

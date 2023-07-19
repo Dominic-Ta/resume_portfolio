@@ -1,0 +1,98 @@
+﻿[
+    {
+        "Release Date": "Dec 20 2019",
+        "Title": "Star Wars: The Rise of Skywalker",
+        "Production Budget": "275000000",
+        "Opening Weekend": "177383864",
+        "Domestic Box Office": "515202542",
+        "Worldwide Box Office": "1072767997"
+    },
+    {
+        "Release Date": "May 25 2018",
+        "Title": "Solo",
+        "Production Budget": "275000000",
+        "Opening Weekend": "84420489",
+        "Domestic Box Office": "213767512",
+        "Worldwide Box Office": "393151347"
+    },
+    {
+        "Release Date": "Dec 15 2017",
+        "Title": "Star Wars Ep. VIII: The Last Jedi",
+        "Production Budget": "262000000",
+        "Opening Weekend": "220009584",
+        "Domestic Box Office": "620181382",
+        "Worldwide Box Office": "1331635141"
+    },
+    {
+        "Release Date": "Dec 16 2016",
+        "Title": "Rogue One",
+        "Production Budget": "200000000",
+        "Opening Weekend": "155081681",
+        "Domestic Box Office": "533539991",
+        "Worldwide Box Office": "1055083596"
+    },
+    {
+        "Release Date": "Dec 18 2015",
+        "Title": "Star Wars Ep. VII: The Force Awakens",
+        "Production Budget": "306000000",
+        "Opening Weekend": "247966675",
+        "Domestic Box Office": "936662225",
+        "Worldwide Box Office": "2064615817"
+    },
+    {
+        "Release Date": "Aug 15 2008",
+        "Title": "Star Wars: The Clone Wars",
+        "Production Budget": "8500000",
+        "Opening Weekend": "14611273",
+        "Domestic Box Office": "35161554",
+        "Worldwide Box Office": "68695443"
+    },
+    {
+        "Release Date": "May 19 2005",
+        "Title": "Star Wars Ep. III: Revenge of the Sith",
+        "Production Budget": "115000000",
+        "Opening Weekend": "108435841",
+        "Domestic Box Office": "380270577",
+        "Worldwide Box Office": "848998877"
+    },
+    {
+        "Release Date": "May 16 2002",
+        "Title": "Star Wars Ep. II: Attack of the Clones",
+        "Production Budget": "115000000",
+        "Opening Weekend": "80027814",
+        "Domestic Box Office": "310676740",
+        "Worldwide Box Office": "656695615"
+    },
+    {
+        "Release Date": "May 19 1999",
+        "Title": "Star Wars Ep. I: The Phantom Menace",
+        "Production Budget": "115000000",
+        "Opening Weekend": "64810970",
+        "Domestic Box Office": "474544677",
+        "Worldwide Box Office": "1027044677"
+    },
+    {
+        "Release Date": "May 25 1983",
+        "Title": "Star Wars Ep. VI: Return of the Jedi",
+        "Production Budget": "32500000",
+        "Opening Weekend": "23019618",
+        "Domestic Box Office": "316465003",
+        "Worldwide Box Office": "482365284"
+    },
+    {
+        "Release Date": "May 21 1980",
+        "Title": "Star Wars Ep. V: The Empire Strikes Back",
+        "Production Budget": "23000000",
+        "Opening Weekend": "4910483",
+        "Domestic Box Office": "291738960",
+        "Worldwide Box Office": "549001086"
+    },
+    {
+        "Release Date": "May 25 1977",
+        "Title": "Star Wars Ep. IV: A New Hope",
+        "Production Budget": "11000000",
+        "Opening Weekend": "1554475",
+        "Domestic Box Office": "460998007",
+        "Worldwide Box Office": "775398007"
+    }
+]

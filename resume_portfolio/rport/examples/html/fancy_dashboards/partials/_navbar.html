@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow position-relative" style="z-index:7; background-color: rgba(179,12,12,.5);">
+    {% comment %} <!-- Sidebar Toggle (Topbar) -->
+    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+        <i class="fa fa-bars"></i>
+    </button> {% endcomment %}
+    <!-- Topbar Search -->
+    <div class="btn-group" id="dashboard_buttons">
+        <button type="button" class="btn h3 mb-0 text-gray-800 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Select a movie.
+        </button>
+        <ul class="dropdown-menu">
+            {% for i in search_parameters %}
+            <li>
+                <a class="dropdown-item" id="{{i}}">{{i}}</a>
+            </li>
+            {% endfor %}    
+        </ul>
+    </div>
+    <ul class="navbar-nav ml-auto">
+        <div class="topbar-divider d-none d-sm-block"></div>
+        <!-- Nav Item - User Information -->
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" onClick="alert('There is nothing here right now to show. An update will be on the way shortly.');" id="userDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jane Doe</span>
+                {% comment %} <img class="img-profile rounded-circle"
+                    src="{% static 'svg_files/undraw_profile.svg' %}"> {% endcomment %}
+                    <img class="img-profile rounded-circle" src="{% static 'images/starwars/Icons/Deathstar.ico' %}">
+            </a>
+        </li>
+    </ul>
+</nav>

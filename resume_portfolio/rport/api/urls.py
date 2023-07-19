@@ -149,8 +149,26 @@ router.register("Starwars_Planets_Data", views.StarwarsPlanetsViewSet)
 router.register("Starwars_Species_Data", views.StarwarsSpeciesViewSet)
 router.register("Starwars_Starships_Data", views.StarwarsStarshipsViewSet)
 router.register("Starwars_Vehicles_Data", views.StarwarsVehiclesViewSet)
+router.register("Starwars_weekly_box_office_data", views.WeeklyBoxOfficeViewSet)
+router.register("Starwars_Profit_cost", views.StarwarsbudgetandprofitViewSet)
+router.register("Swcscreentime", views.SwcscreentimeViewSet)
+router.register("StarwarsCrawlers", views.StarwarsCrawlersViewSet)
+
 urlpatterns = [
     path("", include(router.urls)),
+    path("/StarwarsCrawlers/", include("rest_framework.urls", namespace = "StarwarsCrawlersSerializer"),
+    ),
+    path("/Swcscreentime/",
+         include("rest_framework.urls", namespace="Swcscreentime"),
+         ),
+    path(
+        "/Starwarsbudgetandprofit/",
+        include("rest_framework.urls", namespace="Starwarsbudgetandprofit"),
+    ),
+    path(
+        "/Starwars_Weekly_Box_office/",
+        include("rest_framework.urls", namespace="Starwars_Weekly_Box_office"),
+    ),
     path(
         "/Starwars_Character_data/",
         include("rest_framework.urls", namespace="Starwars_Character_Data"),

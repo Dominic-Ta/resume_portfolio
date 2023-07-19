@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Starwars Fancy Dashboard</title>
+
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+    {% load sass_tags %}
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin-2.css' %}" rel="stylesheet">
+    <link href="{% static 'fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% sass_src 'scss/starwars_crawler_box.scss' %}" rel="stylesheet" type="text/css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="{% static "images/BMO.png" %}" >
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{% sass_src 'scss/twinkle_twinkle.scss' %}" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    {% comment %} <script src="{% static 'js/sidebar.js' %}"></script> {% endcomment %}
+    {% comment %} <link href="{% sass_src 'scss/starwars_crawlers.scss' %}" rel="stylesheet" type="text/css" /> ERROR!!!!{% endcomment %}
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav sidebar" id="accordionSidebar" style="z-index:5; background-color: rgba(21,55,132,.5);
+        color: #fff;">
+            {% include 'fancy_dashboards/partials/_side_bar.html'%}
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div class="background-container">
+                <div class="stars" style="z-index:-1;"></div>
+                <div class="twinkling"  style="z-index:-1;"></div>
+            </div>
+            {% include 'fancy_dashboards/partials/_content.html' %}
+            {% comment %} {% include 'fancy_dashboards/partials/_footer.html' %} {% endcomment %}
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% include 'fancy_dashboards/partials/_log_out_modal.html' %}
+    {% include 'fancy_dashboards/js/line_charts.js.html' with search_parameters=search_parameters starwars_characters=starwars_characters%}
+
+</body>
+
+</html>
