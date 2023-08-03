@@ -1,7 +1,7 @@
 {% load static %}
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'example' %}">
     <div class="sidebar-brand-icon rotate-n-15">
-        <img src={% static 'images/Reypfp.jpeg' %} class="img-fluid img-thumbnail"></img>
+        <img src={% static 'images/Reypfp.jpeg' %} class="img-fluid img-thumbnail" href="{% url 'example' %}"></img>
     </div>
     
     <div class="mx-3">Datas Advocate</div>
@@ -54,13 +54,13 @@
 <li class="nav-item">
     <a class="nav-link" href="{% url 'resume_url' %}">
         <i class="bi bi-file-earmark-pdf-fill"></i>
-        <span>Resume PDF</span>
+        <span>PDF</span>
     </a>
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{% url 'resume' %}">
         <i class="bi bi-person-circle"></i>
-        <span>Resume</span>
+        <span>URL</span>
     </a>
 </li>
 

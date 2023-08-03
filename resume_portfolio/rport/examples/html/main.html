@@ -5,66 +5,119 @@
     Examples
 {% endblock %}
 {% block additional_css %}
-<link rel="stylesheet" href="{% static "css/green_table.css" %}">
+{% comment %} <link rel="stylesheet" href="{% static "css/green_table.css" %}"> {% endcomment %}
 
 {% endblock additional_css %}
+{% block additional_js%}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["sankey"]});
+  google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Weight');
+    data.addRows([
+       
+       [ 'My Experience', 'Software Development', 100 ],
+       [ 'My Experience', 'Data Analysis', 100 ],
+       [ 'Software Development', "Python", 40 ],
+       [ 'Software Development', "Java", 20 ],
+       [ 'Software Development', "Machine Learning", 20 ],
+       [ 'Software Development', "HTML", 10 ],
+       [ 'Software Development', "JavaSCript", 10 ],
+       [ 'Data Analysis', 'SQL', 30 ],
+       [ 'Data Analysis', 'Python', 30 ],
+       [ 'Data Analysis', 'Java', 5 ],
+       [ 'Data Analysis', 'Tableue', 25 ],
+       [ 'Data Analysis', 'Quicksite', 5 ],
+       [ 'Data Analysis', 'PowerBI', 5 ],
+    ]);
+
+    // Set chart options
+    var options = {
+      {% comment %} width: 600, {% endcomment %}
+    };
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+    chart.draw(data, options);
+   }
+</script>
+{% endblock %}
 {% block content %}
-  <h1 class="text-center">
-    Hello! Welcome to my portfolio website.
-  </h1>
-  <div class="container">
-    <table class="topics_of_interest"> {% comment %} class="topics_of_interest"> {% endcomment %}
-      <thead>
-        <tr>
-          <th>Topic</th>
-          <th>Analysis</th>
-          <th>Supporting links</th>
-          <th> API </th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- <tr>
-          <td>Python</td>
-          <td><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://www.python.org/</a></td>
-          <td><a href="https://docs.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://docs.python.org/</a></td>
-          <td><a href="https://pypi.org/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/</a></td>
-        </tr>
-        <tr>
-          <td>Django</td>
-          <td><a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://www.djangoproject.com/</a></td>
-          <td><a href="https://docs.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://docs.djangoproject.com/</a></td>
-          <td><a href="https://pypi.org/project/Django/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/project/Django/</a></td>
-        </tr>
-        <tr>
-          <td>HTML</td>
-          <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer nofollow">https://developer.mozilla.org/en-US/docs/Web/HTML</a></td>
-          <td><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer nofollow">https://www.w3schools.com/html/</a></td>
-          <td><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer nofollow">https://html.spec.whatwg.org/multipage/</a></td>
-        </tr> -->
-        <tr>
-          <td> Netflix Data </td>
-          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'about_netflix' %}>Overview of data</a></td>
-          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'netflix' %}>Data Table of titles</a></td>
-          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href='//www.datasadvocate.dev/api/Netflix_Titles/'>API</a></td>
-        </tr>
-        <tr>
-          <td> Webscraping Tutorial </td>
-          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'webscrapes' %}>Overview</a></td>
-          <td> TBD </td>
-          <td> TBD </td>
-        </tr>
-        <tr>
-          <td> Linear Regression Notes </td>
-          <td> <a href="{% url 'linear_regression' %}">Linear Regression Notes(in progress)</td>
-          <td> TBD </td>
-          <td> TBD </td>
-        <tr>
-          <td> Starwars Dashboard </td>
-          <td> <a href="https://www.datasadvocate.dev/examples/fancy_dashboard/">Final Product</td>
-          <td> <a href="https://www.datasadvocate.dev/examples/dashboards_examples/"> First attempt</a> </td>
-          <td> several starwars API links used, check the API url. </td>
-        </tr>
-      </tbody>
-    </table>
+<div class="container">
+  <div class="row">
+    <h1 class="text-center">
+      Hello! Welcome to my portfolio/website.
+    </h1>
+    <p class="text-center">Below are a few examples done entirely in python/html/scss and javascript.</p>
   </div>
+  <div class="row text-centered overflow-auto">
+    <div id="sankey_multiple" style="width: 900px; height: 300px;" class="container-fluid justify-content-center w-100 p-3"></div>
+  </div>
+  <div class = "row">
+    <div class="container overflow-auto">
+      <table class="topics_of_interest table table-dark text-white"> {% comment %} class="topics_of_interest"> {% endcomment %}
+        <thead>
+          <tr>
+            <th>Topic</th>
+            <th>Analysis</th>
+            <th>Supporting links</th>
+            <th> API </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>Python</td>
+            <td><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://www.python.org/</a></td>
+            <td><a href="https://docs.python.org/" target="_blank" rel="noopener noreferrer nofollow">https://docs.python.org/</a></td>
+            <td><a href="https://pypi.org/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/</a></td>
+          </tr>
+          <tr>
+            <td>Django</td>
+            <td><a href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://www.djangoproject.com/</a></td>
+            <td><a href="https://docs.djangoproject.com/" target="_blank" rel="noopener noreferrer nofollow">https://docs.djangoproject.com/</a></td>
+            <td><a href="https://pypi.org/project/Django/" target="_blank" rel="noopener noreferrer nofollow">https://pypi.org/project/Django/</a></td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer nofollow">https://developer.mozilla.org/en-US/docs/Web/HTML</a></td>
+            <td><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer nofollow">https://www.w3schools.com/html/</a></td>
+            <td><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer nofollow">https://html.spec.whatwg.org/multipage/</a></td>
+          </tr> -->
+          <tr>
+            <td> Netflix Data </td>
+            <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'about_netflix' %}>Overview of data</a></td>
+            <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'netflix' %}>Data Table of titles</a></td>
+            <td> <a  target="_blank" rel="noopener noreferrer nofollow" href='//www.datasadvocate.dev/api/Netflix_Titles/'>API</a></td>
+          </tr>
+          <tr>
+            <td> Webscraping Tutorial </td>
+            <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'webscrapes' %}>Overview</a></td>
+            <td> TBD </td>
+            <td> TBD </td>
+          </tr>
+          <tr>
+            <td> Linear Regression Notes </td>
+            <td> <a href="{% url 'linear_regression' %}">Linear Regression Notes(in progress)</td>
+            <td> TBD </td>
+            <td> TBD </td>
+          <tr>
+            <td> Starwars Dashboard </td>
+            <td> <a href="https://www.datasadvocate.dev/examples/fancy_dashboard/">Final Product</td>
+            <td> <a href="https://www.datasadvocate.dev/examples/dashboards_examples/"> First attempt</a> </td>
+            <td> several starwars API links used, check the API url. </td>
+          </tr>
+          <tr>
+            <td> Jupyter Examples </td>
+            <td> <a href="{% url 'jpyexamples' %}">Click here</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 {% endblock %}

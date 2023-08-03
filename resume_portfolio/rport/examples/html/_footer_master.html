@@ -1,0 +1,59 @@
+{% load static %}
+<div class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary m-0" id="footer">
+    <footer class="bg-grey container-fluid py-5">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6 ">
+                      <div class="logo-part">
+                        <img src="{% static "images/BMO.png" %}" class="w-50 logo-footer" >
+                        <p>Queens, New York</p>
+                      </div>
+                  </div>
+                  <div class="col-md-6 px-4">
+                      <h6> About Me</h6>
+                      <p> Check out my resume, or download it.</p>
+                      <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume' %}" class="btn-footer"> Resume </a><br>
+                      <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume_url' %}" class="btn-footer"> Download Resume </a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-6 px-4">
+                      <h6> Quick Links</h6>
+                      <div class="row ">
+                        <div class="col-md-6">
+                            <ul>
+                              <li> <a href="{% url 'home' %}"> Landing Page</a> </li>
+                              <li> <a href="{% url 'example' %}"> Home</a> </li>
+                              <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api"> API Overview </a> </li>
+                              <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api/Netflix_Titles"> Netflix API </a> </li>
+                            </ul>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 >Contact Me</h6>
+                    <hr>
+                    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.datasadvocate.dev/resume#contact" class="btn-footer"> Email </a><br>
+                    <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/in/dominicmt/" class="btn-footer"> LinkedIn </a><br>
+                    {% comment %} <form>
+                      <fieldset class="form-group">
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      </fieldset>
+                      <fieldset class="form-group">
+                          <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                      </fieldset>
+                      <fieldset class="form-group text-xs-right">
+                          <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
+                      </fieldset>
+                    </form> {% endcomment %}
+                  </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </footer>
+  </div>

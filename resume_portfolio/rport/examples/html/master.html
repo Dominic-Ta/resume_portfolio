@@ -13,13 +13,35 @@
       {% bootstrap_css %}
       {% bootstrap_javascript %}
       {% load static %}
+      {% load sass_tags %}
+
       <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+      <link href="{% static 'css/sb-admin-2.css' %}" rel="stylesheet">
+      <link href="{% static 'fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css" />
+      {% comment %} <link href="{% sass_src 'scss/starwars_crawler_box.scss' %}" rel="stylesheet" type="text/css" /> {% endcomment %}
+      <link href="{% sass_src 'scss/twinkle_twinkle.scss' %}" rel="stylesheet" type="text/css" />
       {% comment %} <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9887557755088624"
      crossorigin="anonymous"></script> {% endcomment %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
       <link rel="shortcut icon" href="{% static "images/BMO.png" %}" >
       <!-- Custom CSS -->
+      <style>
+        .navbar {
+          display: none; /* Hide the mobile menu by default */
+        }
+
+        /* Media query for small screens (e.g., mobile devices) */
+        @media (max-width: 767px) {
+          .sidebar {
+            display: none; /* Hide the sidebar on small screens */
+          }
+
+          .navbar {
+            display: block; /* Show the mobile menu on small screens */
+          }
+        }
+      </style>
       <link rel="stylesheet" href="{% static "css/index.css" %}">
       <!-- Other CSS -->
       {% block additional_css %}{% endblock additional_css %}
@@ -27,9 +49,9 @@
       {% block additional_js %}{% endblock additional_js %}       
 
     </head>
-    <body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <body>
       <script>0</script>
-      <nav class="navbar bg-dark fixed-top">
+      {% comment %} <nav class="navbar bg-dark fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Top</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -68,73 +90,144 @@
             </div>
           </div>
         </div>
+      </nav> {% endcomment %}
+      <nav class="navbar navbar-expanD fixed-top" style="z-index:9; background-color: rgba(179,12,12, 0.5);">
+        <div class="container-fluid">
+          <div class="topbar-divider d-none d-sm-block"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"><img class="img-profile rounded-circle" src="{% static 'images/starwars/Icons/Deathstar.ico' %}"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header" style="z-index:9; background-color: rgba(179,12,12);">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><div class="mx-3">Datas Advocate</div></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body"  style="z-index:9; background-color: rgba(179,12,12);">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <a href="{% url 'example' %}" style="width:20%;">
+                      <img src={% static 'images/Reypfp.jpeg' %} class="img-fluid img-thumbnail" style='width=20%;'href="{% url 'example' %}"></img>
+              </a>
+              
+              <!-- Divider -->
+              <hr class="sidebar-divider my-0">
+              
+              <!-- Nav Item - Dashboard -->
+              <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'home' %}">
+                      <i class="bi bi-house-door-fill"></i>
+                      <span>Home</span>
+                  </a>
+              </li>
+              
+              <!-- Divider -->
+              <hr class="sidebar-divider">
+              
+              <!-- Heading -->
+              <div class="sidebar-heading">
+                  Codebase
+              </div>
+              
+              <!-- Nav Item - Pages Collapse Menu -->
+              <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/Dominic-Ta/resume_portfolio">
+                      <i class="bi bi-github"></i>
+                      <span>Git</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'example' %}">
+                      <i class="bi bi-hdd-network"></i>
+                      <span>examples</span>
+                  </a>
+              </li>
+              <!-- Nav Item - Utilities Collapse Menu -->
+              
+              
+              <!-- Divider -->
+              <hr class="sidebar-divider">
+              
+              <!-- Heading -->
+              <div class="sidebar-heading">
+                  Resume
+              </div>
+              
+              <!-- Nav Item - Pages Collapse Menu -->
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'resume_url' %}">
+                      <i class="bi bi-file-earmark-pdf-fill"></i>
+                      <span>PDF</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'resume' %}">
+                      <i class="bi bi-person-circle"></i>
+                      <span>URL</span>
+                  </a>
+              </li>
+              <hr class="sidebar-divider d-none d-md-block">
+
+              <div class="card d-lg-flex" style="background-color: rgba(0,1,2,0.5);">
+                <p> Take a look around, have fun. Message me if you have any questions at martineztadominic@gmail.com </p>
+            </div>
+              
+              <!-- Divider -->
+              {% comment %} 
+              <!-- Sidebar Toggler (Sidebar) -->
+              <div class="text-center d-none d-md-inline">
+                  
+                  <button class="rounded-circle border-0" id="sidebarToggle"></button>
+              </div> {% endcomment %}
+              
+              <!-- Sidebar Message -->
+
+              
+              
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
+    {% comment %} <nav class="navbar navbar-expand navbar-light topbar static-top shadow position-relative" style="z-index:2; background-color: rgba(179,12,12, 0.5);">
+      <ul class="navbar-nav ml-auto">
+
+          <div class="topbar-divider d-none d-sm-block"></div>
+          <!-- Nav Item - User Information -->
+          <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" 
+              onClick="alert('This is an example, I have no intention of adding user logins/profiles at this moment in time.');" 
+              id="userDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Jane Doe</span>
+                  {% comment %} <img class="img-profile rounded-circle"
+                      src="{% static 'svg_files/undraw_profile.svg' %}">
+                      <img class="img-profile rounded-circle" src="{% static 'images/starwars/Icons/Deathstar.ico' %}">
+              </a>
+          </li>
+      </ul>
+    </nav> {% endcomment %}
+      <div id="wrapper">
+        <ul class="navbar-nav sidebar" id="accordionSidebar" style="z-index:10; background-color: rgba(21,55,132, 0.5);
+        color: #fff;">
+          {% include 'fancy_dashboards/partials/_side_bar.html'%}
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div class="background-container">
+                <div class="stars" style="z-index:-1;"></div>
+                <div class="twinkling"  style="z-index:-1;"></div>
+            </div>
+            <div class="container-fluid overflow-auto mx-auto mt-5 text-white" style="z-index:5;">
+              {% block content %}
+              {% endblock %}
+            </div >
+        </div>
+
+    </div>
 
       <!--Use this block to define content for each page-->
 
-      <div class="container-fluid mx-auto mt-5">
-        {% block content %}
-        {% endblock %}
-      </div >
 
-      <div class="bd-footer py-4 py-md-5 mt-5 bg-body-tertiary m-0" id="footer">
-        <footer class="bg-grey container-fluid py-5">
-          <div class="container">
-              <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                      <div class="col-md-6 ">
-                          <div class="logo-part">
-                            <img src="{% static "images/BMO.png" %}" class="w-50 logo-footer" >
-                            <p>Queens, New York</p>
-                          </div>
-                      </div>
-                      <div class="col-md-6 px-4">
-                          <h6> About Me</h6>
-                          <p> Check out my resume, or download it.</p>
-                          <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume' %}" class="btn-footer"> Resume </a><br>
-                          <a target="_blank" rel="noopener noreferrer nofollow" href="{% url 'resume_url' %}" class="btn-footer"> Download Resume </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                      <div class="col-md-6 px-4">
-                          <h6> Quick Links</h6>
-                          <div class="row ">
-                            <div class="col-md-6">
-                                <ul>
-                                  <li> <a href="{% url 'home' %}"> Landing Page</a> </li>
-                                  <li> <a href="{% url 'example' %}"> Home</a> </li>
-                                  <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api"> API Overview </a> </li>
-                                  <li> <a target="_blank" rel="noopener noreferrer nofollow" href="//www.datasadvocate.dev/api/Netflix_Titles"> Netflix API </a> </li>
-                                </ul>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                        <h6 >Contact Me</h6>
-                        <hr>
-                        <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.datasadvocate.dev/resume#contact" class="btn-footer"> Email </a><br>
-                        <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.linkedin.com/in/dominicmt/" class="btn-footer"> LinkedIn </a><br>
-                        {% comment %} <form>
-                          <fieldset class="form-group">
-                              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                          </fieldset>
-                          <fieldset class="form-group">
-                              <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
-                          </fieldset>
-                          <fieldset class="form-group text-xs-right">
-                              <button type="button" class="btn btn-secondary-outline btn-lg">Send</button>
-                          </fieldset>
-                        </form> {% endcomment %}
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </footer>
-      </div>
+
       {% block extended_js %} {% endblock %}
 
    </body>

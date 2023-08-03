@@ -1,0 +1,41 @@
+{% extends "master.html" %}
+
+{% load static %}
+{% block title %}
+    Jupyter Examples
+{% endblock %}
+{% block additional_css %}
+{% comment %} <link rel="stylesheet" href="{% static "css/green_table.css" %}"> {% endcomment %}
+
+{% endblock additional_css %}
+{% block content %}
+  <div class="row">
+    <div class="col-2">
+      <p class="text-center"><a href={% url 'example' %} style="color: white" class="fa-3x"><i class="bi bi-arrow-return-left"></i></a></p>
+    </div>
+    <div class="col-8">
+      <h1 class="text-center">
+        Jupyter Examples
+      </h1>
+    </div>
+  </div>
+  <div class="container">
+    <table class="topics_of_interest table table-dark text-white"> {% comment %} class="topics_of_interest"> {% endcomment %}
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Analysis</th>
+        </tr>
+      </thead>
+        <tr>
+          <td> LA Crime Data </td>
+          <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'LACrimeJPY' %}>Overview</a></td>
+        </tr>
+        <tr>
+            <td> Starwars API pulls/saves </td>
+            <td> <a  target="_blank" rel="noopener noreferrer nofollow" href={% url 'SWDPY' %}>Overview</a></td>
+            </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

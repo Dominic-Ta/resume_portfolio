@@ -3,6 +3,9 @@ from django.urls import path
 
 urlpatterns = [
     path("", views.main_view, name="example"),
+    path("jupyter_page", views.jupyter_page, name="jpyexamples"),
+    path("jupyter_page/jupyter_crime_data/", views.crime_view, name='LACrimeJPY'),
+    path("jupyter_page/starwars_api_analysis", views.starwars_jpy, name="SWDPY"),
     path("movie_data/<str:movie>", views.get_crawl_data, name="get_movie_data"),
     path("swcscreentime/<str:movie_name>", views.SwcscreentimeView, name="Swcscreentime"),
     path(

@@ -10,7 +10,7 @@
 
 <main class="container">
 <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-  <div class="col-md-6 px-0">
+  <div class="col px-0">
     <h1 class="display-4 fst-italic">Webscraping, what to do and how to do it.</h1>
     <p class="lead my-3">
         Here I discuss some of the tools I've used in my career to gather data through the web either via javascript, Python or Java. In this 
@@ -210,7 +210,7 @@
         your login information to the requesting website. This is a security feature that most individuals have to navigate. I'll make it easy for you, as
         it even took me awhile to figure out. 
       </p>
-      <pre>
+      <pre class="text-light">
         <code>
           from requests_kerberos import HTTPKerberosAuth
           import requests
@@ -243,7 +243,7 @@
         Once you parse it through your magical means of data manipulation, you can then store that string as a value such as <code> x = 'Your_cookie_string_here' </code>
         then input it into our get requests.get
       </p>
-      <pre><code>
+      <pre class="text-light"><code>
         r = requests.get("http://example.org", auth=kerberos_auth, cookies=x)
       </pre></code>
       <p> 

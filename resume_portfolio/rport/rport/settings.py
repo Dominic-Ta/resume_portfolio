@@ -158,6 +158,7 @@ CSP_SCRIPT_SRC = [
     "https://cdnjs.cloudflare.com",
     "https://cdn.jsdelivr.net",
     "https://www.gstatic.com",
+    "https://maps.googleapis.com",
 ]
 CSP_CONNECT_SRC = [
     "'self'",
@@ -165,6 +166,9 @@ CSP_CONNECT_SRC = [
     "'unsafe-inline'",
     "https://127.0.0.1:8000/*",
     "'unsafe-eval'",
+    "https://api.themoviedb.org",
+    "https://www.gstatic.com",
+    "https://maps.googleapis.com",
 ]
 CSP_DEFAULT_SRC = [
     "'self'",
@@ -186,7 +190,8 @@ CSP_IMG_SRC = [
     "data:",
     "https://s3-us-west-2.amazonaws.com",
     "https://i.kym-cdn.com",
-    "https://images.pexels.com"
+    "https://images.pexels.com",
+    "https://image.tmdb.org"
 ]
 CSP_FONT_SRC = [
     "'self'",

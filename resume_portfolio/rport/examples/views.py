@@ -128,8 +128,15 @@ def fancy_dashboard(request):
 def main_view(request):
     template = loader.get_template("main.html")
     return HttpResponse(template.render())
-
-
+def jupyter_page(request):
+    template = loader.get_template("jupyter_page.html")
+    return HttpResponse(template.render())
+def crime_view(request):
+    template = loader.get_template("jupyter_html_files/crime_data_LA.html")
+    return HttpResponse(template.render())
+def starwars_jpy(requests):
+    template=loader.get_template("jupyter_html_files/starwars_datajpy.html")
+    return HttpResponse(template.render())
 def starwars(request):
     model = CharacterData.objects.all()
     model_list = [obj.index for obj in model]

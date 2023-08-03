@@ -149,7 +149,7 @@
   
 <main class="container">
   <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
-    <div class="col-md-6 px-0">
+    <div class="col px-0">
       <h1 class="display-4 fst-italic">My Notes on Linear Regression (In Progress)</h1>
       <p class="lead my-3">I didn't want to lose my notes as they're written, so I figured typing them would be best.</p>
     </div>
@@ -368,7 +368,7 @@
           Anyways I'll drop the code below! Enjoy.
         </p>
         <p>
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
               import numpy as np
               from datetime import datetime
               import pandas as pd
@@ -431,7 +431,7 @@
         </p>
         <p>
           The result would look something like this: 
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
             date      close        low    volume       open       high
             0  06/06  32.025002  31.762501   9532800  33.825001  34.025002
             1  06/07  36.625000  31.582500  24967600  32.500000  37.472500
@@ -470,7 +470,7 @@
         </p>
         <p>
           For a more visual view of this corelation matrix, we can plot this on a scatter matrix plot using pandas. I'll provide the code, below.
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
             from pandas.plotting import scatter_matrix
             import matplotlib.pyplot as plt
 
@@ -506,7 +506,7 @@
         <p>
           Since we're well aware of the fact that stock data isn't a good dataset to be used with linear regression, we'll take this with a grain of //www.statlearning.com/
           Below is the code of what we see when we test it out.
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
             from sklearn import datasets, linear_model
             from sklearn.linear_model import LinearRegression
             from sklearn.model_selection import train_test_split
@@ -550,7 +550,7 @@
             \[f(\bar{x}) = \epsilon + \beta_0\bar{x}+ \beta_1\bar{x}^2 \]
             where each bar represents a Matrix.. This is the basic notation for when we have several parameters. 
             Anyways here's the code:
-            <pre><code>
+            <pre style="color: rgb( 238, 219, 0 )"><code>
               from sklearn.preprocessing import PolynomialFeatures
 
               sample_set = pd.DataFrame({"Price": dataset["close"], 'Volume': dataset['volume']})
@@ -603,7 +603,7 @@
           statistical libraries to us. In this instance I will be using the statsmodels
           library to analyze our data. 
           You can learn more about that <a href="https://www.geeksforgeeks.org/interpreting-the-results-of-linear-regression-using-ols-summary/">here</a>.
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
             import statsmodels.api as sm
 
             z = sm.add_constant(sample_set['Price'])
@@ -611,7 +611,7 @@
             print(mod.summary())
           </pre></code>
           which would ultimately result in:
-          <pre><code>
+          <pre style="color: rgb( 238, 219, 0 )"><code>
             OLS Regression Results                            
             ==============================================================================
             Dep. Variable:                 Volume   R-squared:                       0.105
@@ -661,11 +661,6 @@
 
 </main>
 
-<footer class="blog-footer">
-  <p>
-    <a href="#">Back to top</a>
-  </p>
-</footer>
 
 {% endblock %}
 {% block extended_js %}
