@@ -19,9 +19,8 @@ from resume.views import email, link_to_resume
 from api import views
 from django.urls import path, include
 from rest_framework import routers
-from landing.views import landing_view
+from landing.views import landing_view, privacy_view, send_email_view
 from examples.views import main_view, table_load, load_map
-
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
@@ -33,8 +32,10 @@ router.register(r"users", views.UserViewSet)
 # path("resume/", home_view, name="resume"),
 urlpatterns = [
     path("", landing_view, name="home"),
+    path("privacy_policy", privacy_view, name="privacy_policy"),
     path("resume", email, name="resume"),
     path("resume/url", link_to_resume, name="resume_url"),
-    path("api/", include("api.urls"), name="api_urls"),
+    path("api/", include("api.urls"), name="api"),
     path("examples/", include("examples.urls")),
+    path('send-email/<str:data>', send_email_view, name='send_email'),
 ]

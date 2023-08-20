@@ -159,6 +159,10 @@ CSP_SCRIPT_SRC = [
     "https://cdn.jsdelivr.net",
     "https://www.gstatic.com",
     "https://maps.googleapis.com",
+    "https://ajax.googleapis.com",
+    "https://cdn.lordicon.com",
+    "https://code.iconify.design",
+    "https://fonts.googleapis.com",
 ]
 CSP_CONNECT_SRC = [
     "'self'",
@@ -169,6 +173,10 @@ CSP_CONNECT_SRC = [
     "https://api.themoviedb.org",
     "https://www.gstatic.com",
     "https://maps.googleapis.com",
+    "https://cdn.lordicon.com",
+    "https://localhost:8000",
+    "https://localhost:8000",
+    "https://fonts.googleapis.com"
 ]
 CSP_DEFAULT_SRC = [
     "'self'",
@@ -183,7 +191,8 @@ CSP_DEFAULT_SRC = [
     "https://fonts.googleapis.com",
     "https://cdnjs.cloudflare.com",
     "https://cdn.datatables.net",
-    "https://www.gstatic.com"
+    "https://www.gstatic.com",
+    "https://fonts.googleapis.com"
 ]
 CSP_IMG_SRC = [
     "'self'",
@@ -191,7 +200,8 @@ CSP_IMG_SRC = [
     "https://s3-us-west-2.amazonaws.com",
     "https://i.kym-cdn.com",
     "https://images.pexels.com",
-    "https://image.tmdb.org"
+    "https://image.tmdb.org",
+    "https://fonts.googleapis.com"
 ]
 CSP_FONT_SRC = [
     "'self'",
@@ -199,6 +209,8 @@ CSP_FONT_SRC = [
     "https://cdnjs.cloudflare.com",
     "https://cdn.datatables.net",
     "https://cdn.jsdelivr.net",
+    "https://fonts.googleapis.com",
+    
 ]
 
 ROOT_URLCONF = "rport.urls"

@@ -1,0 +1,99 @@
+{% load static %}
+
+<div class="container d-flex align-items-center">
+{% comment %} 
+    <div class="logo me-auto">
+      <lord-icon
+        src="https://cdn.lordicon.com/etqbfrgp.json"
+        trigger="loop"
+        colors="outline:#131432,primary:#92140c,secondary:#f24c00,tertiary:#b26836,quaternary:#ebe6ef"
+        state="loop"
+        style="font-size: 1em;">
+      </lord-icon>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+        <li><a class="nav-link scrollto" href="#about">About</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+        <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li><a href="#">Drop Down 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <ul>
+                <li><a href="#">Deep Drop Down 1</a></li>
+                <li><a href="#">Deep Drop Down 2</a></li>
+                <li><a href="#">Deep Drop Down 3</a></li>
+                <li><a href="#">Deep Drop Down 4</a></li>
+                <li><a href="#">Deep Drop Down 5</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Drop Down 2</a></li>
+            <li><a href="#">Drop Down 3</a></li>
+            <li><a href="#">Drop Down 4</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <div class="header-social-links d-flex align-items-center">
+      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+    </div>
+
+  </div> {% endcomment %}
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgba(179,12,12);">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <lord-icon
+        src="https://cdn.lordicon.com/etqbfrgp.json"
+        trigger="loop"
+        colors="outline:#131432,primary:#92140c,secondary:#f24c00,tertiary:#b26836,quaternary:#ebe6ef"
+        state="loop"
+        style="font-size: 1em;">
+      </lord-icon>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.datasadvocate.dev/api">API</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'resume_url' %}">Resume</a>
+          </li>
+          <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="#what-we-do">What I do</a></li>
+              <li><a class="nav-link scrollto" href="#about">About</a></li>
+              <li><a class="nav-link scrollto" href="#services">Services</a></li>
+              <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="header-social-links d-flex align-items-center">
+          <a href="https://www.linkedin.com/in/dominicmt/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        {% comment %} <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> {% endcomment %}
+      </div>
+    </div>
+  </nav>

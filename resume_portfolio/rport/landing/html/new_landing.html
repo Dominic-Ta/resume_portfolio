@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Datasadvocate
+    </title>
+    {% load static %}
+    {% load sass_tags %}
+    
+    <meta charset="utf-8">
+
+    <meta name="description" content="Simple portfolio website for Dominic Martinez-Ta">
+    <meta name="keywords" content="Resume, Portfolio, CSS, Javascript, Python Django, HTML">
+    <meta name="author" content="Dominic Martinez-Ta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{% static "images/BMO.png" %}" >
+    <link rel="apple-touch-icon" href="{% static "images/BMO.png" %}"> <!-- For apple devices. --> 
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    {% comment %} <link href="{% static 'assets/css/style.css' %}" rel="stylesheet"> {% endcomment %}
+    <link href="{% sass_src 'scss/landing.scss' %}" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- =======================================================
+    * Template Name: Lumia
+    * Updated: Jul 27 2023 with Bootstrap v5.3.1
+    * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top d-flex align-items-center">
+    {% include 'partials/_header.html' %}
+  </header>
+
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Welcome to <span>DatasAdvocate</span></h1>
+      <h2>I'm a passionate data analyst with a background in software development, Electrical Engineering and Physics!</h2>
+      <a href="#about" class="btn-get-started scrollto">Let's Get Started</a>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <section id="what-we-do" class="what-we-do">
+        {% include 'partials/_what_we_do.html' %}
+    </section>
+
+    <section id="about" class="about">
+        {% include 'partials/_about.html' %}
+    </section>
+
+    <section id="skills" class="skills">
+        {% include 'partials/_skills.html' %}
+    </section>
+
+    <section id="counts" class="counts">
+        {% include 'partials/_counts.html' %}
+    </section>
+
+    <section id="services" class="services section-bg">
+        {% include 'partials/_services.html' %}
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        {% include 'partials/_portfolio.html'%}
+    </section>
+
+
+    <section id="contact" class="contact section-bg">
+      {% with csrf="{{ csrf_token }}" %}
+        {% include 'partials/_contact.html' %}
+      {% endwith %}
+    </section>
+
+  </main>
+
+  {% include 'partials/_footer.html' %}
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script>
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".php-email-form");
+    
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+    
+        let csrfToken = "{{ csrf_token }}"; // Get CSRF token from the data attribute
+        let data = {
+          Contact_Name: form.querySelector('[name=name]').value,
+          Contact_Email: form.querySelector('[name=email]').value,
+          Subject: form.querySelector('[name=subject]').value,
+          Message: form.querySelector('[name=message]').value,
+        };
+        try {
+          const response = await fetch("/send-email/"+JSON.stringify(data), {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": csrfToken
+            },
+          });
+    
+          if (response.ok) {
+            // Handle success
+            const result = await response.json();
+            console.log(result);
+            // Show success message to user
+            const successMessage = form.querySelector('.sent-message');
+            successMessage.style.display = 'block';
+          } else {
+            // Handle error
+            console.error("Error:", response.status);
+            // Show error message to user
+            const errorMessage = form.querySelector('.error-message');
+            errorMessage.style.display = 'block';
+          }
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      });
+    });
+    </script>
+    
+    
+</body>
+
+</html>

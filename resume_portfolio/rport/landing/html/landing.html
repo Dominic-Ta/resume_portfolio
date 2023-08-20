@@ -6,6 +6,7 @@
         Home
     </title>
     {% load static %}
+    {% load sass_tags %}
     <style>
       @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
     </style>
@@ -16,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- The above solves the js being blocked issue -->
+    <link href="{% sass_src 'scss/twinkle_twinkle.scss' %}" rel="stylesheet" type="text/css" />
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src = "{% static "js/jquery3_6_4.min.js" %}"></script>
     <script src="{% static "js/landing.js" %}"></script>
@@ -29,9 +31,9 @@
   <div id="loader" class="center"></div>
   <div>
     <div class="heading">
-      <div class="stars"></div>
-      <div class="twinkling"></div>
-      <section id="section_1" class="Welcome_screen">
+      <div class="stars" style="z-index: -1;"></div>
+      <div class="twinkling" style="z-index: -1;"></div>
+      <section id="section_1" class="Welcome_screen" style="z-index: 5;">
         <h1 id="Welcome_text">Welcome!</h1>
         <a class="bounce" href="#section_1"><span></span></a>
       </section>

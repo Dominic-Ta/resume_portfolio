@@ -17,6 +17,8 @@ from rest_framework import routers
 from . import views
 from django.urls import path, include
 
+app_name = 'api'
+
 router = routers.DefaultRouter()
 router.register("users", views.UserViewSet)
 router.register("Student_Performance", views.StudentPerformanceViewSet)

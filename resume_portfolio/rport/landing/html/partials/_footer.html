@@ -1,0 +1,153 @@
+{% load static %}
+<footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>DatasAdvocate</h3>
+            <p>
+              Queens, NY<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 657 296 5468<br>
+              <strong>Email:</strong> martineztadominic@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#what-we-do">About me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#what-we-do">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <!-- Button trigger modal -->
+                <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Terms of service
+                </a>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Terms of Service</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <h1>Website Terms and Conditions of Use</h1>
+
+                        <h2>1. Terms</h2>
+                        
+                        <p>By accessing this Website, accessible from https://www.datasadvocate.dev, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.</p>
+                        
+                        <h2>2. Use License</h2>
+                        
+                        <p>Permission is granted to temporarily download one copy of the materials on DatasAdvocate's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                        
+                        <ul>
+                            <li>modify or copy the materials;</li>
+                            <li>use the materials for any commercial purpose or for any public display;</li>
+                            <li>attempt to reverse engineer any software contained on DatasAdvocate's Website;</li>
+                            <li>remove any copyright or other proprietary notations from the materials; or</li>
+                            <li>transferring the materials to another person or "mirror" the materials on any other server.</li>
+                        </ul>
+                        
+                        <p>This will let DatasAdvocate to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the <a href="https://www.termsofservicegenerator.net">Terms Of Service Generator</a>.</p>
+                        
+                        <h2>3. Disclaimer</h2>
+                        
+                        <p>All the materials on DatasAdvocate's Website are provided "as is". DatasAdvocate makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, DatasAdvocate does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.</p>
+                        
+                        <h2>4. Limitations</h2>
+                        
+                        <p>DatasAdvocate or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on DatasAdvocate's Website, even if DatasAdvocate or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.</p>
+                        
+                        <h2>5. Revisions and Errata</h2>
+                        
+                        <p>The materials appearing on DatasAdvocate's Website may include technical, typographical, or photographic errors. DatasAdvocate will not promise that any of the materials in this Website are accurate, complete, or current. DatasAdvocate may change the materials contained on its Website at any time without notice. DatasAdvocate does not make any commitment to update the materials.</p>
+                        
+                        <h2>6. Links</h2>
+                        
+                        <p>DatasAdvocate has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by DatasAdvocate of the site. The use of any linked website is at the user's own risk.</p>
+                        
+                        <h2>7. Site Terms of Use Modifications</h2>
+                        
+                        <p>DatasAdvocate may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.</p>
+                        
+                        <h2>8. Your Privacy</h2>
+                        
+                        <p>Please read our Privacy Policy.</p>
+                        
+                        <h2>9. Governing Law</h2>
+                        
+                        <p>Any claim related to DatasAdvocate's Website shall be governed by the laws of us without regards to its conflict of law provisions.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </li>
+              
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'privacy_policy' %}">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>My Skills</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'example' %}">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.datasadvocate.dev/api">Database Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.datasadvocate.dev/api/SQLExamples/">SQL</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://github.com/Dominic-Ta/resume_portfolio">Front and Backend Development</a></li>
+            </ul>
+          </div>
+
+          {% comment %} <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div> {% endcomment %}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>DatasAdvocate</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>,
+          <a href="https://lordicon.com/">Icons by Lordicon.com</a>,
+          <a target="_blank" rel="noopener noreferrer nofollow" href="https://icons8.com/icon/5RSNkT2QWYy3/bmo">Bmo</a> 
+          icon by 
+          <a rel="noopener noreferrer nofollow" href="https://icons8.com" target="_blank"> Icons8</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        {% comment %} <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> {% endcomment %}
+        {% comment %} <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> {% endcomment %}
+        {% comment %} <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> {% endcomment %}
+        {% comment %} <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> {% endcomment %}
+        <a href="https://www.linkedin.com/in/dominicmt/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+    
+  </footer>
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+{% load static %}
+<div class="container">
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          {% comment %} <li data-filter=".filter-app">App</li>
+          <li data-filter=".filter-card">Card</li> {% endcomment %}
+          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-jupyter">iPynb</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row portfolio-container">
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/fancy_dashboard.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-2.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+  
+          <div class="portfolio-info">
+            <h4><a href="{% url 'fancy_starwars_dashboard' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">Starwars Dashboard</a></h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-jupyter wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/LA_Crime.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'LACrimeJPY' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">LA Crimes Jupyter file</a></h4>
+            <p>iPynb</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-jupyter wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/starwars_jupyter.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'SWDPY' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">Starwars Jupyter file</a></h4>
+            <p>iPynb</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/netflix.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'about_netflix' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">Analysis of the Netflix Database</a></h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/netflixDT.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'netflix' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">DataTable of the Netflix Database</a></h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/webscraping.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'webscrapes' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">Webscraping Tutorial</a></h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp">
+        <div class="portfolio-wrap">
+          <figure>
+            <img src="{% static 'images/Linreg.png' %}" class="img-fluid" alt="">
+            {% comment %} <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a> {% endcomment %}
+            {% comment %} <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a> {% endcomment %}
+          </figure>
+          <div class="portfolio-info">
+            <h4><a href="{% url 'linear_regression' %}" target="_blank" 
+              rel="noopener noreferrer nofollow">Linear Regression Tutorial</a></h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
