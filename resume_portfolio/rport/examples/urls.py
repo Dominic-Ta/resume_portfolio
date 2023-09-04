@@ -3,6 +3,7 @@ from django.urls import path
 
 urlpatterns = [
     path("", views.main_view, name="example"),
+    path("resume", views.download_pdf_file, name="resume_file"),
     path("jupyter_page", views.jupyter_page, name="jpyexamples"),
     path("jupyter_page/jupyter_crime_data/", views.crime_view, name='LACrimeJPY'),
     path("jupyter_page/starwars_api_analysis", views.starwars_jpy, name="SWDPY"),

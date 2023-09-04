@@ -11,6 +11,7 @@ from .models import (
     StarwarsFilms,
     StarwarsCrawlers,
 )
+from django.http import FileResponse, Http404
 from datetime import datetime
 import json, requests
 from django.core.cache import cache  # This is the memcache cache.
@@ -38,6 +39,15 @@ load_dotenv(dotenv_path)
 maps_API = os.environ.get("maps_api_key")
 
 # Create your views here.
+def download_pdf_file(request,):
+    file_path = os.path.join(
+        settings.STATIC_ROOT, "pdfs", "MartinezTaresume.pdf"
+    )
+    print(file_path)
+    try:
+        return FileResponse(open(file_path, 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
 def get_crawl_data(requests, movie):
     model = StarwarsCrawlers.objects.filter(title__icontains=movie)
     qs_json = serializers.serialize("json", model)
